@@ -1,0 +1,16 @@
+Escola: Curso+ Audição+
+
+Curso: Professor+ Aluno+
+
+Audição: Actuação+
+
+Actuação: Peça+
+
+Peça: Obra Maestro Músicos
+
+Obra: Titulo Compositor
+
+Maestro: Professor
+
+Musico: Aluno | Professor
+

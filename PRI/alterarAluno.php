@@ -14,7 +14,7 @@
     print "<tr><td>Nome</td><td><input type='text' value='".$aluno['nome']."' name='nome'></td></tr>";
     print "<tr><td>Data de Nascimento</td><td><input type='text' value='".$aluno['dataNasc']."' name='dataNasc'></td></tr>";
     print "<tr><td>Curso</td><td><input type='text' value='".$aluno['curso']."' name='curso'></td></tr>";
-    print "<tr><td>Ano</td><td><input type='text' value='".$aluno['anoCurso']."' name='anoCurso'></td></tr>";
+    print "<tr><td>Ano</td><td><input type='text' value='".$aluno['ano']."' name='ano'></td></tr>";
     print "<tr><td>Instrumento</td><td><input type='text' value='".$aluno['instrumento']."' name='instrumento'></td></tr>";
     print "</table>";
     print "<input type='hidden' value='".$oldId."' name='oldId'>";

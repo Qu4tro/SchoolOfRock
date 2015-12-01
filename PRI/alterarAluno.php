@@ -1,7 +1,7 @@
 
 <?php 
 
-    $dbh = new PDO('mysql:host=localhost;dbname=pri2015','root','root');        
+    $dbh = new PDO('mysql:host=localhost;dbname=PRI','root');        
     $oldId = $_REQUEST['id'];
     $qstring = "SELECT * FROM Aluno WHERE id='".$oldId."'";  
     $resultado = $dbh->query($qstring);

@@ -8,32 +8,40 @@ grammar planeadorAudicoes;
 
 planeadorAudicoes: audicao;
 
-audicao: 'Nome:' nome 'Local:' local plano;
+audicao: 'Audição' nome 'Local:' local 'Data:' data 'Início:' hora 'Duração:' duracao plano;
 
 plano: atuacao (';' atuacao)*;
 
-atuacao: nome 'Alunos: ' alunos 'Professores:' professores 'Peças:' pecas;
+atuacao: nome 'Alunos: ' alunos 'Professores:' professores 'Peças:' pecas 'Duração:' duracao;
 
 alunos : aluno (',' aluno)*;
 
-aluno: idA; 
+data: INT '-' INT '-' INT;
+
+duracao : hora;
+
+hora: INT ':' INT;
+
+aluno: IDA; 
 
 professores: professor (',' professor)*;
 
-professor: idP;
+professor: IDP;
 
 pecas: peca (',' peca)*;
 
 peca: titulo;
 
-idP : 'p' INT;
-idA : 'a' INT;
 titulo: STRING;
 nome: STRING;
 local:STRING;
 
 
 /*--------------- Lexer ---------------------------------------*/
+
+IDA: 'a' ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'-')*;
+
+IDP: 'p' ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'-')*;
 
 ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'-')*
     ;

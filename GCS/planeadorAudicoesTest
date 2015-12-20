@@ -1,19 +1,19 @@
-Audição A
-	Local: Braga
+Audição "A"
+	Local: "Braga"
 	Data: 25-12-2015
 	Início: 22:15
 	Duração: 00:40
-		AtuacaoA
+		"AtuacaoA"
 			Alunos:
 				a67665,
 				a67709
 			Professores:
 				p21
 			Peças:
-				Sinfonia21,
-				Sinfonia32
+				"Sinfonia21",
+				"Sinfonia32"
 			Duração: 00:20;
-		AtuacaoB
+		"AtuacaoB"
 			Alunos:
 				a67665,
 				a64545,
@@ -21,5 +21,5 @@ Audição A
 			Professores:
 				p45
 			Peças:
-				Sinfonia7
+				"Sinfonia7"
 			Duração: 00:20

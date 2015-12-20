@@ -12,13 +12,13 @@ audicao: 'Audição' nome 'Local:' local 'Data:' data 'Início:' hora 'Duração
 
 plano: atuacao (';' atuacao)*;
 
-atuacao: nome 'Alunos: ' alunos 'Professores:' professores 'Peças:' pecas 'Duração:' duracao;
+atuacao: nome 'Alunos:' alunos 'Professores:' professores 'Peças:' pecas 'Duração:' duracao;
 
 alunos : aluno (',' aluno)*;
 
-data: INT '-' INT '-' INT;
+data: DATA;
 
-duracao : hora;
+duracao: hora;
 
 hora: INT ':' INT;
 
@@ -33,8 +33,8 @@ pecas: peca (',' peca)*;
 peca: titulo;
 
 titulo: STRING;
-nome: STRING;
-local:STRING;
+nome:   STRING;
+local:  STRING;
 
 
 /*--------------- Lexer ---------------------------------------*/
@@ -54,7 +54,6 @@ INT :	'0'..'9'+
 WS  :   [ \t\r\n]  -> skip
     ;
     
-fragment
 STRING
     :  '"' ( ESC_SEQ | ~('"') )* '"'
     ;

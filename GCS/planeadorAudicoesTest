@@ -10,8 +10,8 @@ Audição "A"
 			Professores:
 				p21
 			Peças:
-				"Sinfonia21",
-				"Sinfonia32"
+				o1,
+				o2
 			Duração: 00:20;
 		"AtuacaoB"
 			Alunos:
@@ -21,5 +21,5 @@ Audição "A"
 			Professores:
 				p45
 			Peças:
-				"Sinfonia7"
+				o3
 			Duração: 00:20

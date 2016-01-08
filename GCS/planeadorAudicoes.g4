@@ -7,9 +7,18 @@
 grammar planeadorAudicoes;
 
 @header{
-import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.IOException;
+import javax.swing.text.Document;
 import javax.xml.parsers.DocumentBuilder;
-import org.w3c.dom.Document;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 }
 
 @members{
@@ -23,54 +32,49 @@ DocumentBuilderFactory factoryO;
 DocumentBuilder builderO;
 Document docObras;
 
-public void createDocAlunos(){
+public void createDocAlunos() throws ParserConfigurationException, SAXException, IOException{
      factoryA =DocumentBuilderFactory.newInstance();
      factoryA.setValidating(false);
      factoryA.setNamespaceAware(false);
-    try{
-     builderA = factory.newDocumentBuilder();
-     docAlunos = builder.parse("alunos.xml");
-     }
+     builderA = factoryA.newDocumentBuilder();
+     docAlunos = (Document) builderA.parse("alunos.xml");
+     
+    }
 
-public void createDocProfessores(){
+public void createDocProfessores() throws ParserConfigurationException, SAXException, IOException{
      factoryP =DocumentBuilderFactory.newInstance();
      factoryP.setValidating(false);
      factoryP.setNamespaceAware(false);
-    try{
      builderP = factoryP.newDocumentBuilder();
-     docProfessores = builderP.parse("professores.xml");
-     }
+     docProfessores = (Document) builderP.parse("professores.xml");
+    }
     
-public void createDocObras(){
+public void createDocObras() throws ParserConfigurationException, SAXException, IOException{
      factoryO =DocumentBuilderFactory.newInstance();
      factoryO.setValidating(false);
      factoryO.setNamespaceAware(false);
-    try{
      builderO = factoryO.newDocumentBuilder();
-     docObras = builderO.parse("obras.xml");
-     }
-    
-public int findAluno(String id){
-     XpathFactory xpathFactory = XPathFactory.newInstance();
-     XPath xpath = xpathFactory.newXPath();
+     docObras = (Document) builderO.parse("obras.xml");
+    }
+
+public int findAluno(String id) throws XPathExpressionException{ 
+     XPath xpath = XPathFactory.newInstance().newXPath();
      XPathExpression expr = xpath.compile("/Alunos/Aluno[@id="+id+"]");
      NodeList nodes = (NodeList) expr.evaluate(docAlunos, XPathConstants.NODESET);
      if(nodes==null) return 0;
      else return 1;
 }
 
-public int findProfessor(String id){
-     XpathFactory xpathFactory = XPathFactory.newInstance();
-     XPath xpath = xpathFactory.newXPath();
+public int findProfessor(String id) throws XPathExpressionException{
+     XPath xpath = XPathFactory.newInstance().newXPath();
      XPathExpression expr = xpath.compile("/Professores/Professor[@id="+id+"]");
      NodeList nodes = (NodeList) expr.evaluate(docProfessores, XPathConstants.NODESET);
      if(nodes==null) return 0;
      else return 1;
 }
 
-public int findObra(String id){
-     XpathFactory xpathFactory = XPathFactory.newInstance();
-     XPath xpath = xpathFactory.newXPath();
+public int findObra(String id) throws XPathExpressionException{
+    XPath xpath = XPathFactory.newInstance().newXPath();
      XPathExpression expr = xpath.compile("/Obras/Obra[@id="+id+"]");
      NodeList nodes = (NodeList) expr.evaluate(docObras, XPathConstants.NODESET);
      if(nodes==null) return 0;
@@ -95,15 +99,15 @@ duracao: hora;
 hora returns [int horas, int minutos]: a=INT ':' b=INT {$horas = $a.int; $minutos= $b.int;}
         ;
 
-aluno: IDA {if(findAluno($IDA.text)==0) throw new RuntimeException("O Aluno " + $IDA.text + " não existe na base de dados!");}; 
+aluno: IDA {try { if(findAluno($IDA.text)==0) throw new RuntimeException("O Aluno " + $IDA.text + " não existe na base de dados!");} catch(XPathExpressionException ex){}}; 
 
 professores: professor (',' professor)*;
 
-professor: IDP {if(findProfessor($IDP.text)==0) throw new RuntimeException("O Professor " + $IDP.text + " não existe na base de dados!");};
+professor: IDP { try { if(findProfessor($IDP.text)==0) throw new RuntimeException("O Professor " + $IDP.text + " não existe na base de dados!"); } catch (XPathExpressionException ex) {}};
 
 pecas: peca (',' peca)*;
 
-peca: IDO {if(findObra($IDO.text)==0) throw new RuntimeException("A obra " + $IDO.text + " não existe na base de dados!");};
+peca: IDO { try { if(findObra($IDO.text)==0) throw new RuntimeException("A obra " + $IDO.text + " não existe na base de dados!"); } catch(XPathExpressionException ex){}};
 
 titulo: STRING;
 nome:   STRING;

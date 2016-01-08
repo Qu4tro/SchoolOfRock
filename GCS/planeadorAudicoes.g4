@@ -84,7 +84,26 @@ public int findObra(String id) throws XPathExpressionException{
 
 planeadorAudicoes: audicao;
 
-audicao: 'Audição' nome 'Local:' local 'Data:' data 'Início:' hora 'Duração:' duracao plano;
+audicao: 'Audição' {try {
+                createDocAlunos();
+            } catch (ParserConfigurationException ex) {
+            } catch (SAXException ex) {
+            } catch (IOException ex) {
+            }
+                    try {
+                createDocProfessores();
+            } catch (ParserConfigurationException ex) {
+            } catch (SAXException ex) {
+            } catch (IOException ex) {
+            }
+                    try {
+                createDocObras();
+            } catch (ParserConfigurationException ex) {
+            } catch (SAXException ex) {
+            } catch (IOException ex) {
+            }
+        } 
+         nome 'Local:' local 'Data:' data 'Início:' hora 'Duração:' duracao plano;
 
 plano: atuacao (';' atuacao)*;
 

@@ -118,15 +118,24 @@ duracao: hora;
 hora returns [int horas, int minutos]: a=INT ':' b=INT {$horas = $a.int; $minutos= $b.int;}
         ;
 
-aluno: IDA {try { if(findAluno($IDA.text)==0) throw new RuntimeException("O Aluno " + $IDA.text + " não existe na base de dados!");} catch(XPathExpressionException ex){}}; 
+aluno: IDA { try { 
+                  if(findAluno($IDA.text)==0) 
+                    throw new RuntimeException("O Aluno " + $IDA.text + " não existe na base de dados!");}
+             catch(XPathExpressionException ex){}}; 
 
 professores: professor (',' professor)*;
 
-professor: IDP { try { if(findProfessor($IDP.text)==0) throw new RuntimeException("O Professor " + $IDP.text + " não existe na base de dados!"); } catch (XPathExpressionException ex) {}};
+professor: IDP { try { 
+                      if(findProfessor($IDP.text)==0) 
+                        throw new RuntimeException("O Professor " + $IDP.text + " não existe na base de dados!"); } 
+                catch (XPathExpressionException ex) {}};
 
 pecas: peca (',' peca)*;
 
-peca: IDO { try { if(findObra($IDO.text)==0) throw new RuntimeException("A obra " + $IDO.text + " não existe na base de dados!"); } catch(XPathExpressionException ex){}};
+peca: IDO { try { 
+                 if(findObra($IDO.text)==0) 
+                    throw new RuntimeException("A obra " + $IDO.text + " não existe na base de dados!"); } 
+           catch(XPathExpressionException ex){}};
 
 titulo: STRING;
 nome:   STRING;

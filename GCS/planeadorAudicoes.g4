@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 grammar planeadorAudicoes;
 
 @header{
@@ -19,6 +13,7 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+import org.w3c.dom.Element;
 }
 
 @members{
@@ -31,6 +26,16 @@ Document docProfessores;
 DocumentBuilderFactory factoryO;
 DocumentBuilder builderO;
 Document docObras;
+DocumentBuilderFactory factoryAud;
+DocumentBuilder builderAud;
+Document docAudicoes;
+Element rootAudicoes;
+Element novaAudicao;
+Element rootAtuacoes;
+Element rootAlunos;
+Element rootProfessores;
+Element rootObras;
+
 
 public void createDocAlunos() throws ParserConfigurationException, SAXException, IOException{
      factoryA =DocumentBuilderFactory.newInstance();
@@ -39,6 +44,16 @@ public void createDocAlunos() throws ParserConfigurationException, SAXException,
      builderA = factoryA.newDocumentBuilder();
      docAlunos = (Document) builderA.parse("alunos.xml");
      
+    }
+
+public void createDocAudicoes() throws ParserConfigurationException, SAXException, IOException{
+     factoryAud =DocumentBuilderFactory.newInstance();
+     factoryAud.setValidating(false);
+     factoryAud.setNamespaceAware(false);
+     builderAud = factoryA.newDocumentBuilder();
+     docAudicoes = (Document) builderAud.parse("audicoes.xml");
+     rootAudicoes = docAudicoes.getDocumentElement();
+     novaAudicao = docAudicoes.createElement("audicao");
     }
 
 public void createDocProfessores() throws ParserConfigurationException, SAXException, IOException{
@@ -102,18 +117,70 @@ audicao: 'Audição' {try {
             } catch (SAXException ex) {
             } catch (IOException ex) {
             }
+                    try {
+                createDocAudicoes();
+            } catch (ParserConfigurationException ex) {
+            } catch (SAXException ex) {
+            } catch (IOException ex) {
+            }
         } 
-         nome 'Local:' local 'Data:' data 'Início:' hora 'Duração:' duracao plano;
+                    nome 'Local:' local 'Data:' data 'Início:' hora 'Duração:' duracao{
+                          
+                          Element nome = docAudicoes.createElement("nome");
+                          nome.appendChild(docAudicoes.createTextNode($nome.val));
+                          novaAudicao.appendChild(nome);
+                           
+                          Element local = docAudicoes.createElement("local");
+                          local.appendChild(docAudicoes.createTextNode($local.val));
+                          novaAudicao.appendChild(local);
+                          
+                          Element data = docAudicoes.createElement("data");
+                          String dataString = Integer.toString($data.dia) + "/" + Integer.toString($data.mes) + "/" + Integer.toString($data.ano);
+                          data.appendChild(docAudicoes.createTextNode(dataString));
+                          novaAudicao.appendChild(data);
+                          
+                          Element inicio = docAudicoes.createElement("inicio");
+                          String inicioString = Integer.toString($hora.horas) + ":" + Integer.toString($hora.minutos);
+                          inicio.appendChild(docAudicoes.createTextNode(inicioString));
+                          novaAudicao.appendChild(inicio);
+                          
+                          Element duracao = docAudicoes.createElement("duracao");
+                          String duracaoString = Integer.toString($duracao.horas) + ":" + Integer.toString($duracao.minutos);
+                          duracao.appendChild(docAudicoes.createTextNode(duracaoString));
+                          novaAudicao.appendChild(duracao);
+                         }
+                    plano{
+                          rootAtuacoes = docAudicoes.createElement("atuacoes");
+                          };
 
 plano: atuacao (';' atuacao)*;
 
-atuacao: nome 'Alunos:' alunos 'Professores:' professores 'Peças:' pecas 'Duração:' duracao;
+atuacao: nome {
+               Element nome = docAudicoes.createElement("nome");
+               nome.appendChild(docAudicoes.createTextNode($nome.val));
+               rootAtuacoes.append(nome);
+               }
+         'Alunos:' alunos {
+                           rootAlunos = docAudicoes.createElement("alunos");
+                           }
+         'Professores:' professores {
+                           rootProfessores = docAudicoes.createElement("professores");
+                           }
+         'Peças:' pecas {
+                           rootObras = docAudicoes.createElement("obras");
+                           }
+         'Duração:' duracao{
+                            Element duracao = docAudicoes.createElement("duracao");
+                            String duracaoString = Integer.toString($duracao.horas) + ":" + Integer.toString($duracao.minutos);
+                            duracao.appendChild(docAudicoes.createTextNode(duracaoString));
+                            rootAtuacoes.append(duracao);
+                            };
 
 alunos : aluno (',' aluno)*;
 
-data: DATA;
+data returns [int dia, int mes, int ano]: a=NT '-' b=INT '-' c=INT {$dia = $a.int; $mes = $b.int; $ano = $c.int;};
 
-duracao: hora;
+duracao returns [int horas, int minutos] : hora {$horas = $hora.horas; $minutos= $hora.minutos;};
 
 hora returns [int horas, int minutos]: a=INT ':' b=INT {$horas = $a.int; $minutos= $b.int;}
         ;
@@ -137,9 +204,9 @@ peca: IDO { try {
                     throw new RuntimeException("A obra " + $IDO.text + " não existe na base de dados!"); } 
            catch(XPathExpressionException ex){}};
 
-titulo: STRING;
-nome:   STRING;
-local:  STRING;
+titulo returns [String val] : STRING {$val = $STRING.text;};
+nome returns [String val] :   STRING {$val = $STRING.text;};
+local returns [String val] :  STRING {$val = $STRING.text;};
 
 
 /*--------------- Lexer ---------------------------------------*/
@@ -153,8 +220,6 @@ IDO: 'o' ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'-')*;
 ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'-')*
     ;
 
-DATA:   INT '-' INT '-' INT
-    ;
 INT :	'0'..'9'+
     ;
 

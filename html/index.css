@@ -88,7 +88,21 @@ a{
     opacity: 0.9;
 }
 
-#newFormDiv{
+.tableShow{
+    padding-right:10px;
+    margin-top: 5%;
+    line-height: 160%; 
+    border: 1px solid white;
+    text-align: left;
+    color:white;
+    font-size: 14px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    vertical-align: center;
+    background-color: black;
+    opacity: 0.9;
+}
+
+.newFormDiv{
    margin-top: 5%;
    margin-left: 30%;
    margin-right: 30%;
@@ -99,7 +113,7 @@ a{
     background-color: black;
     opacity: 0.9; 
 }
-#newForm{
+.newForm{
   margin-top: 5%;
    margin-left: 5%;
    margin-right: 5%; 

@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Alunos</title>
-        <link rel="stylesheet" href="index.css" type"text/css" media="all"/>
-        <link rel="stylesheet" href="alunos.css" type="text/css" media="all" />
-
-
+        <link rel="stylesheet" href="css/index.css" type"text/css" media="all"/>
+        <link rel="stylesheet" href="css/alunos.css" type="text/css" media="all" />
+        <script type="application/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/listarAlunos.js"></script>
+        <script src="js/povoarTabelaAlunos.js"></script>
     </head>
 
     <body>
@@ -21,20 +22,13 @@
         </table>
 
         <div>
-            <center><table id="tableListing">
+            <center><table class="tableListing" id="alunos">
                 <tr>
                     <td>Id</td>
                     <td>Nome</td>
                     <td>Instrumento</td>
                     <td></td>
                 </tr>
-                 <tr>
-                    <td>a67665</td>
-                    <td>Patrícia Amorim Barros</td>
-                    <td>Clarinete</td>
-                    <td><input type="button" onclick="location.href='alterarAluno.html';" value="Alterar"/><button>Remover</button><button>Consultar</button></td>
-                </tr>
-              
             </table></center>  
         </div>
         <center><input type="button" id="bigButton" onclick="location.href='novoAluno.html';" value="Novo Aluno"/></center>

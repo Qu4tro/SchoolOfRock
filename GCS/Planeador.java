@@ -74,7 +74,7 @@ public class Planeador {
          
     }
 
-    public void createDocAudicoes() throws ParserConfigurationException, SAXException, IOException{
+    public void createDocAudicoes() throws ParserConfigurationException, SAXException, IOException {
 
 
         DocumentBuilderFactory factoryAud;
@@ -88,11 +88,9 @@ public class Planeador {
         this.docAudicoes = (Document) builderAud.parse("audicoes.xml");
 
         // this.rootAudicoes = docAudicoes.getDocumentElement();
-        // this.novaAudicao = docAudicoes.createElement("audicao");
-
     }
 
-    public void createDocProfessores() throws ParserConfigurationException, SAXException, IOException{
+    public void createDocProfessores() throws ParserConfigurationException, SAXException, IOException {
 
         DocumentBuilderFactory factoryP;
         DocumentBuilder builderP;
@@ -105,7 +103,7 @@ public class Planeador {
         this.docProfessores = (Document) builderP.parse("professores.xml");
     }
         
-    public void createDocObras() throws ParserConfigurationException, SAXException, IOException{
+    public void createDocObras() throws ParserConfigurationException, SAXException, IOException {
 
         DocumentBuilderFactory factoryO;
         DocumentBuilder builderO;

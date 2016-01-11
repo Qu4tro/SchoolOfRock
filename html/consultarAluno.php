@@ -14,4 +14,5 @@ $logs = simplexml_load_file("alunos.xml");
         echo "<th>Ano do Curso:</th><th>".(string)$aluno[0]->anoCurso."</th></tr>";
         echo "<th>Instrumento:</th><th>".(string)$aluno[0]->instrumento."</th></tr>";
  		echo "</table></center>";
+ 		echo "<center><input type='button' id='bigButton' onclick=\"location.href='alunos.html'\" value=\"Voltar\"/></center>";
 ?>

@@ -5,6 +5,9 @@
         <title>Docentes</title>
         <link rel="stylesheet" href="index.css" type="text/css" media="all" />
         <link rel="stylesheet" href="audicoes.css" type="text/css" media="all" />
+        <script type="application/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="listarCursos.js"></script>
+        <script src="carregarCursos.js"></script>
     </head>
 
     <body>
@@ -22,7 +25,7 @@
                 Nome: <input type="text" size="30" name="nome"> <br/>
                 Data de Nascimento: <input type="text" size="10" name="dataNasc"> <br/>
                 Habilitações: <input type="text"size="20" name="habil"><br/>   
-                Curso: <input type="text" size="7" name="curso"> <br/>
+                Curso: <select id="cursos" name="cursos"></select> <br/>
                 <center><input type="submit" id="bigButton"value="Adicionar"> </center>  
             </form>
         </div>

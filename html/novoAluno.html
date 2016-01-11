@@ -5,6 +5,9 @@
         <title>Alunos</title>
         <link rel="stylesheet" href="index.css" type="text/css" media="all" />
         <link rel="stylesheet" href="alunos.css" type="text/css" media="all" />
+        <script type="application/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="listarInstrumentos.js"></script>
+        <script src="carregarInstrumentos.js"></script>
 
     </head>
 
@@ -18,18 +21,13 @@
             </tr>
         </table>
         <div class="newFormDiv">
-            <form class="newForm">
-                Id: <input type="text" size="5"> <br/>
-                Nome: <input type="text" size="30"> <br/>
-                Data de Nascimento: <input type="text" size="10"> <br/>
-                Curso: <input type="text" size="7"> <br/>
-                Ano do Curso: <input type="text"size="3"><br/>   
-                Instrumento: <select>
-                            <option>dssad</option>
-                            <option>dssad</option>
-                            <option>dssad</option>
-                            <option>dssad</option>
-                            </select>  <br/>
+            <form class="newForm" action="addAluno.php" method="get">
+                Id: <input type="text" size="5" name="id"> <br/>
+                Nome: <input type="text" size="30" name="nome"> <br/>
+                Data de Nascimento: <input type="text" name="dataNasc" size="10"> <br/>
+                Curso: <input type="text" name="curso" size="7"> <br/>
+                Ano do Curso: <input type="text" name="ano" size="3"><br/>   
+                Instrumento: <select id="instrumentos" name="instrumentos"></select><br/>    
                 <center><input type="submit" id="bigButton"value="Adicionar"> </center>  
             </form>
         </div>

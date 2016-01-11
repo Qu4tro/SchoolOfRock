@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="alunos.xsl"?>
 <alunos>
     <aluno id="A1510">
         <nome>ADEMAR FONTES DE MAGALHAES GONCALVES</nome>
@@ -2534,4 +2535,4 @@
         <anoCurso>2</anoCurso>
         <instrumento>Clarinete</instrumento>
     </aluno>
-</alunos>
+<aluno id="sadas"><nome>dsada</nome><dataNasc>sadasd</dataNasc><curso>sadad</curso><anoCurso>sdad</anoCurso><instrumento>Cornetim</instrumento></aluno><aluno id="dsad"><nome>dsad</nome><dataNasc>sdasd</dataNasc><curso>sadasd</curso><anoCurso>dsada</anoCurso><instrumento>Caixa</instrumento></aluno></alunos>

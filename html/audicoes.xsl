@@ -7,17 +7,20 @@
     <xsl:output method="text"/>
     
     <xsl:template match="/">
-        <xsl:result-document href="listarProfessores.js">
-            var ids= [<xsl:apply-templates select="//professor"/>];
+        <xsl:result-document href="listarAudicoes.js">
+            var ids= [<xsl:apply-templates select="//audicao"/>];
             var nomes=[<xsl:apply-templates select="//nome"/>];
-            var cursos = [<xsl:apply-templates select="//curso"/>];
+            var datas = [<xsl:apply-templates select="//data"/>];
+            var locais = [<xsl:apply-templates select="//local"/>];
         </xsl:result-document>
     </xsl:template>
     
-    <xsl:template match="professor">"<xsl:value-of select="./@id"/>",
+    <xsl:template match="audicao">"<xsl:value-of select="./@id"/>",
     </xsl:template>
     <xsl:template match="nome">"<xsl:value-of select="."/>",
     </xsl:template>
-    <xsl:template match="curso">"<xsl:value-of select="."/>",
+    <xsl:template match="data">"<xsl:value-of select="."/>",
+    </xsl:template>
+    <xsl:template match="local">"<xsl:value-of select="."/>",
     </xsl:template>
 </xsl:stylesheet>

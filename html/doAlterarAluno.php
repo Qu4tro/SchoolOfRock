@@ -3,8 +3,8 @@
 $oldId = $_REQUEST['id'];
 
 
-/*$xsl = new DOMDocument;
-$xsl->load('alunos.xsl');*/
+$xsl = new DOMDocument;
+$xsl->load('alunos.xsl',LIBXML_NOCDATA);
 
 $logs = simplexml_load_file("alunos.xml");
   
@@ -15,10 +15,10 @@ $aluno[0]->dataNasc = $_REQUEST['data'];
 $aluno[0]->curso= $_REQUEST['curso'];
 $aluno[0]->anoCurso = $_REQUEST['ano'];
 
-/*$proc = new XSLTProcessor;
+$proc = new XSLTProcessor;
 $proc->importStyleSheet($xsl); 
 
-$proc->transformToXML($logs);*/
+$proc->transformToXML($logs);
 
 include("alunos.html");
 

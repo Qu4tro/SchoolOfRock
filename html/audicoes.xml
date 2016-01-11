@@ -2,7 +2,7 @@
 <audicoes>
 	<audicao id="A1">
 		<nome>Récita 1º Dezembro</nome>
-		<data>1 de Dezembro</data>
+		<data>2016-12-01</data>
 		<local>Theatro Circo</local>
 		<inicio>22:30</inicio>
 		<duracao>150 min</duracao>
@@ -37,7 +37,46 @@
 					<obra>O1</obra>
 				</obras>
 			</atuacao>
-			
+			<audicao id="A2">
+				<nome>Récita 1º Dezembro</nome>
+				<data>2015-12-01</data>
+				<local>Theatro Circo</local>
+				<inicio>22:30</inicio>
+				<duracao>150 min</duracao>
+				<atuacoes>
+					<atuacao>
+						<nome>Atuacao 1</nome>
+						<duracao>40 min</duracao>
+						<alunos>
+							<aluno>a67665</aluno>
+							<aluno>A78</aluno>
+						</alunos>
+						<professores>
+							<professor>P1</professor>
+							<professor>P2</professor>
+						</professores>
+						<obras>
+							<obra>O1</obra>
+						</obras>
+					</atuacao>
+					<atuacao>
+						<nome>Atuacao 2</nome>
+						<duracao>50 min</duracao>
+						<alunos>
+							<aluno>a67665</aluno>
+							<aluno>A78</aluno>
+						</alunos>
+						<professores>
+							<professor>P1</professor>
+							<professor>P2</professor>
+						</professores>
+						<obras>
+							<obra>O1</obra>
+						</obras>
+					</atuacao>
+					
+				</atuacoes>
+			</audicao>
 		</atuacoes>
 	</audicao>
 </audicoes>

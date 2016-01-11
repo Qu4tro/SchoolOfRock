@@ -2,12 +2,22 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Alunos</title>
+        <title>Audições</title>
         <link rel="stylesheet" href="index.css" type="text/css" media="all" />
         <link rel="stylesheet" href="audicoes.css" type="text/css" media="all" />
-        <script type="application/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="pagination.js"></script>
         <script src="listarAudicoes.js"></script>
         <script src="povoarTabelaAudicoes.js"></script>
+        <script src="moment.js"></script>
+
+        <script type="text/javaScript"> 
+            $(document).ready(function(){       
+                $('#audicoes').tablePaginate({navigateType:'navigator',recordPerPage:30,buttonPosition:'after',});
+            });
+        </script>
+
     </head>
 
     <body>
@@ -20,6 +30,13 @@
             </tr>
         </table>
 
+        <div style="margin-top:2%"><center>
+            Filtrar: <select id="filtro">
+                        <option selected="selected">Todas</option>
+                        <option>Passadas</option>
+                        <option>Futuras</option>
+                    </select></center>
+        </div>
         <div>
             <center><table class="tableListing" id="audicoes">
                <tr>

@@ -6,9 +6,18 @@
         <title>Alunos</title>
         <link rel="stylesheet" href="index.css" type"text/css" media="all"/>
         <link rel="stylesheet" href="alunos.css" type="text/css" media="all" />
-        <script type="application/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="pagination.js"></script>
         <script src="listarAlunos.js"></script>
         <script src="povoarTabelaAlunos.js"></script>
+
+        <script type="text/javaScript"> 
+            $(document).ready(function(){       
+                $('#alunos').tablePaginate({navigateType:'navigator',recordPerPage:30,buttonPosition:'after',});
+            });
+        </script>
+
     </head>
 
     <body>
@@ -34,5 +43,4 @@
         <center><input type="button" id="bigButton" onclick="location.href='novoAluno.html'" value="Novo Aluno"/></center>
 
     </body>
-
 </html>

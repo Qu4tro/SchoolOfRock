@@ -10,7 +10,7 @@ $aluno = $logs->xpath("//aluno[@id='".$id."']");
 
 echo "<div class='newFormDiv'>";
 echo "<form action='doAlterarAluno.php' class='newForm'>";
-echo "Id: <input type='text' name='id' value='".(string)$aluno[0]['id']."'size='3'> <br/>";
+echo "Id: <input type='text' name='id' value='".(string)$aluno[0]['id']."'size='3' readonly> <br/>";
 echo "Nome: <input type='text' name='nome' value='".(string)$aluno[0]->nome."'size='45'> <br/>";
 echo "Data de Nascimento: <input type='text' name='data'value='".(string)$aluno[0]->dataNasc."' size='6'> <br/>";
 echo "Curso: <select name='cursos' id='cursos'><option selected='selected'>".(string)$aluno[0]->curso."</option></select><br/>";

@@ -2,24 +2,20 @@
 
 $oldId = $_REQUEST['id'];
 
-
-$xsl = new DOMDocument;
-$xsl->load('alunos.xsl',LIBXML_NOCDATA);
-
 $logs = simplexml_load_file("alunos.xml");
   
-$aluno= $logs->xpath("//aluno[@id='".$oldId."']");
+$alunos= $logs->xpath("//aluno[@id='".$oldId."']");
+	
+	foreach ($alunos as $aluno) {
+		$aluno->nome = $_REQUEST['nome'];
+		$aluno->dataNasc = $_REQUEST['data'];
+		$aluno->curso= $_REQUEST['cursos'];
+		$aluno->anoCurso = $_REQUEST['ano'];
+		$aluno->instrumento = $_REQUEST['instrumentos'];
+	}
 
-$aluno[0]->nome = $_REQUEST['nome'];
-$aluno[0]->dataNasc = $_REQUEST['data'];
-$aluno[0]->curso= $_REQUEST['curso'];
-$aluno[0]->anoCurso = $_REQUEST['ano'];
 
-$proc = new XSLTProcessor;
-$proc->importStyleSheet($xsl); 
 
-$proc->transformToXML($logs);
-
-include("alunos.html");
-
+header("Location:alunos.html");
+$logs->asXML('alunos.xml');
 ?>

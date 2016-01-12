@@ -16,6 +16,7 @@
             $(document).ready(function(){       
                 $('#audicoes').tablePaginate({navigateType:'navigator',recordPerPage:30,buttonPosition:'after',});
             });
+
         </script>
 
     </head>
@@ -31,14 +32,15 @@
         </table>
 
         <div style="margin-top:2%"><center>
-            Filtrar: <select id="filtro">
+            Filtrar: <select onchange="filtrar()" id="filtrar">
                         <option selected="selected">Todas</option>
                         <option id="passadas">Passadas</option>
                         <option id="futuras">Futuras</option>
-                    </select></center>
+                    </select>
         </div>
         <div>
             <center><table class="tableListing" id="audicoes">
+            <thead>
                <tr>
                     <td>Id</td>
                     <td>Nome</td>
@@ -46,6 +48,7 @@
                     <td>Local</td>
                     <td></td>
                 </tr>
+            </thead>
             </table></center>   
         </div>
         <br/>

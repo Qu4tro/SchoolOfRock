@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+    <front-matter>
+        <meta>
+            <title>Processamento de Linguagens e Conhecimento</title>
+            <subtitle>Um Gestor de Audições/Concertos Musicaiso</subtitle>
+            <authors>
+                <author>
+                    <name>Patrícia Barros</name>
+                    <identifier>a67665</identifier>
+                    <email>a67665@alunos.uminho.pt</email>
+                    <photo path=""/>
+                </author>
+                <author>
+                    <name>Xavier Francisco</name>
+                    <identifier>aXXXXX</identifier>
+                    <email>aXXXXx@alunos.uminho.pt</email>
+                    <photo path=""/>
+                </author>
+            </authors>
+            <date>2016-01-18</date>
+            <affil>Universidade do Minho</affil>
+        </meta>
+        <abstract>
+            <p>Este relatório descreve todo o processo de desenvolvimento e decisões tomadas para a realização do trabalho final do perfil de Processamento de Linguagens e Compiladores.\\ O problema a resolver consiste na criação de um sistema que permita a gestão de audições musicais de uma escola de música.</p>
+        </abstract>
+        <toc/>
+        <lof/>
+    </front-matter>
+    <body>
+        <section>
+            <title>Estrutura do Relatório</title>
+           <p>Este relatório está organizado em capítulos e secções. No capítulo 1 podemos encontrar um apanhado de informações sobre o projeto, nomeadamente sobre o contexto, motivação, objetivos e resultados do mesmo.</p>
+           <p>O capítulo 2  expõe o enunciado do trabalho.</p>
+           <p>De seguida, o capítulo 3 engloba todas as secções relativas ao desenvolvimento do projeto: todas as decisões tomadas e uma descrição de tudo o que foi feito. CONTINUAR</p>
+           <p>Por último, o capítulo 4 contém algumas conclusões sobre o trabalho realizado, nomeadamente o estado do mesmo, o trabalho futuro e um comentário de opinião pessoal.</p>
+        </section>
+        <section>
+            <title>Introdução</title>
+            <subsection>
+                <title>Contextualização</title>
+               <p>Este trabalho foi realizado no âmbito das Unidades Curriculares de Gramáticas na Compreensão de Software e Processamento e Representação de Informação, dizendo respeito às matérias leccionadas em ambas: gramáticas independentes de contexto, gramáticas de atributos, DTD's, XPath, XSLT, XML Schema e formulários HTML.</p>
+            </subsection>
+            <subsection>
+                <title>Objetivos</title>
+               <p>Este trabalho tem como objetivos consolidar todo o conhecimento adquirido ao longo do semestre nas duas Unidades Curriculares a que diz respeito mas também dar resposta a uma necessidade que existe atualmente no Mundo real, tornando ainda o projeto mais aliciante.</p>
+            </subsection>
+            <subsection>
+                <title>Motivação</title>
+               <p>Atualmente praticamente nenhuma das aplicações existentes para gerir escolas tem a funcionalidade de gerir audições ou concertos pois esta é uma necessidade específica de uma escola de música que ao longo de um ano letivo poderá ter que organizar dezenas ou centenas de audições e concertos. Posto isto é importante começar a dar resposta às escolas de música nesse sentido.</p>
+            </subsection>
+            <subsection>
+                <title>Ferramentas</title>
+               <p>ESCREVER</p>
+            </subsection>
+        </section>
+        <section>
+            <title>Desenvolvimento</title>
+            <title>Notas Finais</title>
+            <subsection>
+                <title>Conclusão</title>
+               <p>Em conclusão, vemos este projeto como mais um forma de pôr em prática os conhecimentos adquiridos e as ferramentas disponibilizadas no perfil de Processamento de Linguagens e Conhecimento durante o 1º Semestre. Como o enunciado deste trabalho prático implica um domínio de todos os conceitos abordados nas aulas, este ajudou a consolidar os conhecimentos e a combater algumas dificuldades que tínhamos anteriormente.</p>
+               <p>Apesar da abordagem deste enunciado ser centrada inicialmente no formato dos ficheiros, se estes seguirem as normas especificadas não põem em causa os dados armazenados na base de dados. Assim é, obviamente, necessário utilizar validações para a base de dados não ficar inconsistente.</p>
+               <p>Depois de uma avaliação ponderada, o grupo considerou que os requisitos pedidos foram cumpridos. O grupo acredita que este projeto, para além de ser viável, é também um excelente oportunidade de criar algo com alguma importância e por isso o grupo está satisfeito com o trabalho realizado.</p>
+            </subsection>
+            <subsection>
+                <title>Trabalho Futuro</title>
+               <p>Em relação a algumas melhorias e a um possível trabalho futuro que possamos desenvolver, destacam-se as seguintes:</p>
+                <ul>
+                    <li><p>Melhorar as views, em termos de visualização e validação de erros.</p></li>
+                    <li><p>Adicionar à Dashboard, os locais e as profissões para ter uma perpectiva mais interessante sobre a informação.</p></li>
+                    <li><p>E por nós considerada, a melhoria que seria mais crucial neste projeto, era tornar as pessoas totalmente únicas, através de comparações com as suas relações entre pais e filhos, etc. Neste momento, o único elemento de distinção entre as pessoas é o nome, pois é a única que coisa que conseguimos retirar dos arquivos biográficos e fotográficos.</p></li>
+                </ul>
+            </subsection>
+        </section>
+    </body>
+    <back-matter>
+        <appendix-list>
+            <appendix>
+                <title></title>
+               <p></p>
+            </appendix>
+        </appendix-list>
+    </back-matter>
+</report>

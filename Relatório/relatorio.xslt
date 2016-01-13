@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" exclude-result-prefixes="xs xd" version="1.0">
-    <xd:doc scope="stylesheet">
-        <xd:desc>
-            <xd:p><xd:b>Created on:</xd:b> Dec 15, 2014</xd:p>
-            <xd:p/>
-        </xd:desc>
-    </xd:doc>
     
     <xsl:key name="seccoes" match="section|subsection|subsubsection" use="@id"/>
     
@@ -34,11 +28,6 @@
         </html>
     </xsl:template>
 
-
-    <!--*********************************
-        Report
-    **********************************-->
-
     <xsl:template match="report">
         <xsl:apply-templates select="front-matter"/>
         <hr/>
@@ -58,7 +47,7 @@
     <xsl:template match="toc">
         <div class="col-md-12">
             <div class="row">
-                <p class="bg-danger">Table of contents</p>
+                <p class="bg-info">Indíce:</p>
                 <xsl:apply-templates mode="toc" select="//section"/>
             </div>
         </div>
@@ -66,28 +55,28 @@
     
     <xsl:template mode="toc" match="section">
         <ul>
-            <li><a href="#{generate-id()}"><xsl:value-of select="title"/></a></li>
+            <li><a style="color:#2ecc71" href="#{generate-id()}"><xsl:value-of select="title"/></a></li>
             <xsl:apply-templates mode="toc_sub" select="subsection"/>
         </ul>
     </xsl:template>
     
     <xsl:template mode="toc_sub" match="subsection">
         <ul>
-            <li><a href="#{generate-id()}"><xsl:value-of select="title"/></a></li>
+            <li><a style="color:#1abc9c" href="#{generate-id()}"><xsl:value-of select="title"/></a></li>
             <xsl:apply-templates mode="toc_subsub" select="subsubsection"/>
         </ul>
     </xsl:template>
     
     <xsl:template mode="toc_subsub" match="subsubsection">
         <ul>
-            <li><a href="#{generate-id()}"><xsl:value-of select="title"/></a></li>
+            <li><a style="color:#3498db" href="#{generate-id()}"><xsl:value-of select="title"/></a></li>
         </ul>
     </xsl:template>
 
     <xsl:template match="lot">
         <div class="col-md-12">
             <div class="row">
-                <p class="bg-danger">List of Tables</p>
+                <p class="bg-danger">Indíce de Tabelas:</p>
             </div>
         </div>
     </xsl:template>
@@ -95,7 +84,7 @@
     <xsl:template match="lof">
         <div class="col-md-12">
             <div class="row">
-                <p class="bg-danger">List of Figures</p>
+                <p class="bg-success">Indíce de Figuras:</p>
                 <xsl:apply-templates mode="lof" select="//image"/>
             </div>
         </div>
@@ -103,7 +92,7 @@
     
     <xsl:template mode="lof" match="image">
         <ul>
-            <li><a href="#{generate-id()}"><xsl:value-of select="."/></a></li>
+            <li><a style="color:#3498db" href="#{generate-id()}"><xsl:value-of select="."/></a></li>
         </ul>
     </xsl:template>
 
@@ -111,10 +100,10 @@
         <div class="col-md-12 text-center">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>
+                    <h2 style="color:#c0392b">
                         <xsl:value-of select="title"/>
                     </h2>
-                    <h3>
+                    <h3 style="color:#e74c3c">
                         <xsl:value-of select="subtitle"/>
                     </h3>
                 </div>
@@ -178,7 +167,7 @@
     </xsl:template>
 
     <xsl:template match="section/title">
-        <h2>
+        <h2 style="color:#c0392b">
             <xsl:value-of select="."/>
         </h2>
     </xsl:template>
@@ -189,7 +178,7 @@
     </xsl:template>
 
     <xsl:template match="subsection/title">
-        <h3>
+        <h3 style="color:#e74c3c">
             <xsl:value-of select="."/>
         </h3>
     </xsl:template>
@@ -200,7 +189,7 @@
     </xsl:template>
 
     <xsl:template match="subsubsection/title">
-        <h4>
+        <h4 style="color:#2ecc71">
             <xsl:value-of select="."/>
         </h4>
     </xsl:template>
@@ -260,7 +249,7 @@
     </xsl:template>
 
     <xsl:template match="code">
-        <pre>
+        <pre style="background-color:#F5FFFA">
             <xsl:value-of select="."/>
         </pre>
     </xsl:template>
@@ -273,7 +262,7 @@
             <a name="{generate-id()}"/>
             <img src="{@path}"/>
             <br/>
-            <xsl:value-of select="."/>
+            <p style="font-size:11px"><xsl:value-of select="."/></p>
         </div>
 
 

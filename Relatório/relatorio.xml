@@ -9,7 +9,7 @@
                     <name>Patrícia Barros</name>
                     <identifier>a67665</identifier>
                     <email>a67665@alunos.uminho.pt</email>
-                    <photo path=""/>
+                    <photo path="7.jpg"/>
                 </author>
                 <author>
                     <name>Xavier Francisco</name>
@@ -22,7 +22,8 @@
             <affil>Universidade do Minho</affil>
         </meta>
         <abstract>
-            <p>Este relatório descreve todo o processo de desenvolvimento e decisões tomadas para a realização do trabalho final do perfil de Processamento de Linguagens e Compiladores.\\ O problema a resolver consiste na criação de um sistema que permita a gestão de audições musicais de uma escola de música.</p>
+            <p>Este relatório descreve todo o processo de desenvolvimento e decisões tomadas para a realização do trabalho final do perfil de Processamento de Linguagens e Compiladores.</p>
+            <p>O problema a resolver consiste na criação de um sistema que permita a gestão de audições musicais de uma escola de música.</p>
         </abstract>
         <toc/>
         <lof/>
@@ -56,21 +57,227 @@
         </section>
         <section>
             <title>Desenvolvimento</title>
+            <subsection>
+                <title>Base de Dados</title>
+                <p>Decidimos utilizar ficheiros <i>XML</i> para guardar todos os dados relevantes da escola de música: alunos, professores, cursos, instrumentos, audições, obras e compositores. Para cada uma destas entidades existe um ficheiro <i>XML</i> que lhe oferece suporte.</p>
+                <p>Passamos então a descrever a estrutura dos documentos <i>XML</i> utilizados para suportar toda a indormação do sistema.</p>
+                <subsubsection>
+                    <title>Modelos</title>
+                    <p><b>Aluno:</b></p>
+                    <list>
+                        <ul>código/identificador único;</ul>
+                        <ul>nome;</ul>
+                        <ul>data de nascimento;</ul>
+                        <ul>curso em que está matriculado;</ul>
+                        <ul>ano do curso que frequenta;</ul>
+                        <ul>instrumento que toca;</ul>
+                    </list>
+                    <image path="dtdAlunos.png"><i>Schema</i> representativo da estrutura do ficheiro <i>XML</i> que suporta a informação dos alunos.</image>
+                    <p><b>Professor:</b></p>
+                    <list>
+                        <ul>código/identificador único;</ul>
+                        <ul>nome;</ul>
+                        <ul>data de nascimento;</ul>
+                        <ul>abilitação académica (que nível de formação tem e em quê);</ul>
+                        <ul>curso que lecciona;</ul>
+                    </list>
+                    <image path="dtdProfessores.png"><i>Schema</i> representativo da estrutura do ficheiro <i>XML</i> que suporta a informação dos professores.</image>
+                    <p><b>Audição:</b></p>
+                    <list>
+                        <ul>nome/título;</ul>
+                        <ul>local;</ul>
+                        <ul>data;</ul>
+                        <ul>duração esperada;</ul>
+                        <ul>hora de inicio;</ul>
+                        <ul>atuaçoes: cada atuaçao tem um nome, duração e uma lista de alunos e professores;</ul>
+                    </list>
+                    <image path="dtdAudicoes.png"><i>Schema</i> representativo da estrutura do ficheiro <i>XML</i> que suporta a informação das audições.</image>
+                </subsubsection>
+            </subsection>
+            <subsection>
+                <title>Funcionalidades</title>
+                <p>Passamos agora a descrever detalhadamente como foi implementada cada uma das funcionalidades que o nosso sistema tem para oferecer e todas as decisões tomadas em relação a elas.</p>
+                <subsubsection>
+                    <title>Listar Alunos/Professores</title>
+                    <p>Os alunos e professores são listados da mesma forma: a partir do ficheiro <i>XML</i> pré-definido (alunos.xml) é gerado um ficheiro .js através de um processador <i>XSLT</i> que contém algumas informações sobre os elementos (id, nome e instrumento/curso) guardadas em arrays. Na página em que é apresentada a listagem é carregado um outro .js que povoa a tabela de acordo com os arrays de informações disponíveis. São ainda adicionados para cada elemento três botões que dão acesso às funcionalidades de consultar, alterar e remover.</p>
+                    <p>A tabela em que são apresentados os resultados é paginada, ou seja, são apresentados no máximo 30 resultados por página e é possível navegar para outras páginas. Isto foi conseguido através de uma biblioteca <i>javascript</i> já existente chamada <i>pagination.js</i>.</p>
+                    <image path="listarAlunos.png">Exemplo da listagem de alunos.</image>
+                    <p>Segue-se o ficheiro .js utilizado para povoar a tabela de alunos, sendo que a <i>script</i> para povoar a tabela dos professores é idêntica.</p>
+                    <code>
+        var index=0;
+        $(document).ready(function(){
+        for(index=0;index &lt; nomes.length;index++){
+            $("#alunos").append("&lt;tr>&lt;td>"+ids[index]+"&lt;/td&gt;
+            &lt;td&gt;"+nomes[index]+"&lt;/td&gt;
+            &lt;td&gt;"+instrumentos[index]+"&lt;/td&gt;
+            &lt;td&gt;&lt;input type=\"button\" onclick=\"location.href=\'alterarAluno.php?idAluno="+ids[index]+"\'\" value=\"Alterar\"/&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;input type=\"button\" onclick=\"location.href=\'removerAluno.php?idAluno="+ids[index]+"\'\" value=\"Remover\"/&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;input type=\"button\" onclick=\"location.href=\'consultarAluno.php?idAluno="+ids[index]+"\'\" value=\"Consultar\"/&gt;&lt;/td&gt;
+                    &lt;/tr&gt;");
+                        }
+                        });
+                    </code>
+                </subsubsection>
+                <subsubsection>
+                    <title>Adicionar um Aluno/Professor</title>
+                    <p>O ato de adicionar um aluno ou professor ao sistema é feito através de um formulário <i>HTML</i> com uma <i>script</i> de atendimento em <i>PHP</i> que utilizando <i>DOM</i> adiciona um novo elemento ao ficheiro <i>XML</i> com as informações recebidas do formulário.</p>
+                    <p>De seguida mostra-se a <i>script PHP</i> utilizada para adicionar os elementos ao <i>XML</i>:</p>
+                    <code>
+&lt;?php
+$logs = new DOMDocument(); 
+$logs-&gt;load('alunos.xml');
+ 
+$log = $logs-&gt;createElement('aluno');
+$id = $logs-&gt;createAttribute('id');
+$id-&gt;value = $_GET['id'];
+$nome = $logs-&gt;createElement('nome',$_GET['nome']);
+$dataNasc = $logs-&gt;createElement('dataNasc',$_GET['dataNasc']);
+$curso = $logs-&gt;createElement('curso',$_GET['curso']);
+$anoCurso = $logs-&gt;createElement('anoCurso',$_GET['ano']);
+$instrumento = $logs-&gt;createElement('instrumento',$_GET['instrumentos']);
+ 
+$log-&gt;appendChild($id);
+$log-&gt;appendChild($nome);
+$log-&gt;appendChild($dataNasc);
+$log-&gt;appendChild($curso);
+$log-&gt;appendChild($anoCurso);
+$log-&gt;appendChild($instrumento);
+ 
+$logs-&gt;documentElement-&gt;appendChild($log);
+ 
+$logs-&gt;save("alunos.xml");
+
+header("Location:alunos.html");
+                    </code>
+                    <p>Seguem-se exemplos ilustrativos dos formulários de criação de um aluno e de um professor.</p>
+                    <image path="adicionarAluno.png">Exemplo de preenchimento do formulário de criação de um aluno.</image>
+                    <image path="adicionarProfessor.png">Exemplo de preenchimento do formulário de criação de um professor.</image>
+                </subsubsection>
+                <subsubsection>
+                    <title>Alterar um Aluno/Professor</title>
+                    <p>A funcionalidade de alterar um aluno ou professor é também ela processada a partir de um formulário <i>HTML</i>, semelhante ao respetivo para adicionar, mas já inicialmente preenchido com as informações pré-alteração do aluno ou professor escolhido. Assumimos que o id de um aluno não pode ser alterado pois isso não faria grande sentido.</p>
+                    <p>Após feitas as alterações no formulário e submetido o mesmo é chamada a <i>script</i> de atendimento em <i>PHP</i> utilizando <i>SimpleXML</i> que altera o nodo respetivo do <i>XML</i> com as informações do formulário.</p>
+                    <p> Segue-se a <i>script</i> utilizada para preencher o formulário com os dados do aluno escolhido (funciona igual para o professor).</p>
+                    <code>
+&lt;?php
+                            
+include('consultarAluno.html');
+
+$id = $_REQUEST['idAluno'];
+
+$logs = simplexml_load_file("alunos.xml");
+  
+$aluno = $logs-&gt;xpath("//aluno[@id='".$id."']");
+
+echo "&lt;div class='newFormDiv'&gt;";
+echo "&lt;form action='doAlterarAluno.php' class='newForm'&gt;";
+echo "Id: &lt;input type='text' name='id' value='".(string)$aluno[0]['id']."'size='3' readonly&gt; &lt;br/&gt;";
+echo "Nome: &lt;input type='text' name='nome' value='".(string)$aluno[0]-&gt;nome."'size='45'&gt; &lt;br/&gt;";
+echo "Data de Nascimento: &lt;input type='text' name='data'value='".(string)$aluno[0]-&gt;dataNasc."' size='6'&gt; &lt;br/&gt;";
+echo "Curso: &lt;select name='cursos' id='cursos'&gt;&lt;option selected='selected'&gt;".(string)$aluno[0]-&gt;curso."&lt;/option&gt;&lt;/select&gt;&lt;br/&gt;";
+echo "Ano do Curso: &lt;input type='text' name='ano' value='".(string)$aluno[0]-&gt;anoCurso."'size='1'&gt;&lt;br/&gt;"; 
+echo "Instrumento: &lt;select name='instrumentos' id='instrumentos'&gt;&lt;option selected='selected'&gt;".(string)$aluno[0]-&gt;instrumento."&lt;/option&gt;&lt;/select&gt;&lt;br/&gt;";
+echo "&lt;center&gt;&lt;input type='submit' id='bigButton' value='Alterar'&gt; &lt;/center&gt;";
+?&gt;
+                    </code>
+                    <p>Para além desta <i>script</i> juntamos ainda a que trata de alterar os valores no <i>XML</i>:</p>
+                    <code>
+&lt;?php
+                            
+$oldId = $_REQUEST['id'];
+
+$logs = simplexml_load_file("alunos.xml");
+  
+$alunos= $logs-&gt;xpath("//aluno[@id='".$oldId."']");
+	
+	foreach ($alunos as $aluno) {
+		$aluno-&gt;nome = $_REQUEST['nome'];
+		$aluno-&gt;dataNasc = $_REQUEST['data'];
+		$aluno-&gt;curso= $_REQUEST['cursos'];
+		$aluno-&gt;anoCurso = $_REQUEST['ano'];
+		$aluno-&gt;instrumento = $_REQUEST['instrumentos'];
+	}
+	
+header("Location:alunos.html");
+$logs-&gt;asXML('alunos.xml');
+?&gt;
+                    </code>
+                </subsubsection>
+                <subsubsection>
+                    <title>Remover um Aluno/Professor</title>
+                    <p>Para remover um aluno ou professor do sistema recorremos novamente ao <i>DOM</i> numa <i>script PHP</i> que recebe como argumento o id do aluno ou professor a remover e facilmente o remove do documento <i>XML</i> correspondente.</p>
+                    <p>Segue-se a <i>script</i> de remoção de um aluno, sendo que a de um professor é semelhante.</p>
+                    <code>
+&lt;?php 
+                            
+$logs = new DOMDocument(); 
+$logs-&gt;load('alunos.xml');
+
+$alunos = $logs-&gt;getElementsByTagName('aluno');
+
+foreach ($alunos as $aluno) {
+	$id = $aluno-&gt;getAttribute("id");
+	if($id == $_REQUEST['idAluno']){
+    	$aluno-&gt;parentNode-&gt;removeChild($aluno);}
+	}
+	
+$logs-&gt;save("alunos.xml");
+header("Location:alunos.html");
+?&gt;
+                    </code>
+                </subsubsection>
+                <subsubsection>
+                    <title>Adicionar uma Audição</title>
+                    <p>Uma das funcionalidades que a plataforma deve oferecer é o planeamento/adição de uma audição à base de dados da escola.</p>
+                    <p>Este planeamento será feito através de um simples ficheiro de texto em que o utilizador poderá introduzir os dados da audição de acordo com algumas regras especificadas por uma gramática desenvolvida por nós.</p>
+                    <code>
+                        grammar planeadorAudicoes;
+                        
+                        planeadorAudicoes: audicao;
+                        
+                        audicao: 'Audicao' nome 'Local:' local 'Data:' data 'Inicio:' hora 'Duracao:' duracao plano;
+                        
+                        plano: atuacao (';' atuacao)*;
+                        
+                        atuacao: nome 'Alunos:' alunos 'Professores:' professores 'Pecas:' pecas 'Duracao:' duracao;
+                        
+                        alunos : aluno (',' aluno)*;
+                        
+                        data: DATA;
+                        
+                        duracao: hora;
+                        
+                        hora: INT ':' INT;
+                        
+                        aluno: IDA; 
+                        
+                        professores: professor (',' professor)*;
+                        
+                        professor: IDP;
+                        
+                        pecas: peca (',' peca)*;
+                        
+                        peca: IDO;
+                    </code>
+                    <p>Essa gramática foi totalmente desenvolvida utilizando <i>ANTLR</i> e mais tarde completada com atributos e recorrendo a funcionalidades do <i>Java</i> para as ações semânticas.</p>
+                    <p>Para além de validar o formato do ficheiro de planeamento de uma audição fornecido pelo utilizador esta gramática terá a função de verificar se a informação inserida está de acordo com a base de dados (alunos existem, professor exite, obras existem...) e, caso tudo esteja correto, adicionar a informação sobre a audição à base de dados da escola.</p>
+                    <p>Sendo a nossa base de dados um conjunto de ficheiros <i>XML</i> tivemos de recorrer a algumas bibliotecas do <i>Java</i> com funções especifícas para podermos consultar e manipular os seus dados.</p>
+                </subsubsection>
+                <subsubsection>
+                    <title>Alterar uma Audição</title>
+                </subsubsection>
+                <subsubsection>
+                    <title>Remover uma Audição</title>
+                </subsubsection>
+            </subsection>
+        </section>
+        <section>
             <title>Notas Finais</title>
             <subsection>
                 <title>Conclusão</title>
-               <p>Em conclusão, vemos este projeto como mais um forma de pôr em prática os conhecimentos adquiridos e as ferramentas disponibilizadas no perfil de Processamento de Linguagens e Conhecimento durante o 1º Semestre. Como o enunciado deste trabalho prático implica um domínio de todos os conceitos abordados nas aulas, este ajudou a consolidar os conhecimentos e a combater algumas dificuldades que tínhamos anteriormente.</p>
-               <p>Apesar da abordagem deste enunciado ser centrada inicialmente no formato dos ficheiros, se estes seguirem as normas especificadas não põem em causa os dados armazenados na base de dados. Assim é, obviamente, necessário utilizar validações para a base de dados não ficar inconsistente.</p>
-               <p>Depois de uma avaliação ponderada, o grupo considerou que os requisitos pedidos foram cumpridos. O grupo acredita que este projeto, para além de ser viável, é também um excelente oportunidade de criar algo com alguma importância e por isso o grupo está satisfeito com o trabalho realizado.</p>
             </subsection>
             <subsection>
                 <title>Trabalho Futuro</title>
-               <p>Em relação a algumas melhorias e a um possível trabalho futuro que possamos desenvolver, destacam-se as seguintes:</p>
-                <ul>
-                    <li><p>Melhorar as views, em termos de visualização e validação de erros.</p></li>
-                    <li><p>Adicionar à Dashboard, os locais e as profissões para ter uma perpectiva mais interessante sobre a informação.</p></li>
-                    <li><p>E por nós considerada, a melhoria que seria mais crucial neste projeto, era tornar as pessoas totalmente únicas, através de comparações com as suas relações entre pais e filhos, etc. Neste momento, o único elemento de distinção entre as pessoas é o nome, pois é a única que coisa que conseguimos retirar dos arquivos biográficos e fotográficos.</p></li>
-                </ul>
             </subsection>
         </section>
     </body>

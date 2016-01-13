@@ -16,5 +16,5 @@ echo "Data de Nascimento: <input type='text' name='data'value='".(string)$aluno[
 echo "Curso: <select name='cursos' id='cursos'><option selected='selected'>".(string)$aluno[0]->curso."</option></select><br/>";
 echo "Ano do Curso: <input type='text' name='ano' value='".(string)$aluno[0]->anoCurso."'size='1'><br/>"; 
 echo "Instrumento: <select name='instrumentos' id='instrumentos'><option selected='selected'>".(string)$aluno[0]->instrumento."</option></select><br/>";
-echo "<center><input type='submit' id='bigButton' value='Alterar'> </center>";
+echo "<center><input type='submit' id='bigButton' onclick=\"validar()\" value='Alterar'> </center>";
 ?>

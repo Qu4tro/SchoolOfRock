@@ -1,9 +1,6 @@
 <?php
 	$logs = new DOMDocument(); 
 	$logs->load('alunos.xml');
-
-	$xsl = new DOMDocument;
-	$xsl->load('alunos.xsl');
 	 
 	$log = $logs->createElement('aluno');
 	$id = $logs->createAttribute('id');
@@ -24,11 +21,6 @@
 	$logs->documentElement->appendChild($log);
 	 
 	$logs->save("alunos.xml");
-
-	$proc = new XSLTProcessor;
-	$proc->importStyleSheet($xsl); 
-
-	$proc->transformToXML($logs);
 
 	header("Location:alunos.html");
 ?>

@@ -58,6 +58,11 @@
         <section>
             <title>Desenvolvimento</title>
             <subsection>
+                <title>Arquitetura do Sistema</title>
+                <p>Para começar a descrição dotrabalho que realizamos segue-se um desenho da arquitetura do sistema para que seja facilmente perceptível qual a abordagem que utilizamos.</p>
+                <image path="PLC.png">Desenho da arquitetura do Sistema</image>
+            </subsection>
+            <subsection>
                 <title>Base de Dados</title>
                 <p>Decidimos utilizar ficheiros <i>XML</i> para guardar todos os dados relevantes da escola de música: alunos, professores, cursos, instrumentos, audições, obras e compositores. Para cada uma destas entidades existe um ficheiro <i>XML</i> que lhe oferece suporte.</p>
                 <p>Passamos então a descrever a estrutura dos documentos <i>XML</i> utilizados para suportar toda a indormação do sistema.</p>
@@ -100,7 +105,7 @@
                 <subsubsection>
                     <title>Listar Alunos/Professores</title>
                     <p>Os alunos e professores são listados da mesma forma: a partir do ficheiro <i>XML</i> pré-definido (alunos.xml) é gerado um ficheiro .js através de um processador <i>XSLT</i> que contém algumas informações sobre os elementos (id, nome e instrumento/curso) guardadas em arrays. Na página em que é apresentada a listagem é carregado um outro .js que povoa a tabela de acordo com os arrays de informações disponíveis. São ainda adicionados para cada elemento três botões que dão acesso às funcionalidades de consultar, alterar e remover.</p>
-                    <p>A tabela em que são apresentados os resultados é paginada, ou seja, são apresentados no máximo 30 resultados por página e é possível navegar para outras páginas. Isto foi conseguido através de uma biblioteca <i>javascript</i> já existente chamada <i>pagination.js</i>.</p>
+                    <p>A tabela em que são apresentados os resultados é paginada, ou seja, são apresentados no máximo 20 resultados por página e é possível navegar para outras páginas. Isto foi conseguido através de uma biblioteca <i>javascript</i> já existente chamada <i>pagination.js</i>.</p>
                     <image path="listarAlunos.png">Exemplo da listagem de alunos.</image>
                     <p>Segue-se o ficheiro .js utilizado para povoar a tabela de alunos, sendo que a <i>script</i> para povoar a tabela dos professores é idêntica.</p>
                     <code>

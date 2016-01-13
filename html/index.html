@@ -3,9 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>CHANGE THIS</title>
+        <title>Gestor de Audições</title>
+         <link rel="stylesheet" href="bootstrap.css" type"text/css" media="all"/>
         <link rel="stylesheet" href="index.css" type="text/css" media="all" />
-
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="listarAudicoes.js"></script>
+        <script src="proximaAudicao.js"></script>
+        <script src="moment.js"></script>
     </head>
 
     <body>
@@ -20,12 +25,9 @@
         </table>
 
         <div id="nextAuditionsBox">
-            <p class="nextEvent">Próximo Evento</p> <br/>
-            <div>
-                <p class="event">Récita 1º Dezembro</p> 
-                <p class="detailsEvent">1 de Dezembro, 20h-28h, Entrada a 5€</p> 
-                <p class="detailsEvent">Theatro Circo</p>
-            </div>
+            <p class="nextEvent">Próxima Audição</p> <br/>
+            <table id="proximaAudicao">
+            </table>
         </div>
 
 

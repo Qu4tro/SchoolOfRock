@@ -3,8 +3,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Audições</title>
+        <link rel="stylesheet" href="bootstrap.css" type"text/css" media="all"/>
         <link rel="stylesheet" href="index.css" type="text/css" media="all" />
-        <link rel="stylesheet" href="audicoes.css" type="text/css" media="all" />
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="pagination.js"></script>
@@ -14,7 +14,7 @@
 
         <script type="text/javaScript"> 
             $(document).ready(function(){       
-                $('#audicoes').tablePaginate({navigateType:'navigator',recordPerPage:30,buttonPosition:'after',});
+                $('#audicoes').tablePaginate({navigateType:'navigator',recordPerPage:20,buttonPosition:'after',});
             });
 
         </script>
@@ -22,38 +22,37 @@
     </head>
 
     <body>
-        <table id="header">
+        <table style="font-size:13px"id="header">
             <tr>
                 <td class="menu_option logo"><a href="index.html">&#8962;</a></td>
                 <td class="menu_option"><a href="alunos.html">Alunos</a></td>
-                <td class="menu_option"><a href="professores.html">Docentes</a></td>
+                <td class="menu_option"><a href="professores.html">Professores</a></td>
                 <td class="menu_optionactive"><a href="audicoes.html">Audições</a></td>
             </tr>
         </table>
 
         <div style="margin-top:2%"><center>
-            Filtrar: <select onchange="filtrar()" id="filtrar">
+           <p style="color:white"> Filtrar: <select style="color:black"onchange="filtrar()" id="filtrar"></p>
                         <option selected="selected">Todas</option>
                         <option id="passadas">Passadas</option>
                         <option id="futuras">Futuras</option>
                     </select>
         </div>
         <div>
-            <center><table class="tableListing" id="audicoes">
+            <center><table style="margin-top:1%; font-size:13px" class="table-condensed table-bordered table-striped" id="audicoes">
             <thead>
                <tr>
-                    <td>Id</td>
-                    <td>Nome</td>
-                    <td>Data</td>
-                    <td>Local</td>
-                    <td></td>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Data</th>
+                    <th>Local</th>
                 </tr>
             </thead>
             </table></center>   
         </div>
         <br/>
         <center>
-            <input type="button" id="bigButton" onclick="location.href='novaAudicao.html';" value="Nova audição"/>
+            <input type="button"  style="margin-top:2%; margin-bottom:2%"class="btn btn-default" onclick="location.href='novaAudicao.html';" value="Nova audição"/>
         </center>
 
     </body>

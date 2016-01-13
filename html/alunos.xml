@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="alunos.xsl"?>
 <alunos>
     <aluno id="A1510">
-        <nome>ADEMAR FONTES DE MAGALHAES GONCALVES</nome>
+        <nome></nome>
         <dataNasc>2003-1-3</dataNasc>
         <curso>CB2</curso>
         <anoCurso>5</anoCurso>
@@ -2535,4 +2535,4 @@
         <anoCurso>2</anoCurso>
         <instrumento>Clarinete</instrumento>
     </aluno>
-<aluno id="sadas"><nome>dsada</nome><dataNasc>sadasd</dataNasc><curso>sadad</curso><anoCurso>sdad</anoCurso><instrumento>Cornetim</instrumento></aluno><aluno id="dsad"><nome>dsad</nome><dataNasc>sdasd</dataNasc><curso>sadasd</curso><anoCurso>dsada</anoCurso><instrumento>Caixa</instrumento></aluno><aluno id="a67665"><nome>Patrícia Amorim Barros</nome><dataNasc>1994-02-24</dataNasc><curso/><anoCurso>1</anoCurso><instrumento>Corne Inglês</instrumento></aluno></alunos>
+<aluno id="sadas"><nome>dsada</nome><dataNasc>sadasd</dataNasc><curso>sadad</curso><anoCurso>sdad</anoCurso><instrumento>Cornetim</instrumento></aluno><aluno id="dsad"><nome>dsad</nome><dataNasc>sdasd</dataNasc><curso>sadasd</curso><anoCurso>dsada</anoCurso><instrumento>Caixa</instrumento></aluno><aluno id="a67665"><nome>Patrícia Amorim Barros</nome><dataNasc>1994-02-24</dataNasc><curso/><anoCurso>1</anoCurso><instrumento>Corne Inglês</instrumento></aluno><aluno id="a67665"><nome>Patrícia Amorim Barros</nome><dataNasc>1994-02-24</dataNasc><curso/><anoCurso>1</anoCurso><instrumento>Oboé</instrumento></aluno><aluno id=""><nome/><dataNasc/><curso/><anoCurso/><instrumento>Badalo</instrumento></aluno><aluno id=""><nome/><dataNasc/><curso/><anoCurso/><instrumento>Badalo</instrumento></aluno><aluno id=""><nome/><dataNasc/><curso/><anoCurso/><instrumento/></aluno><aluno id=""><nome/><dataNasc/><curso/><anoCurso/><instrumento/></aluno><aluno id=""><nome/><dataNasc/><curso/><anoCurso/><instrumento/></aluno><aluno id=""><nome/><dataNasc/><curso/><anoCurso/><instrumento/></aluno><aluno id=""><nome/><dataNasc/><curso/><anoCurso/><instrumento>Badalo</instrumento></aluno><aluno id=""><nome/><dataNasc/><curso/><anoCurso/><instrumento>Badalo</instrumento></aluno><aluno id="sdasd"><nome>dsda</nome><dataNasc/><curso/><anoCurso/><instrumento>Badalo</instrumento></aluno><aluno id="sdasd"><nome>sdadasd</nome><dataNasc>sadad</dataNasc><curso/><anoCurso>sadads</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="dsada"><nome>dasda</nome><dataNasc>dsada</dataNasc><curso/><anoCurso/><instrumento>Badalo</instrumento></aluno><aluno id="sdsad"><nome>sadsad</nome><dataNasc>dsad</dataNasc><curso/><anoCurso/><instrumento>Badalo</instrumento></aluno><aluno id="sadasd"><nome>sadassad</nome><dataNasc>dsadas</dataNasc><curso/><anoCurso/><instrumento>Badalo</instrumento></aluno><aluno id=""><nome/><dataNasc/><curso/><anoCurso/><instrumento>Badalo</instrumento></aluno></alunos>

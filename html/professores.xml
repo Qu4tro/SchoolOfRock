@@ -2,12 +2,12 @@
 <professores>
     <professor id="P1">
         <nome>ALVARO JOSE DE CASTRO MOREIRA DA SILVA</nome>
-        <dataNasc>1990-2-19</dataNasc>
+        <dataNasc></dataNasc>
         <habilitacoes>Mestre em Piano</habilitacoes>
         <curso>Curso Básico de Harpa</curso>
     </professor>
     <professor id="P2">
-        <nome>ANDRE FILIPE AZEVEDO SOUSA</nome>
+        <nome/>
         <dataNasc>1982-7-1</dataNasc>
         <habilitacoes>Licenciado em Corne Inglês</habilitacoes>
         <curso>Curso Básico de Corne Inglês</curso>
@@ -570,4 +570,4 @@
         <habilitacoes>Licenciado em Clarinete</habilitacoes>
         <curso>Curso Básico de Clarinete</curso>
     </professor>
-</professores>
+<professor id=""><nome/><dataNasc/><curso/><habilitacoes/></professor></professores>

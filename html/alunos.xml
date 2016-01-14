@@ -8,10 +8,10 @@
         <instrumento>Violino</instrumento>
     </aluno>
     <aluno id="A32597">
-        <nome>ADERITO NELSON MIRANDA DE hgcg</nome>
-        <dataNasc>1998-11-14</dataNasc>
+        <nome/>
+        <dataNasc/>
         <curso>CB18</curso>
-        <anoCurso>3</anoCurso>
+        <anoCurso/>
         <instrumento>Tuba</instrumento>
     </aluno>
     <aluno id="A36539">
@@ -22,10 +22,10 @@
         <instrumento>Guitarra</instrumento>
     </aluno>
     <aluno id="A38165">
-        <nome>AFONSO DELERUE ARRIAGA</nome>
-        <dataNasc>2000-5-12</dataNasc>
+        <nome></nome>
+        <dataNasc></dataNasc>
         <curso>CB4</curso>
-        <anoCurso>4</anoCurso>
+        <anoCurso></anoCurso>
         <instrumento>Eufónio</instrumento>
     </aluno>
     <aluno id="A38176">

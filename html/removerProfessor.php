@@ -13,4 +13,9 @@
 
 	$logs->save("professores.xml");
 	header("Location:professores.html");
+
+	$proc = new XSLTProcessor;
+	$proc->importStyleSheet($xsl); 
+
+	$proc->transformToXML($logs);
 ?>

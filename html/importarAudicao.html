@@ -9,7 +9,7 @@
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="pagination.js"></script>
-        <script src="validarFichÃudicoes.js"></script>
+        <script src="validarFichAudicoes.js"></script>
 
         <script type="text/javaScript"> 
             $(document).ready(function(){       
@@ -31,9 +31,9 @@
         </table>
 
         <center><div class="newFormDiv">
-            <form style="margin-top:10%">
-            <input id="ficheiro" type="file"></input><br/>
-            <input type="submit" class="btn btn-default" onclick="validar()" value="Submeter"></input><br/><br/>
+            <form style="margin-top:10%" onsubmit="return validar()">
+            <input id="ficheiro" type="file"accept=".xml"></input><br/>
+            <input type="submit" class="btn btn-default" value="Submeter"></input><br/><br/>
         </form>
         </div></center>
 

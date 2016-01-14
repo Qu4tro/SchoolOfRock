@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <professores>
     <professor id="P1">
-        <nome>ALVARO JOSE DE CASTRO MOREIRA DA SILVA</nome>
+        <nome>ALVARO</nome>
         <dataNasc></dataNasc>
         <habilitacoes>Mestre em Piano</habilitacoes>
         <curso>Curso Básico de Harpa</curso>

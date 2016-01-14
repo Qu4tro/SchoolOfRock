@@ -21,12 +21,12 @@
             </tr>
         </table>
     <div class="newFormDiv">
-            <form class="newForm" action="addProfessor.php" method="get" name="adicionar">
+            <form class="newForm" onsubmit="return validar()" action="addProfessor.php" method="get" name="adicionar">
                 Id: <input type="text" size="5" name="id"> <br/>
                 Nome: <input type="text" size="30" name="nome"> <br/>
                 Data de Nascimento: <input type="text" size="10" name="dataNasc"> <br/>
                 Habilitações: <input type="text"size="20" name="habil"><br/>   
                 Curso: <select id="cursos" name="cursos"></select> <br/>
-                <center><input type="submit" id="bigButton"value="Adicionar" onclick="validar()"> </center>  
+                <center><input type="submit" id="bigButton"value="Adicionar"> </center>  
             </form>
         </div>

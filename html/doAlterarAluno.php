@@ -3,6 +3,11 @@
 $oldId = $_REQUEST['id'];
 
 $logs = simplexml_load_file("alunos.xml");
+
+
+$xsl = new DOMDocument;
+$xsl->load('alunos.xsl');
+
   
 $alunos= $logs->xpath("//aluno[@id='".$oldId."']");
 	
@@ -18,4 +23,9 @@ $alunos= $logs->xpath("//aluno[@id='".$oldId."']");
 
 header("Location:alunos.html");
 $logs->asXML('alunos.xml');
+
+$proc = new XSLTProcessor;
+$proc->importStyleSheet($xsl); 
+
+$proc->transformToXML($logs);
 ?>

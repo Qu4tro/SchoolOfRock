@@ -4,7 +4,7 @@
 	$logs->load('alunos.xml');
 
 	$xsl = new DOMDocument;
-+	$xsl->load('alunos.xsl');
+	$xsl->load('alunos.xsl');
 
 	$alunos = $logs->getElementsByTagName('aluno');
 

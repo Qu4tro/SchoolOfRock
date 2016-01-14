@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <professores>
     <professor id="P1">
-        <nome>ALVARO</nome>
+        <nome>Álvaro</nome>
         <dataNasc></dataNasc>
         <habilitacoes>Mestre em Piano</habilitacoes>
         <curso>Curso Básico de Harpa</curso>
     </professor>
     <professor id="P2">
-        <nome/>
+        <nome>Rui</nome>
         <dataNasc>1982-7-1</dataNasc>
         <habilitacoes>Licenciado em Corne Inglês</habilitacoes>
         <curso>Curso Básico de Corne Inglês</curso>

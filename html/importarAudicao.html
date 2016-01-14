@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Audições</title>
+        <link rel="stylesheet" href="bootstrap.css" type"text/css" media="all"/>
+        <link rel="stylesheet" href="index.css" type="text/css" media="all" />
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="pagination.js"></script>
+        <script src="validarFichÃudicoes.js"></script>
+
+        <script type="text/javaScript"> 
+            $(document).ready(function(){       
+                $('#audicoes').tablePaginate({navigateType:'navigator',recordPerPage:20,buttonPosition:'after',});
+            });
+
+        </script>
+
+    </head>
+
+    <body>
+        <table style="font-size:13px"id="header">
+            <tr>
+                <td class="menu_option logo"><a href="index.html">&#8962;</a></td>
+                <td class="menu_option"><a href="alunos.html">Alunos</a></td>
+                <td class="menu_option"><a href="professores.html">Professores</a></td>
+                <td class="menu_optionactive"><a href="audicoes.html">Audições</a></td>
+            </tr>
+        </table>
+
+        <center><div class="newFormDiv">
+            <form style="margin-top:10%">
+            <input id="ficheiro" type="file"></input><br/>
+            <input type="submit" class="btn btn-default" onclick="validar()" value="Submeter"></input><br/><br/>
+        </form>
+        </div></center>
+
+
+    </body>
+
+</html>

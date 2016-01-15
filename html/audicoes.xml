@@ -8,7 +8,7 @@
 		<duracao>150 min</duracao>
 		<atuacoes>
 			<atuacao>
-				<nome>Atuacao 1</nome>
+				<nome>Ritmo Fluente</nome>
 				<duracao>40 min</duracao>
 				<alunos>
 					<aluno>A1510</aluno>
@@ -23,7 +23,7 @@
 				</obras>
 			</atuacao>
 			<atuacao>
-				<nome>Atuacao 2</nome>
+				<nome>Vários Ritmos</nome>
 				<duracao>50 min</duracao>
 				<alunos>
 					<aluno>A32597</aluno>
@@ -37,7 +37,21 @@
 					<obra>O1</obra>
 				</obras>
 			</atuacao>
-			
+			<atuacao>
+				<nome>Rapsódia</nome>
+				<duracao>50 min</duracao>
+				<alunos>
+					<aluno>A32597</aluno>
+					<aluno>A38165</aluno>
+				</alunos>
+				<professores>
+					<professor>P1</professor>
+					<professor>P2</professor>
+				</professores>
+				<obras>
+					<obra>O1</obra>
+				</obras>
+			</atuacao>
 		</atuacoes>
 	</audicao>
 </audicoes>

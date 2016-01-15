@@ -51,7 +51,7 @@
     <xsl:template match="audicao/atuacoes/atuacao/duracao"/>
     
     <xsl:template match="atuacoes">
-        <div style="background-color:#4AAAA5; height:400px" class="row">
+        <div style="background-color:#4AAAA5;" class="row">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
@@ -63,7 +63,7 @@
     </xsl:template>
     
     <xsl:template match="atuacoes/atuacao/nome">
-        <h2><xsl:value-of select="."/></h2>
+        <h2 style="margin-top:15%"><xsl:value-of select="."/></h2>
     </xsl:template>
     
     
@@ -77,7 +77,7 @@
     </xsl:template>
     
     <xsl:template match="atuacoes/atuacao/professores">
-        <p style="color:#35404F;font-size:13px">(Orientado por <xsl:apply-templates/>)</p>
+        <p style="color:#A3D39C;font-size:13px">(Orientado por <xsl:apply-templates/>)</p>
     </xsl:template>
     
     <xsl:template match="atuacoes/atuacao/professores/professor">
@@ -89,7 +89,7 @@
     </xsl:template>
     
     <xsl:template match="atuacoes/atuacao/obras">
-        em <xsl:apply-templates/>
+        <p style="margin-bottom:20%">em <xsl:apply-templates/></p>
     </xsl:template>
     
     <xsl:template match="atuacoes/atuacao/obras/obra">

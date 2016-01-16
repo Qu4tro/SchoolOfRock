@@ -52,15 +52,23 @@
             </subsection>
             <subsection>
                 <title>Ferramentas</title>
-               <p>ESCREVER</p>
+               <p>Para o desenvolvimento deste projeto foram necessárias várias ferramentas de desenvolvimento que passamos a nomear.</p>
+               <p>Para gerir o desenvolvimento de código em paralelo pelos dois membros da equipa utilizamos uma ferramenta de controlo de versões, o <i><b>Github</b></i>.</p>
+               <p>Para o desenvolvimento propriamente dito do projeto utilizamos <i><b>HTML</b></i>, <i><b>PHP</b></i> e <i><b>Javascript</b></i>. Recorremos ainda ao <i><b>CSS</b></i> para melhorar o aspeto estético do sistema. Utilizámos ainda algomas funcionalidades do <i><b>Bootsrap</b></i>, nomeadamente para a formatação das tabelas de listagem e dos botões.</p>
+               <p>Para lidar com os ficheiros de texto que guardam os dados do nosso sistema recorremos ao <i><b>XML</b></i> e utilizamos <i><b>XSL</b></i> para os transformar em ficheiros <i>javascript</i> e <i>html</i>. Utilizamos ainda <i><b>XSL-FO</b></i> para gerar um documento <i>PDF</i> a partir de um <i>XML</i></p>
+               <p>Utilizamos ainda <i><b>ANTLR</b></i> para criar uma linguagem de suporte a uma parte do nosso sistema.</p>
+               <p>Para facilitar o nosso trabalho recorremos a alguns <i>IDE's</i> como o <i><b>Oxygen</b></i> e o <i><b>Intelij</b></i>.</p>
             </subsection>
         </section>
         <section>
             <title>Desenvolvimento</title>
             <subsection>
                 <title>Arquitetura do Sistema</title>
-                <p>Para começar a descrição dotrabalho que realizamos segue-se um desenho da arquitetura do sistema para que seja facilmente perceptível qual a abordagem que utilizamos.</p>
+                <p>Para começar a descrição do trabalho que realizamos segue-se um desenho da arquitetura do sistema para que seja facilmente perceptível qual a abordagem que utilizamos.</p>
                 <image path="PLC.png">Desenho da arquitetura do Sistema</image>
+                <p>Apesar de o sistema ser um gestor de audições decidimos também manipular informação sobre os alunos e professores da escola de música.</p>
+                <p>O utilizador pode consultar toda a informação sobre essas três entidades, sendo que os dados são extraídos dos ficheiros <i>XML</i> pré-definidos (alunos.xml, professores.xml e audicoes.xml) através de um <i>XSL</i>.</p>
+                <p>ACABAR DESCRIÇÃO</p>
             </subsection>
             <subsection>
                 <title>Base de Dados</title>
@@ -106,7 +114,7 @@
                     <title>Listar Alunos/Professores</title>
                     <p>Os alunos e professores são listados da mesma forma: a partir do ficheiro <i>XML</i> pré-definido (alunos.xml) é gerado um ficheiro .js através de um processador <i>XSLT</i> que contém algumas informações sobre os elementos (id, nome e instrumento/curso) guardadas em arrays. Na página em que é apresentada a listagem é carregado um outro .js que povoa a tabela de acordo com os arrays de informações disponíveis. São ainda adicionados para cada elemento três botões que dão acesso às funcionalidades de consultar, alterar e remover.</p>
                     <p>A tabela em que são apresentados os resultados é paginada, ou seja, são apresentados no máximo 20 resultados por página e é possível navegar para outras páginas. Isto foi conseguido através de uma biblioteca <i>javascript</i> já existente chamada <i>pagination.js</i>.</p>
-                    <image path="listarAlunos.png">Exemplo da listagem de alunos.</image>
+                    <image path="listarAlunos.png">Exemplo da listagem de professores.</image>
                     <p>Segue-se o ficheiro .js utilizado para povoar a tabela de alunos, sendo que a <i>script</i> para povoar a tabela dos professores é idêntica.</p>
                     <code>
         var index=0;
@@ -207,6 +215,8 @@ header("Location:alunos.html");
 $logs-&gt;asXML('alunos.xml');
 ?&gt;
                     </code>
+                    <p>Segue-se um exemplo ilustrativo do formulário de alteração de um aluno.</p>
+                    <image path="alterarProfessor.png">Exemplo da alteração de um aluno.</image>
                 </subsubsection>
                 <subsubsection>
                     <title>Remover um Aluno/Professor</title>

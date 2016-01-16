@@ -22,10 +22,10 @@
         <instrumento>Guitarra</instrumento>
     </aluno>
     <aluno id="A38165">
-        <nome></nome>
-        <dataNasc></dataNasc>
+        <nome/>
+        <dataNasc/>
         <curso>CB4</curso>
-        <anoCurso></anoCurso>
+        <anoCurso/>
         <instrumento>Eufónio</instrumento>
     </aluno>
     <aluno id="A38176">
@@ -2562,4 +2562,4 @@
         <anoCurso>3</anoCurso>
         <instrumento>Contrabaixo</instrumento>
     </aluno>
-<aluno id="sdadsa"><nome>sadadsa</nome><dataNasc>sadasd</dataNasc><curso/><anoCurso>asdasd</anoCurso><instrumento>Badalo</instrumento></aluno></alunos>
+<aluno id="sdadsa"><nome>sadadsa</nome><dataNasc>sadasd</dataNasc><curso/><anoCurso>asdasd</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="a67665"><nome>Patrícia</nome><dataNasc>1994-02-24</dataNasc><curso/><anoCurso>1</anoCurso><instrumento>Badalo</instrumento></aluno></alunos>

@@ -7,15 +7,18 @@ $(document).ready(function(){
 	indice = 0;
 
 	for(index=0;index<ids.length;index++){
-			if((moment(datas[index]).isBefore(proxima)===true) && (moment(datas[index]).isAfter(proxima)===true)){
+			if((moment(datas[index]).isBefore(proxima)===true) && (moment(datas[index]).isAfter(moment())===true)){
 				proxima = datas[index];
 				indice = index;
 			}
 		}
+		var div = document.getElementById('nextAuditionsBox');
+
 	if(moment(proxima).isAfter(moment())){
-		("#proximaAudicao").append("<tr><th>Nome:</th><td>"+nomes[indice]+"</td></tr><tr><th>Data:</th><td>"+datas[indice]+"</td></tr><tr><th>Local:</th><td>"+locais[indice]+"</td></tr>");
+
+		div.innerHTML = div.innerHTML + "<p>"+nomes[indice]+"</p><p>"+datas[indice]+"</p><br/><input type=\"button\" class=\"btn btn-default\" onclick=\"location.href=\'consultarAudicao.php?idAudicao="+ids[indice]+"\'\" value=\"Consultar\"/>";
 	}
 	else{
-		("#proximaAudicao").append("<tr><th>Não existem audições futuras.</th></tr>");
+		div.innerHTML = div.innerHTML + "<p>Não existem audições futuras.</p>";
 	}
 });

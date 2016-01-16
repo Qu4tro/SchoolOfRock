@@ -1,6 +1,11 @@
 <?php
 	$logs = new DOMDocument(); 
 	$logs->load('alunos.xml');
+
+	$xslt = new XSLTProcessor();
+	$XSL = new DOMDocument();
+	$XSL->load('alunos.xsl',LIBXML_NOCDATA);
+	$xslt->importStylesheet($XSL);
 	 
 	$log = $logs->createElement('aluno');
 	$id = $logs->createAttribute('id');
@@ -21,6 +26,9 @@
 	$logs->documentElement->appendChild($log);
 	 
 	$logs->save("alunos.xml");
+
+	$alunosJS = fopen('../listarAlunos.js','w');
+	fwrite($alunosJS,$xslt->transformToXML($logs));
 
 	header("Location:alunos.html");
 ?>

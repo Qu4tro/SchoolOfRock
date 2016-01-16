@@ -96,26 +96,32 @@
                         <li><a style="color:#3498db" href="#d0e448">Alterar um Aluno/Professor</a></li>
                      </ul>
                      <ul>
-                        <li><a style="color:#3498db" href="#d0e502">Remover um Aluno/Professor</a></li>
+                        <li><a style="color:#3498db" href="#d0e502">Remover um Aluno/Professor/Audi&ccedil;&atilde;o</a></li>
                      </ul>
                      <ul>
-                        <li><a style="color:#3498db" href="#d0e529">Adicionar uma Audi&ccedil;&atilde;o</a></li>
+                        <li><a style="color:#3498db" href="#d0e529">Listar Audi&ccedil;&otilde;es</a></li>
                      </ul>
                      <ul>
-                        <li><a style="color:#3498db" href="#d0e565">Alterar uma Audi&ccedil;&atilde;o</a></li>
+                        <li><a style="color:#3498db" href="#d0e565">Adicionar uma Audi&ccedil;&atilde;o</a></li>
                      </ul>
                      <ul>
-                        <li><a style="color:#3498db" href="#d0e571">Remover uma Audi&ccedil;&atilde;o</a></li>
+                        <li><a style="color:#3498db" href="#d0e604">Alterar uma Audi&ccedil;&atilde;o</a></li>
+                     </ul>
+                     <ul>
+                        <li><a style="color:#3498db" href="#d0e613">Gerar PDF para uma Audi&ccedil;&atilde;o</a></li>
+                     </ul>
+                     <ul>
+                        <li><a style="color:#3498db" href="#d0e643">Gerar p&aacute;gina HTML para uma Audi&ccedil;&atilde;o</a></li>
                      </ul>
                   </ul>
                </ul>
                <ul>
-                  <li><a style="color:#2ecc71" href="#d0e579">Notas Finais</a></li>
+                  <li><a style="color:#2ecc71" href="#d0e688">Conclus&otilde;es</a></li>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d0e584">Conclus&atilde;o</a></li>
+                     <li><a style="color:#1abc9c" href="#d0e693">Reflex&atilde;o Crit&iacute;ca</a></li>
                   </ul>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d0e590">Trabalho Futuro</a></li>
+                     <li><a style="color:#1abc9c" href="#d0e740">Trabalho Futuro</a></li>
                   </ul>
                </ul>
             </div>
@@ -146,6 +152,18 @@
                </ul>
                <ul>
                   <li><a style="color:#3498db" href="#d0e498">Exemplo da altera&ccedil;&atilde;o de um aluno.</a></li>
+               </ul>
+               <ul>
+                  <li><a style="color:#3498db" href="#d0e555">Listagem de todas as audi&ccedil;&otilde;es</a></li>
+               </ul>
+               <ul>
+                  <li><a style="color:#3498db" href="#d0e558">Listagem das audi&ccedil;&otilde;es que j&aacute; decorreram</a></li>
+               </ul>
+               <ul>
+                  <li><a style="color:#3498db" href="#d0e561">Listagem das audi&ccedil;&otilde;es que ainda v&atilde;o decorrer</a></li>
+               </ul>
+               <ul>
+                  <li><a style="color:#3498db" href="#d0e681">HTML gerado para a audi&ccedil;&atilde;o</a></li>
                </ul>
             </div>
          </div>
@@ -460,12 +478,12 @@ $logs-&gt;asXML('alunos.xml');
                             
                             <a name="d0e502"></a>
                                 
-            <h4 style="color:#2ecc71">Remover um Aluno/Professor</h4>
+            <h4 style="color:#2ecc71">Remover um Aluno/Professor/Audi&ccedil;&atilde;o</h4>
                                 
-            <p>Para remover um aluno ou professor do sistema recorremos novamente ao <em>DOM</em> numa <em>script PHP</em> que recebe como argumento o id do aluno ou professor a remover e facilmente o remove do documento <em>XML</em> correspondente.
+            <p>Para remover um aluno,professor ou audi&ccedil;&atilde;o do sistema recorremos novamente ao <em>DOM</em> numa <em>script PHP</em> que recebe como argumento o id do aluno ou professor a remover e facilmente o remove do documento <em>XML</em> correspondente.
             </p>
                                 
-            <p>Segue-se a <em>script</em> de remo&ccedil;&atilde;o de um aluno, sendo que a de um professor &eacute; semelhante.
+            <p>Segue-se a <em>script</em> de remo&ccedil;&atilde;o de um aluno, sendo que a de um professor e de uma audi&ccedil;&atilde;o &eacute; semelhante.
             </p>
                                 <pre style="background-color:#F5FFFA">
 &lt;?php 
@@ -488,7 +506,31 @@ header("Location:alunos.html");
                             
                             <a name="d0e529"></a>
                                 
+            <h4 style="color:#2ecc71">Listar Audi&ccedil;&otilde;es</h4>
+                                
+            <p>A listagem de audi&ccedil;&otilde;es &eacute; feita de forma semelhante &agrave; listagem de alunos e professores mas com uma ligeira diferen&ccedil;a: existe
+               a op&ccedil;&atilde;o de filtrar as audi&ccedil;&otilde;es distinguindo as que ainda v&atilde;o decorrer das que j&aacute; decorreram.
+            </p>
+                                
+            <p>Para al&eacute;m disso para cada audi&ccedil;&atilde;o existem dois bot&otilde;es adicionais relativos &agrave;s funcionalidades de gerar um <em>PDF</em> e uma p&aacute;gina <em>HTML</em> para publicitar audi&ccedil;&atilde;o. Isto foi conseguido com o aux&iacute;lio de uma biblioteca <em>Javascript</em>, <em>moment.js</em> que oferece funcionalidades para lidar com datas.
+            </p>
+                                
+            <p>Seguem-se imagens ilustrativas da listagem de audi&ccedil;&otilde;es aplicando os filtros.</p>
+                                
+            <div class="col-center text-center"><a name="d0e555"></a><img src="audicoes.png"><br><p style="font-size:11px">Listagem de todas as audi&ccedil;&otilde;es</p>
+            </div>
+                                
+            <div class="col-center text-center"><a name="d0e558"></a><img src="audicoesPass.png"><br><p style="font-size:11px">Listagem das audi&ccedil;&otilde;es que j&aacute; decorreram</p>
+            </div>
+                                
+            <div class="col-center text-center"><a name="d0e561"></a><img src="audicoesFut.png"><br><p style="font-size:11px">Listagem das audi&ccedil;&otilde;es que ainda v&atilde;o decorrer</p>
+            </div>
+                            
+                            <a name="d0e565"></a>
+                                
             <h4 style="color:#2ecc71">Adicionar uma Audi&ccedil;&atilde;o</h4>
+                                
+            <p>4 COMPLETAR ESTA SEC&Ccedil;&Atilde;O COM O QUE TU FIZESTE</p>
                                 
             <p>Uma das funcionalidades que a plataforma deve oferecer &eacute; o planeamento/adi&ccedil;&atilde;o de uma audi&ccedil;&atilde;o &agrave; base de dados da escola.</p>
                                 
@@ -496,33 +538,33 @@ header("Location:alunos.html");
                de acordo com algumas regras especificadas por uma gram&aacute;tica desenvolvida por n&oacute;s.
             </p>
                                 <pre style="background-color:#F5FFFA">
-                        grammar planeadorAudicoes;
-                        
-                        planeadorAudicoes: audicao;
-                        
-                        audicao: 'Audicao' nome 'Local:' local 'Data:' data 'Inicio:' hora 'Duracao:' duracao plano;
-                        
-                        plano: atuacao (';' atuacao)*;
-                        
-                        atuacao: nome 'Alunos:' alunos 'Professores:' professores 'Pecas:' pecas 'Duracao:' duracao;
-                        
-                        alunos : aluno (',' aluno)*;
-                        
-                        data: DATA;
-                        
-                        duracao: hora;
-                        
-                        hora: INT ':' INT;
-                        
-                        aluno: IDA; 
-                        
-                        professores: professor (',' professor)*;
-                        
-                        professor: IDP;
-                        
-                        pecas: peca (',' peca)*;
-                        
-                        peca: IDO;
+grammar planeadorAudicoes;
+
+planeadorAudicoes: audicao;
+
+audicao: 'Audicao' nome 'Local:' local 'Data:' data 'Inicio:' hora 'Duracao:' duracao plano;
+
+plano: atuacao (';' atuacao)*;
+
+atuacao: nome 'Alunos:' alunos 'Professores:' professores 'Pecas:' pecas 'Duracao:' duracao;
+
+alunos : aluno (',' aluno)*;
+
+data: DATA;
+
+duracao: hora;
+
+hora: INT ':' INT;
+
+aluno: IDA; 
+
+professores: professor (',' professor)*;
+
+professor: IDP;
+
+pecas: peca (',' peca)*;
+
+peca: IDO;
                     </pre>
                                 <p>Essa gram&aacute;tica foi totalmente desenvolvida utilizando <em>ANTLR</em> e mais tarde completada com atributos e recorrendo a funcionalidades do <em>Java</em> para as a&ccedil;&otilde;es sem&acirc;nticas.
             </p>
@@ -535,41 +577,130 @@ header("Location:alunos.html");
             <p>Sendo a nossa base de dados um conjunto de ficheiros <em>XML</em> tivemos de recorrer a algumas bibliotecas do <em>Java</em> com fun&ccedil;&otilde;es especif&iacute;cas para podermos consultar e manipular os seus dados.
             </p>
                             
-                            <a name="d0e565"></a>
+                            <a name="d0e604"></a>
                                 
             <h4 style="color:#2ecc71">Alterar uma Audi&ccedil;&atilde;o</h4>
-                            
-                            <a name="d0e571"></a>
                                 
-            <h4 style="color:#2ecc71">Remover uma Audi&ccedil;&atilde;o</h4>
+            <p>AINDA NAO SEI COMO VAI SER</p>
+                            
+                            <a name="d0e613"></a>
+                                
+            <h4 style="color:#2ecc71">Gerar PDF para uma Audi&ccedil;&atilde;o</h4>
+                                
+            <p>Outra das funcionalidades que o nosso sistema oferece &eacute; a possibilidade de gerar um documento <em>PDF</em> para uma audi&ccedil;&atilde;o.
+            </p>
+                                
+            <p>Para isto foi necess&aacute;rio criar um <em>XSL</em> que gerasse um ficheiro <em>FO (Formatting objects)</em> que por sua vez gera um documento <em>PDF</em> para um determinado documento <em>XML</em>.
+            </p>
+                            
+                            <a name="d0e643"></a>
+                                
+            <h4 style="color:#2ecc71">Gerar p&aacute;gina HTML para uma Audi&ccedil;&atilde;o</h4>
+                                
+            <p>Para al&eacute;m do <em>PDF</em> &eacute; ainda poss&iacute;vel gerar uma p&aacute;gina <em>HTML</em> para publicitar uma audi&ccedil;&atilde;o.
+            </p>
+                                
+            <p>Isto &eacute; feito atrav&eacute;s de um <em>XSL</em> simples que transforma um <em>XML</em> num <em>HTML</em>.
+            </p>
+                                
+            <p>De seguida apresentamos o <em>XML</em> de uma audi&ccedil;&atilde;o e o resultado.
+            </p>
+                                <pre style="background-color:#F5FFFA">
+&lt;audicao id="A1"&gt;
+   &lt;nome&gt;R&eacute;cita 1&ordm; Dezembro&lt;/nome&gt;
+   &lt;data&gt;2040-12-01&lt;/data&gt;
+   &lt;local&gt;Theatro Circo&lt;/local&gt;
+   &lt;inicio&gt;22:30&lt;/inicio&gt;
+   &lt;duracao&gt;150 min&lt;/duracao&gt;
+   &lt;atuacoes&gt;
+       &lt;atuacao&gt;
+            &lt;nome&gt;Ritmo Fluente&lt;/nome&gt;
+            &lt;duracao&gt;40 min&lt;/duracao&gt;
+            &lt;alunos&gt;
+               &lt;aluno&gt;A1510&lt;/aluno&gt;
+               &lt;aluno&gt;A32597&lt;/aluno&gt;
+           &lt;/alunos&gt;
+           &lt;professores&gt;
+               &lt;professor&gt;P1&lt;/professor&gt;
+               &lt;professor&gt;P2&lt;/professor&gt;
+           &lt;/professores&gt;
+           &lt;obras&gt;
+               &lt;obra&gt;O134&lt;/obra&gt;
+           &lt;/obras&gt;
+       &lt;/atuacao&gt;
+       &lt;atuacao&gt;
+           &lt;nome&gt;V&aacute;rios Ritmos&lt;/nome&gt;
+           &lt;duracao&gt;50 min&lt;/duracao&gt;
+           &lt;alunos&gt;
+               &lt;aluno&gt;A32597&lt;/aluno&gt;
+               &lt;aluno&gt;A38165&lt;/aluno&gt;
+           &lt;/alunos&gt;
+           &lt;professores&gt;
+               &lt;professor&gt;P1&lt;/professor&gt;
+               &lt;professor&gt;P2&lt;/professor&gt;
+           &lt;/professores&gt;
+           &lt;obras&gt;
+               &lt;obra&gt;O1&lt;/obra&gt;
+           &lt;/obras&gt;
+       &lt;/atuacao&gt;
+       &lt;atuacao&gt;
+           &lt;nome&gt;Raps&oacute;dia&lt;/nome&gt;
+           &lt;duracao&gt;50 min&lt;/duracao&gt;
+           &lt;alunos&gt;
+               &lt;aluno&gt;A32597&lt;/aluno&gt;
+               &lt;aluno&gt;A38165&lt;/aluno&gt;
+           &lt;/alunos&gt;
+           &lt;professores&gt;
+               &lt;professor&gt;P1&lt;/professor&gt;
+               &lt;professor&gt;P2&lt;/professor&gt;
+           &lt;/professores&gt;
+           &lt;obras&gt;
+               &lt;obra&gt;O1&lt;/obra&gt;
+           &lt;/obras&gt;
+       &lt;/atuacao&gt;
+   &lt;/atuacoes&gt;
+&lt;/audicao&gt;
+                    </pre>
+                                <div class="col-center text-center"><a name="d0e681"></a><img src="audicaoHTML.png"><br><p style="font-size:11px">HTML gerado para a audi&ccedil;&atilde;o</p>
+            </div>
                             
                         
-                    <a name="d0e579"></a>
+                    <a name="d0e688"></a>
                         
-            <h2 style="color:#c0392b">Notas Finais</h2>
-                        <a name="d0e584"></a>
+            <h2 style="color:#c0392b">Conclus&otilde;es</h2>
+                        <a name="d0e693"></a>
                             
-            <h3 style="color:#e74c3c">Conclus&atilde;o</h3>
+            <h3 style="color:#e74c3c">Reflex&atilde;o Crit&iacute;ca</h3>
+                            
+            <p>Este trabalho permitiu-nos consolidar e dar uma aplica&ccedil;&atilde;o mais pr&aacute;tica aos conceitos leccionados durante todo o semestre nas
+               Unidades Curriculares de <strong>GCS</strong> e <strong>PRI</strong>.
+            </p>
+                            
+            <p>Revelou-se um projeto bastante interessante e &uacute;til na medida em que atrav&eacute;s da sua realiza&ccedil;&atilde;o foi poss&iacute;vel melhorarmos (e
+               at&eacute; aprendermos!) muito os nossos conhecimentos em termos de aplica&ccedil;&otilde;es <em>Web</em>.
+            </p>
+                            
+            <p>&Eacute; sempre positivo poder praticar o uso de novas tecnologias, como foi o caso do <em>PHP</em> que nunca haviamos utilizado ou mesmo o <em>javascript</em>. 
+            </p>
+                            
+            <p>Em termos de gram&aacute;ticas foi tamb&eacute;m interessante perceber que podem ser bastante utiliz&aacute;veis e &uacute;teis em casos reais.</p>
+                            
+            <p>O maior obst&aacute;culo que encontramos na realiza&ccedil;&atilde;o deste trabalho foi o facto de o <em>PHP</em> n&atilde;o suportar o <em>XSL 2.0</em>, o que fez com que tivessemos que encontrar alternativas para o <em>xsl:result-document</em> de forma a poder gerar documentos atrav&eacute;sdo <em>XSL</em></p>
                         
-                        <a name="d0e590"></a>
+                        <a name="d0e740"></a>
                             
             <h3 style="color:#e74c3c">Trabalho Futuro</h3>
+                            
+            <p>Como trabalho futuro fica , antes de mais, tornar a plataforma mais apelativa e atual visualmente. </p>
+                            
+            <p>Gostariamos ainda de alarg&aacute;-la de forma a lidar com mais informa&ccedil;&atilde;o (cursos, obras, compositores, grupos de alunos) e criar
+               funcionalidades de registo de v&aacute;rios tipos de utilizador (alunos, professores, gerentes das escolas) de forma a que se tornasse
+               uma plataforma completa para uma escola de m&uacute;sica em que se pudessem,por exemplo, marcar aulas e gerir hor&aacute;rios
+            </p>
                         
                     
          </div>
          <hr>
-         <div class="col-md-12">
-            <div class="row">
-                       
-                           
-                               
-                              
-               <p></p>
-                           
-                       
-                   
-            </div>
-         </div>
          <hr>
       </div>
    </body>

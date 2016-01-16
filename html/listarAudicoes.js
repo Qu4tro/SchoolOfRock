@@ -3,11 +3,7 @@
     "A2",
     ];
             var nomes=["Récita 1º Dezembro",
-    "Atuacao 1",
-    "Atuacao 2",
-    "Récita 1º Dezembro",
-    "Atuacao 1",
-    "Atuacao 2",
+    "Récita 1º Dezembro"
     ];
             var datas = ["2040-12-30",
     "2000-01-02",

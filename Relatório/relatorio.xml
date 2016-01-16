@@ -219,9 +219,9 @@ $logs-&gt;asXML('alunos.xml');
                     <image path="alterarProfessor.png">Exemplo da alteração de um aluno.</image>
                 </subsubsection>
                 <subsubsection>
-                    <title>Remover um Aluno/Professor</title>
-                    <p>Para remover um aluno ou professor do sistema recorremos novamente ao <i>DOM</i> numa <i>script PHP</i> que recebe como argumento o id do aluno ou professor a remover e facilmente o remove do documento <i>XML</i> correspondente.</p>
-                    <p>Segue-se a <i>script</i> de remoção de um aluno, sendo que a de um professor é semelhante.</p>
+                    <title>Remover um Aluno/Professor/Audição</title>
+                    <p>Para remover um aluno,professor ou audição do sistema recorremos novamente ao <i>DOM</i> numa <i>script PHP</i> que recebe como argumento o id do aluno ou professor a remover e facilmente o remove do documento <i>XML</i> correspondente.</p>
+                    <p>Segue-se a <i>script</i> de remoção de um aluno, sendo que a de um professor e de uma audição é semelhante.</p>
                     <code>
 &lt;?php 
                             
@@ -242,37 +242,47 @@ header("Location:alunos.html");
                     </code>
                 </subsubsection>
                 <subsubsection>
+                    <title>Listar Audições</title>
+                    <p>A listagem de audições é feita de forma semelhante à listagem de alunos e professores mas com uma ligeira diferença: existe a opção de filtrar as audições distinguindo as que ainda vão decorrer das que já decorreram.</p>
+                    <p>Para além disso para cada audição existem dois botões adicionais relativos às funcionalidades de gerar um <i>PDF</i> e uma página <i>HTML</i> para publicitar audição. Isto foi conseguido com o auxílio de uma biblioteca <i>Javascript</i>, <i>moment.js</i> que oferece funcionalidades para lidar com datas.</p>
+                    <p>Seguem-se imagens ilustrativas da listagem de audições aplicando os filtros.</p>
+                    <image path="audicoes.png">Listagem de todas as audições</image>
+                    <image path="audicoesPass.png">Listagem das audições que já decorreram</image>
+                    <image path="audicoesFut.png">Listagem das audições que ainda vão decorrer</image>
+                </subsubsection>
+                <subsubsection>
                     <title>Adicionar uma Audição</title>
+                    <p>4 COMPLETAR ESTA SECÇÃO COM O QUE TU FIZESTE</p>
                     <p>Uma das funcionalidades que a plataforma deve oferecer é o planeamento/adição de uma audição à base de dados da escola.</p>
                     <p>Este planeamento será feito através de um simples ficheiro de texto em que o utilizador poderá introduzir os dados da audição de acordo com algumas regras especificadas por uma gramática desenvolvida por nós.</p>
                     <code>
-                        grammar planeadorAudicoes;
-                        
-                        planeadorAudicoes: audicao;
-                        
-                        audicao: 'Audicao' nome 'Local:' local 'Data:' data 'Inicio:' hora 'Duracao:' duracao plano;
-                        
-                        plano: atuacao (';' atuacao)*;
-                        
-                        atuacao: nome 'Alunos:' alunos 'Professores:' professores 'Pecas:' pecas 'Duracao:' duracao;
-                        
-                        alunos : aluno (',' aluno)*;
-                        
-                        data: DATA;
-                        
-                        duracao: hora;
-                        
-                        hora: INT ':' INT;
-                        
-                        aluno: IDA; 
-                        
-                        professores: professor (',' professor)*;
-                        
-                        professor: IDP;
-                        
-                        pecas: peca (',' peca)*;
-                        
-                        peca: IDO;
+grammar planeadorAudicoes;
+
+planeadorAudicoes: audicao;
+
+audicao: 'Audicao' nome 'Local:' local 'Data:' data 'Inicio:' hora 'Duracao:' duracao plano;
+
+plano: atuacao (';' atuacao)*;
+
+atuacao: nome 'Alunos:' alunos 'Professores:' professores 'Pecas:' pecas 'Duracao:' duracao;
+
+alunos : aluno (',' aluno)*;
+
+data: DATA;
+
+duracao: hora;
+
+hora: INT ':' INT;
+
+aluno: IDA; 
+
+professores: professor (',' professor)*;
+
+professor: IDP;
+
+pecas: peca (',' peca)*;
+
+peca: IDO;
                     </code>
                     <p>Essa gramática foi totalmente desenvolvida utilizando <i>ANTLR</i> e mais tarde completada com atributos e recorrendo a funcionalidades do <i>Java</i> para as ações semânticas.</p>
                     <p>Para além de validar o formato do ficheiro de planeamento de uma audição fornecido pelo utilizador esta gramática terá a função de verificar se a informação inserida está de acordo com a base de dados (alunos existem, professor exite, obras existem...) e, caso tudo esteja correto, adicionar a informação sobre a audição à base de dados da escola.</p>
@@ -280,28 +290,93 @@ header("Location:alunos.html");
                 </subsubsection>
                 <subsubsection>
                     <title>Alterar uma Audição</title>
+                    <p>AINDA NAO SEI COMO VAI SER</p>
                 </subsubsection>
                 <subsubsection>
-                    <title>Remover uma Audição</title>
+                    <title>Gerar <i>PDF</i> para uma Audição</title>
+                    <p>Outra das funcionalidades que o nosso sistema oferece é a possibilidade de gerar um documento <i>PDF</i> para uma audição.</p>
+                    <p>Para isto foi necessário criar um <i>XSL</i> que gerasse um ficheiro <i>FO (Formatting objects)</i> que por sua vez gera um documento <i>PDF</i> para um determinado documento <i>XML</i>.</p>
+                </subsubsection>
+                <subsubsection>
+                    <title>Gerar página <i>HTML</i> para uma Audição</title>
+                    <p>Para além do <i>PDF</i> é ainda possível gerar uma página <i>HTML</i> para publicitar uma audição.</p>
+                    <p>Isto é feito através de um <i>XSL</i> simples que transforma um <i>XML</i> num <i>HTML</i>.</p>
+                    <p>De seguida apresentamos o <i>XML</i> de uma audição e o resultado.</p>
+                    <code>
+&lt;audicao id="A1">
+   &lt;nome&gt;Récita 1º Dezembro&lt;/nome&gt;
+   &lt;data&gt;2040-12-01&lt;/data&gt;
+   &lt;local&gt;Theatro Circo&lt;/local&gt;
+   &lt;inicio&gt;22:30&lt;/inicio&gt;
+   &lt;duracao&gt;150 min&lt;/duracao&gt;
+   &lt;atuacoes&gt;
+       &lt;atuacao&gt;
+            &lt;nome&gt;Ritmo Fluente&lt;/nome&gt;
+            &lt;duracao&gt;40 min&lt;/duracao&gt;
+            &lt;alunos&gt;
+               &lt;aluno&gt;A1510&lt;/aluno&gt;
+               &lt;aluno&gt;A32597&lt;/aluno&gt;
+           &lt;/alunos&gt;
+           &lt;professores&gt;
+               &lt;professor&gt;P1&lt;/professor&gt;
+               &lt;professor&gt;P2&lt;/professor&gt;
+           &lt;/professores&gt;
+           &lt;obras&gt;
+               &lt;obra&gt;O134&lt;/obra&gt;
+           &lt;/obras&gt;
+       &lt;/atuacao&gt;
+       &lt;atuacao&gt;
+           &lt;nome&gt;Vários Ritmos&lt;/nome&gt;
+           &lt;duracao&gt;50 min&lt;/duracao&gt;
+           &lt;alunos&gt;
+               &lt;aluno&gt;A32597&lt;/aluno&gt;
+               &lt;aluno&gt;A38165&lt;/aluno&gt;
+           &lt;/alunos&gt;
+           &lt;professores&gt;
+               &lt;professor&gt;P1&lt;/professor&gt;
+               &lt;professor&gt;P2&lt;/professor&gt;
+           &lt;/professores&gt;
+           &lt;obras&gt;
+               &lt;obra&gt;O1&lt;/obra&gt;
+           &lt;/obras&gt;
+       &lt;/atuacao&gt;
+       &lt;atuacao&gt;
+           &lt;nome&gt;Rapsódia&lt;/nome&gt;
+           &lt;duracao&gt;50 min&lt;/duracao&gt;
+           &lt;alunos&gt;
+               &lt;aluno&gt;A32597&lt;/aluno&gt;
+               &lt;aluno&gt;A38165&lt;/aluno&gt;
+           &lt;/alunos&gt;
+           &lt;professores&gt;
+               &lt;professor&gt;P1&lt;/professor&gt;
+               &lt;professor&gt;P2&lt;/professor&gt;
+           &lt;/professores&gt;
+           &lt;obras&gt;
+               &lt;obra&gt;O1&lt;/obra&gt;
+           &lt;/obras&gt;
+       &lt;/atuacao&gt;
+   &lt;/atuacoes&gt;
+&lt;/audicao&gt;
+                    </code>
+                    <image path="audicaoHTML.png"><i>HTML gerado para a audição</i></image>
                 </subsubsection>
             </subsection>
         </section>
         <section>
-            <title>Notas Finais</title>
+            <title>Conclusões</title>
             <subsection>
-                <title>Conclusão</title>
+                <title>Reflexão Critíca</title>
+                <p>Este trabalho permitiu-nos consolidar e dar uma aplicação mais prática aos conceitos leccionados durante todo o semestre nas Unidades Curriculares de <b>GCS</b> e <b>PRI</b>.</p>
+                <p>Revelou-se um projeto bastante interessante e útil na medida em que através da sua realização foi possível melhorarmos (e até aprendermos!) muito os nossos conhecimentos em termos de aplicações <i>Web</i>.</p>
+                <p>É sempre positivo poder praticar o uso de novas tecnologias, como foi o caso do <i>PHP</i> que nunca haviamos utilizado ou mesmo o <i>javascript</i>. </p>
+                <p>Em termos de gramáticas foi também interessante perceber que podem ser bastante utilizáveis e úteis em casos reais.</p>
+                <p>O maior obstáculo que encontramos na realização deste trabalho foi o facto de o <i>PHP</i> não suportar o <i>XSL 2.0</i>, o que fez com que tivessemos que encontrar alternativas para o <i>xsl:result-document</i> de forma a poder gerar documentos atravésdo <i>XSL</i></p>
             </subsection>
             <subsection>
                 <title>Trabalho Futuro</title>
+                <p>Como trabalho futuro fica , antes de mais, tornar a plataforma mais apelativa e atual visualmente. </p>
+                <p>Gostariamos ainda de alargá-la de forma a lidar com mais informação (cursos, obras, compositores, grupos de alunos) e criar funcionalidades de registo de vários tipos de utilizador (alunos, professores, gerentes das escolas) de forma a que se tornasse uma plataforma completa para uma escola de música em que se pudessem,por exemplo, marcar aulas e gerir horários</p>
             </subsection>
         </section>
     </body>
-    <back-matter>
-        <appendix-list>
-            <appendix>
-                <title></title>
-               <p></p>
-            </appendix>
-        </appendix-list>
-    </back-matter>
 </report>

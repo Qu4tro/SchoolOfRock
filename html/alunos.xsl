@@ -7,11 +7,9 @@
     <xsl:output method="text"/>
     
     <xsl:template match="/">
-        <xsl:result-document href="listarAlunos.js">
             var ids= [<xsl:apply-templates select="//aluno"/>];
             var nomes=[<xsl:apply-templates select="//nome"/>];
             var instrumentos = [<xsl:apply-templates select="//instrumento"/>];
-        </xsl:result-document>
     </xsl:template>
     
     <xsl:template match="aluno">"<xsl:value-of select="./@id"/>",

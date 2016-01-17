@@ -25,7 +25,7 @@ $alunos= $logs->xpath("//aluno[@id='".$oldId."']");
 header("Location:alunos.html");
 $logs->asXML('alunos.xml');
 
-$alunosJS = fopen('../listarAlunos.js','w');
+$alunosJS = fopen('listarAlunos.js','w');
 fwrite($alunosJS,$xslt->transformToXML($logs));
 
 ?>

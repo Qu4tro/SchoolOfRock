@@ -94,9 +94,12 @@
     "P93",
     "P94",
     "P95",
+    "",
+    "1",
+    "22",
     ];
-            var nomes=["ALVARO JOSE DE CASTRO MOREIRA DA SILVA",
-    "ANDRE FILIPE AZEVEDO SOUSA",
+            var nomes=["Álvaro Cabra",
+    "Rui",
     "BRUNO MIGUEL PEREIRA PINTO",
     "FILIPE ALEXANDRE DA SILVA MARTINS",
     "HELDER RICARDO DIAS RIBEIRO",
@@ -190,8 +193,11 @@
     "Marco Paulo Martins Cruz",
     "Miguel Pereira Mateus",
     "Rodney Lopes Gomes",
+    "",
+    "1",
+    "22",
     ];
-            var cursos = ["Curso Supletivo de Piano",
+            var cursos = ["Curso Básico de Harpa",
     "Curso Básico de Corne Inglês",
     "Curso Básico de Tuba",
     "Curso Básico de Bandolim",
@@ -286,5 +292,8 @@
     "Curso Básico de Fagote",
     "Curso Básico de Contrabaixo",
     "Curso Básico de Clarinete",
+    "",
+    "",
+    "Curso Básico de Clarinete",
     ];
-        
+    

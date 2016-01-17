@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <professores>
     <professor id="P1">
-        <nome>Álvaro</nome>
-        <dataNasc/>
+        <nome>Álvaro Cabra</nome>
+        <dataNasc>23424</dataNasc>
         <habilitacoes>Mestre em Piano</habilitacoes>
         <curso>Curso Básico de Harpa</curso>
     </professor>

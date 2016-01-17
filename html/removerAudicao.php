@@ -18,7 +18,7 @@
 
 	$logs->save("audicoes.xml");
 
-	$audicoesJS = fopen('../listarAudicoes.js','w');
+	$audicoesJS = fopen('listarAudicoes.js','w');
 	fwrite($audicoesJS,$xslt->transformToXML($logs));
 
 	header("Location:audicoes.html");

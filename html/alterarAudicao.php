@@ -16,5 +16,13 @@ echo "Data: <input type='text' name='data'value='".(string)$audicao[0]->data."' 
 echo "Local: <input type='text' name='local' value='".(string)$audicao[0]->local."'size='15'><br/>"; 
 echo "Início: <input type='text' name='inicio' value='".(string)$audicao[0]->inicio."'size='5'><br/>"; 
 echo "Duração: <input type='text' name='duracao' value='".(string)$audicao[0]->duracao."'size='5'><br/>"; 
+
+$atuacoes = $logs->xpath("//audicao[@id='".$id."']/atuacoes");
+
+	foreach ($atuacoes as $atuacao) {
+		echo "<fieldset><legend>"+(string)$atuacao->nome+"</legend>";
+
+	}
+
 echo "<center><input type='submit' id='bigButton' onclick=\"validar()\" value='Alterar'> </center>";
 ?>

@@ -2,13 +2,17 @@
             var ids= ["A1",
     "A2",
     ];
-            var nomes=["Récita 1º Dezembro",
-    "Récita 1º Dezembro"
+            var nomes=["Récita ",
+    "Ritmo Fluente",
+    "Vários Ritmos",
+    "Rapsódia",
+    "Orquestra Gulbenkian",
+    "Atuação Principal",
     ];
-            var datas = ["2040-12-30",
-    "2000-01-02",
+            var datas = ["2015-12-01",
+    "2016-01-29",
     ];
             var locais = ["Theatro Circo",
-    "Theatro Circo",
+    "Grande Auditório ",
     ];
-        
+    

@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alunos>
-    <aluno id="A1510">
-        <nome/>
-        <dataNasc>1999-7-1</dataNasc>
-        <curso>CB20</curso>
-        <anoCurso>5</anoCurso>
-        <instrumento>Violino</instrumento>
-    </aluno>
-    <aluno id="A32597">
-        <nome/>
-        <dataNasc/>
-        <curso>CB18</curso>
-        <anoCurso/>
-        <instrumento>Tuba</instrumento>
-    </aluno>
+    
+    
     <aluno id="A36539">
-        <nome>ADMILSON CESAR ANDRADE RODRIGUES</nome>
+        <nome>ADMILSON </nome>
         <dataNasc>2002-4-2</dataNasc>
         <curso>CS8</curso>
         <anoCurso>8</anoCurso>
         <instrumento>Guitarra</instrumento>
     </aluno>
-    <aluno id="A38165">
-        <nome/>
-        <dataNasc/>
-        <curso>CB4</curso>
-        <anoCurso/>
-        <instrumento>Eufónio</instrumento>
-    </aluno>
+    
     <aluno id="A38176">
         <nome>AGOSTINHO MANUEL ALVES DA SILVA</nome>
         <dataNasc>2003-7-12</dataNasc>
@@ -53,7 +35,7 @@
         <nome>ALEXANDRE MANUEL PEREIRA DE MIRANDA PINTO</nome>
         <dataNasc>1998-5-10</dataNasc>
         <curso>CB16</curso>
-        <anoCurso></anoCurso>
+        <anoCurso/>
         <instrumento>Trompa</instrumento>
     </aluno>
     <aluno id="A18141">
@@ -112,13 +94,7 @@
         <anoCurso>7</anoCurso>
         <instrumento>Contrabaixo</instrumento>
     </aluno>
-    <aluno id="A38214">
-        <nome/>
-        <dataNasc>2003-11-5</dataNasc>
-        <curso>CS19</curso>
-        <anoCurso>6</anoCurso>
-        <instrumento>Violoncelo</instrumento>
-    </aluno>
+    
     <aluno id="A35274">
         <nome>ANDRE FILIPE OLIVEIRA MARTINS</nome>
         <dataNasc>2002-2-25</dataNasc>
@@ -2532,4 +2508,4 @@
     
     
     
-<aluno id="sdadsa"><nome>sadadsa</nome><dataNasc>sadasd</dataNasc><curso/><anoCurso>asdasd</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="a67665"><nome>Patrícia</nome><dataNasc>1994-02-24</dataNasc><curso/><anoCurso>1</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="sadsd"><nome>adadsa</nome><dataNasc>dasda</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>dasda</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="777"><nome>777</nome><dataNasc>777</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>777</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="888"><nome>8888</nome><dataNasc>88888</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>8888</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="sdas"><nome>dasdasd</nome><dataNasc>sadasd</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>dasdad</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="111"><nome>1111</nome><dataNasc>111</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>111</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="111"><nome>1111</nome><dataNasc>111</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>111</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="111"><nome>1111</nome><dataNasc>111</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>111</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="111"><nome>1111</nome><dataNasc>111</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>111</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="111"><nome>1111</nome><dataNasc>111</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>111</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="22"><nome>22</nome><dataNasc>22</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>22</anoCurso><instrumento>Badalo</instrumento></aluno></alunos>
+<aluno id="a67665"><nome>Patrícia Amorim Barros</nome><dataNasc>24-02-1994</dataNasc><curso>Curso Supletivo de Fliscorne</curso><anoCurso>1</anoCurso><instrumento>Corneta</instrumento></aluno></alunos>

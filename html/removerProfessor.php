@@ -19,7 +19,7 @@
 	$logs->save("professores.xml");
 	
 
-	$profsJS = fopen('../listarProfessores.js','w');
+	$profsJS = fopen('listarProfessores.js','w');
 
 	fwrite($profsJS,$xslt->transformToXML($logs)); 
 

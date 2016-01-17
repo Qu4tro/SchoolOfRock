@@ -21,11 +21,11 @@ $audicoes= $logs->xpath("//audicao[@id='".$oldId."']");
 	}
 
 
-
-header("Location:audicoes.html");
 $logs->asXML('audicoes.xml');
 
-$audicoesJS = fopen('../listarAudicoes.js','w');
+$audicoesJS = fopen('listarAudicoes.js','w');
 fwrite($audicoesJS,$xslt->transformToXML($logs));
+
+header("Location:audicoes.html");
 
 ?>

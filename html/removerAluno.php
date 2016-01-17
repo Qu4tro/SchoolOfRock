@@ -18,7 +18,7 @@
 
 	$logs->save("alunos.xml");
 
-	$alunosJS = fopen('../listarAlunos.js','w');
+	$alunosJS = fopen('listarAlunos.js','w');
 
 	fwrite($alunosJS,$xslt->transformToXML($logs));
 

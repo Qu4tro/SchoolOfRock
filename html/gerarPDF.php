@@ -10,7 +10,7 @@
 
 	$audicao = $logs->xpath("//audicao[@id='".$id."']");
 
-	$audicaoPDF = fopen('../audicao.pdf','w');
+	$audicaoPDF = fopen('audicao.pdf','w');
 	fwrite($audicaoPDF,$xslt->transformToXML($audicao[0]));
 
 	header('Content-Type: application/download');

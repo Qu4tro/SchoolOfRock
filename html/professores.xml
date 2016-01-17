@@ -2,7 +2,7 @@
 <professores>
     <professor id="P1">
         <nome>Álvaro</nome>
-        <dataNasc></dataNasc>
+        <dataNasc/>
         <habilitacoes>Mestre em Piano</habilitacoes>
         <curso>Curso Básico de Harpa</curso>
     </professor>
@@ -570,4 +570,4 @@
         <habilitacoes>Licenciado em Clarinete</habilitacoes>
         <curso>Curso Básico de Clarinete</curso>
     </professor>
-<professor id=""><nome/><dataNasc/><curso/><habilitacoes/></professor></professores>
+<professor id=""><nome/><dataNasc/><curso/><habilitacoes/></professor><professor id="1"><nome>1</nome><dataNasc>1</dataNasc><curso/><habilitacoes>1</habilitacoes></professor><professor id="22"><nome>22</nome><dataNasc>22</dataNasc><curso>Curso Básico de Clarinete</curso><habilitacoes>22</habilitacoes></professor></professores>

@@ -9,7 +9,7 @@ $logs = simplexml_load_file("alunos.xml");
 $aluno = $logs->xpath("//aluno[@id='".$id."']");
 
 echo "<div class='newFormDiv'>";
-echo "<form action='doAlterarAluno.php' onsubmit='validar()' class='newForm'>";
+echo "<form action='doAlterarAluno.php' onsubmit='return validar()' class='newForm' name='adicionar'>";
 echo "Id: <input type='text' name='id' value='".(string)$aluno[0]['id']."'size='3' readonly> <br/>";
 echo "Nome: <input type='text' name='nome' value='".(string)$aluno[0]->nome."'size='45'> <br/>";
 echo "Data de Nascimento: <input type='text' name='data'value='".(string)$aluno[0]->dataNasc."' size='6'> <br/>";

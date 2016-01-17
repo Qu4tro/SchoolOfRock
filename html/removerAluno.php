@@ -3,8 +3,10 @@
 	$logs = new DOMDocument(); 
 	$logs->load('alunos.xml');
 
-	$xsl = new DOMDocument;
-	$xsl->load('alunos.xsl');
+	$xslt = new XSLTProcessor();
+	$XSL = new DOMDocument();
+	$XSL->load('alunos.xsl',LIBXML_NOCDATA);
+	$xslt->importStylesheet($XSL);
 
 	$alunos = $logs->getElementsByTagName('aluno');
 
@@ -15,10 +17,10 @@
 		}
 
 	$logs->save("alunos.xml");
+
+	$alunosJS = fopen('../listarAlunos.js','w');
+
+	fwrite($alunosJS,$xslt->transformToXML($logs));
+
 	header("Location:alunos.html");
-
-	$proc = new XSLTProcessor;
-	$proc->importStyleSheet($xsl); 
-
-	$proc->transformToXML($logs);
 ?>

@@ -10,7 +10,7 @@ $logs = simplexml_load_file("professores.xml");
 $professor= $logs->xpath("//professor[@id='".$id."']");
 
 echo "<div class='newFormDiv'>";
-echo "<form action='doAlterarProfessor.php' onsubmit='validar()'class='newForm'>";
+echo "<form action='doAlterarProfessor.php' onsubmit='return validar()'class='newForm' name='adicionar'>";
 echo "Id: <input type='text' name='id' value='".(string)$professor[0]['id']."'size='3' readonly> <br/>";
 echo "Nome: <input type='text' name='nome' value='".(string)$professor[0]->nome."'size='45'> <br/>";
 echo "Data de Nascimento: <input type='text' name='data' value='".(string)$professor[0]->dataNasc."' size='6'> <br/>";

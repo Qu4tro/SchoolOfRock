@@ -5,10 +5,11 @@ $oldId = $_REQUEST['id'];
 $logs = simplexml_load_file("alunos.xml");
 
 
-$xsl = new DOMDocument;
-$xsl->load('alunos.xsl');
+$xslt = new XSLTProcessor();
+$XSL = new DOMDocument();
+$XSL->load('alunos.xsl',LIBXML_NOCDATA);
+$xslt->importStylesheet($XSL);
 
-  
 $alunos= $logs->xpath("//aluno[@id='".$oldId."']");
 	
 	foreach ($alunos as $aluno) {
@@ -24,8 +25,7 @@ $alunos= $logs->xpath("//aluno[@id='".$oldId."']");
 header("Location:alunos.html");
 $logs->asXML('alunos.xml');
 
-$proc = new XSLTProcessor;
-$proc->importStyleSheet($xsl); 
+$alunosJS = fopen('../listarAlunos.js','w');
+fwrite($alunosJS,$xslt->transformToXML($logs));
 
-$proc->transformToXML($logs);
 ?>

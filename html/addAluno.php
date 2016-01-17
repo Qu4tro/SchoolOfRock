@@ -12,7 +12,7 @@
 	$id->value = $_GET['id'];
 	$nome = $logs->createElement('nome',$_GET['nome']);
 	$dataNasc = $logs->createElement('dataNasc',$_GET['dataNasc']);
-	$curso = $logs->createElement('curso',$_GET['curso']);
+	$curso = $logs->createElement('curso',$_GET['cursos']);
 	$anoCurso = $logs->createElement('anoCurso',$_GET['ano']);
 	$instrumento = $logs->createElement('instrumento',$_GET['instrumentos']);
 	 
@@ -28,6 +28,7 @@
 	$logs->save("alunos.xml");
 
 	$alunosJS = fopen('../listarAlunos.js','w');
+
 	fwrite($alunosJS,$xslt->transformToXML($logs));
 
 	header("Location:alunos.html");

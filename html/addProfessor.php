@@ -2,15 +2,17 @@
 	$logs = new DOMDocument(); 
 	$logs->load('professores.xml');
 
-	$xsl = new DOMDocument;
-	$xsl->load('professores.xsl',LIBXML_NOCDATA);
+	$xslt = new XSLTProcessor();
+	$XSL = new DOMDocument();
+	$XSL->load('professores.xsl',LIBXML_NOCDATA);
+	$xslt->importStylesheet($XSL);
 	 
 	$log = $logs->createElement('professor');
 	$id = $logs->createAttribute('id');
 	$id->value = $_GET['id'];
 	$nome = $logs->createElement('nome',$_GET['nome']);
 	$dataNasc = $logs->createElement('dataNasc',$_GET['dataNasc']);
-	$curso = $logs->createElement('curso',$_GET['curso']);
+	$curso = $logs->createElement('curso',$_GET['cursos']);
 	$habil = $logs->createElement('habilitacoes',$_GET['habil']);
 	 
 	$log->appendChild($id);
@@ -23,10 +25,9 @@
 	 
 	$logs->save("professores.xml");
 
-	$proc = new XSLTProcessor;
-	$proc->importStyleSheet($xsl); 
+	$profsJS = fopen('../listarProfessores.js','w');
 
-	$proc->transformToXML($logs);
+	fwrite($profsJS,$xslt->transformToXML($logs));
 
 	header("Location:professores.html");
 ?>

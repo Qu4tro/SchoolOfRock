@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <alunos>
     <aluno id="A1510">
-        <nome>ademar</nome>
+        <nome/>
         <dataNasc>1999-7-1</dataNasc>
         <curso>CB20</curso>
         <anoCurso>5</anoCurso>
         <instrumento>Violino</instrumento>
     </aluno>
     <aluno id="A32597">
-        <nome>Rui</nome>
+        <nome/>
         <dataNasc/>
         <curso>CB18</curso>
         <anoCurso/>
@@ -53,7 +53,7 @@
         <nome>ALEXANDRE MANUEL PEREIRA DE MIRANDA PINTO</nome>
         <dataNasc>1998-5-10</dataNasc>
         <curso>CB16</curso>
-        <anoCurso>2</anoCurso>
+        <anoCurso></anoCurso>
         <instrumento>Trompa</instrumento>
     </aluno>
     <aluno id="A18141">
@@ -113,7 +113,7 @@
         <instrumento>Contrabaixo</instrumento>
     </aluno>
     <aluno id="A38214">
-        <nome>ANDRE FILIPE DE SOUSA VIVEIROS</nome>
+        <nome/>
         <dataNasc>2003-11-5</dataNasc>
         <curso>CS19</curso>
         <anoCurso>6</anoCurso>
@@ -2485,13 +2485,7 @@
         <anoCurso>8</anoCurso>
         <instrumento>Flauta</instrumento>
     </aluno>
-    <aluno id="A">
-        <nome/>
-        <dataNasc>2005-12-1</dataNasc>
-        <curso>CS8</curso>
-        <anoCurso>8</anoCurso>
-        <instrumento>Guitarra</instrumento>
-    </aluno>
+    
     <aluno id="A27648">
         <nome>NUNO RAMOS MATOS</nome>
         <dataNasc>1996-12-19</dataNasc>
@@ -2513,13 +2507,7 @@
         <anoCurso>6</anoCurso>
         <instrumento>Trombone</instrumento>
     </aluno>
-    <aluno id="A">
-        <nome/>
-        <dataNasc>1997-10-24</dataNasc>
-        <curso>CB18</curso>
-        <anoCurso>4</anoCurso>
-        <instrumento>Tuba</instrumento>
-    </aluno>
+    
     <aluno id="AE-939">
         <nome>Jorge Gonzalez y Hurtado de Mendoza</nome>
         <dataNasc>2001-10-27</dataNasc>
@@ -2541,25 +2529,7 @@
         <anoCurso>8</anoCurso>
         <instrumento>Harpa</instrumento>
     </aluno>
-    <aluno id="A">
-        <nome/>
-        <dataNasc>2000-9-18</dataNasc>
-        <curso>CB22</curso>
-        <anoCurso>3</anoCurso>
-        <instrumento>Bandolim</instrumento>
-    </aluno>
-    <aluno id="A">
-        <nome/>
-        <dataNasc>2001-11-28</dataNasc>
-        <curso>CB12</curso>
-        <anoCurso>3</anoCurso>
-        <instrumento>Percussão</instrumento>
-    </aluno>
-    <aluno id="A">
-        <nome/>
-        <dataNasc>1998-9-8</dataNasc>
-        <curso>CB2</curso>
-        <anoCurso>3</anoCurso>
-        <instrumento>Contrabaixo</instrumento>
-    </aluno>
-<aluno id="sdadsa"><nome>sadadsa</nome><dataNasc>sadasd</dataNasc><curso/><anoCurso>asdasd</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="a67665"><nome>Patrícia</nome><dataNasc>1994-02-24</dataNasc><curso/><anoCurso>1</anoCurso><instrumento>Badalo</instrumento></aluno></alunos>
+    
+    
+    
+<aluno id="sdadsa"><nome>sadadsa</nome><dataNasc>sadasd</dataNasc><curso/><anoCurso>asdasd</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="a67665"><nome>Patrícia</nome><dataNasc>1994-02-24</dataNasc><curso/><anoCurso>1</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="sadsd"><nome>adadsa</nome><dataNasc>dasda</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>dasda</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="777"><nome>777</nome><dataNasc>777</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>777</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="888"><nome>8888</nome><dataNasc>88888</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>8888</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="sdas"><nome>dasdasd</nome><dataNasc>sadasd</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>dasdad</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="111"><nome>1111</nome><dataNasc>111</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>111</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="111"><nome>1111</nome><dataNasc>111</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>111</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="111"><nome>1111</nome><dataNasc>111</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>111</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="111"><nome>1111</nome><dataNasc>111</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>111</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="111"><nome>1111</nome><dataNasc>111</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>111</anoCurso><instrumento>Badalo</instrumento></aluno><aluno id="22"><nome>22</nome><dataNasc>22</dataNasc><curso>Curso Básico de Clarinete</curso><anoCurso>22</anoCurso><instrumento>Badalo</instrumento></aluno></alunos>

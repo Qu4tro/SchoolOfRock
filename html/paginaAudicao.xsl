@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="xs"
-    version="2.0">
+    version="1.0">
     
     <xsl:output method="html"/>
     
@@ -11,7 +11,6 @@
     <xsl:variable name="obras_info" select="document('obras.xml')"/>
     
     <xsl:template match="/">
-        <xsl:result-document href="audicao.html">
             <html>
                 <head>
                     <meta charset="utf-8"/>
@@ -23,7 +22,6 @@
                     <xsl:apply-templates/>
                 </body>
             </html>
-        </xsl:result-document>
     </xsl:template>
     
     <xsl:template match="audicao">

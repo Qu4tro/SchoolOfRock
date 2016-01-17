@@ -56,7 +56,7 @@
 	</audicao>
 		<audicao id="A2">
 		<nome>Orquestra Gulbenkian</nome>
-		<data>2016-01-29</data>
+		<data>2016-02-12</data>
 		<local>Grande Auditório </local>
 		<inicio>19:00</inicio>
 		<duracao>150 min</duracao>
@@ -70,6 +70,84 @@
 				</alunos>
 				<professores>
 					<professor>P4</professor>
+				</professores>
+				<obras>
+					<obra>O121</obra>
+				</obras>
+			</atuacao>
+		</atuacoes>
+	</audicao>
+	<audicao id="A3">
+		<nome>Orquestra Gulbenkian</nome>
+		<data>2040-03-12</data>
+		<local>Grande Auditório </local>
+		<inicio>19:00</inicio>
+		<duracao>150 min</duracao>
+		<atuacoes>
+			<atuacao>
+				<nome>Atuação Principal</nome>
+				<duracao>40 min</duracao>
+				<alunos>
+					<aluno>A35291</aluno>
+					<aluno>A38595</aluno>
+					<aluno>A38595</aluno>
+					<aluno>A38595</aluno>
+				</alunos>
+				<professores>
+					<professor>P6</professor>
+				</professores>
+				<obras>
+					<obra>O121</obra>
+				</obras>
+			</atuacao>
+			<atuacao>
+				<nome>Atuação Secundária</nome>
+				<duracao>40 min</duracao>
+				<alunos>
+					<aluno>A35291</aluno>
+					<aluno>A38595</aluno>
+				</alunos>
+				<professores>
+					<professor>P7</professor>
+				</professores>
+				<obras>
+					<obra>O121</obra>
+				</obras>
+			</atuacao>
+		</atuacoes>
+	</audicao>
+	<audicao id="A4">
+		<nome>Orquestra Gulbenkian</nome>
+		<data>2014-02-12</data>
+		<local>Grande Auditório </local>
+		<inicio>19:00</inicio>
+		<duracao>150 min</duracao>
+		<atuacoes>
+			<atuacao>
+				<nome>Atuação Principal</nome>
+				<duracao>40 min</duracao>
+				<alunos>
+					<aluno>A35291</aluno>
+					<aluno>A38595</aluno>
+					<aluno>A38595</aluno>
+					<aluno>A38595</aluno>
+				</alunos>
+				<professores>
+					<professor>P6</professor>
+				</professores>
+				<obras>
+					<obra>O121</obra>
+				</obras>
+			</atuacao>
+			<atuacao>
+				<nome>Atuação Secundária</nome>
+				<duracao>40 min</duracao>
+				<alunos>
+					<aluno>A35291</aluno>
+					<aluno>A38595</aluno>
+				</alunos>
+				<professores>
+					<professor>P7</professor>
 				</professores>
 				<obras>
 					<obra>O121</obra>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <professores>
     <professor id="P1">
-        <nome>Álvaro Cabra</nome>
-        <dataNasc>23424</dataNasc>
+        <nome>ALVARO JOSE DE CASTRO MOREIRA DA SILVA</nome>
+        <dataNasc>1990-2-19</dataNasc>
         <habilitacoes>Mestre em Piano</habilitacoes>
-        <curso>Curso Básico de Harpa</curso>
+        <curso>Curso Supletivo de Piano</curso>
     </professor>
     <professor id="P2">
-        <nome>Rui</nome>
+        <nome>ANDRE FILIPE AZEVEDO SOUSA</nome>
         <dataNasc>1982-7-1</dataNasc>
         <habilitacoes>Licenciado em Corne Inglês</habilitacoes>
         <curso>Curso Básico de Corne Inglês</curso>
@@ -570,4 +570,4 @@
         <habilitacoes>Licenciado em Clarinete</habilitacoes>
         <curso>Curso Básico de Clarinete</curso>
     </professor>
-<professor id=""><nome/><dataNasc/><curso/><habilitacoes/></professor><professor id="1"><nome>1</nome><dataNasc>1</dataNasc><curso/><habilitacoes>1</habilitacoes></professor><professor id="22"><nome>22</nome><dataNasc>22</dataNasc><curso>Curso Básico de Clarinete</curso><habilitacoes>22</habilitacoes></professor></professores>
+</professores>

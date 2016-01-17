@@ -5,6 +5,8 @@ include('consultarAudicao.html');
 $id = $_REQUEST['idAudicao'];
 
 $logs = simplexml_load_file("audicoes.xml");
+$logsAlunos = simplexml_load_file("alunos.xml");
+$logsProfs = simplexml_load_file("professores.xml");
   
 $audicao = $logs->xpath("//audicao[@id='".$id."']");
 
@@ -17,12 +19,8 @@ echo "Local: <input type='text' name='local' value='".(string)$audicao[0]->local
 echo "Início: <input type='text' name='inicio' value='".(string)$audicao[0]->inicio."'size='5'><br/>"; 
 echo "Duração: <input type='text' name='duracao' value='".(string)$audicao[0]->duracao."'size='5'><br/>"; 
 
-$atuacoes = $logs->xpath("//audicao[@id='".$id."']/atuacoes");
 
-	foreach ($atuacoes as $atuacao) {
-		echo "<fieldset><legend>"+(string)$atuacao->nome+"</legend>";
-
-	}
 
 echo "<center><input type='submit' id='bigButton' onclick=\"validar()\" value='Alterar'> </center>";
+
 ?>

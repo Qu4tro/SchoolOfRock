@@ -3,7 +3,7 @@
     <front-matter>
         <meta>
             <title>Processamento de Linguagens e Conhecimento</title>
-            <subtitle>Um Gestor de Audições/Concertos Musicaiso</subtitle>
+            <subtitle>Um Gestor de Audições/Concertos Musicais</subtitle>
             <authors>
                 <author>
                     <name>Patrícia Barros</name>
@@ -13,9 +13,9 @@
                 </author>
                 <author>
                     <name>Xavier Francisco</name>
-                    <identifier>aXXXXX</identifier>
-                    <email>aXXXXx@alunos.uminho.pt</email>
-                    <photo path=""/>
+                    <identifier>a67725</identifier>
+                    <email>a67725@alunos.uminho.pt</email>
+                    <photo path="4.jpg"/>
                 </author>
             </authors>
             <date>2016-01-18</date>
@@ -290,7 +290,7 @@ peca: IDO;
                 </subsubsection>
                 <subsubsection>
                     <title>Alterar uma Audição</title>
-                    <p>AINDA NAO SEI COMO VAI SER</p>
+                    <p>Também a funcionalidade de alterar uma audição é conseguida através de um formulário <i>HTML</i>, mas este um pouco mais complexo.</p>
                 </subsubsection>
                 <subsubsection>
                     <title>Gerar <i>PDF</i> para uma Audição</title>
@@ -370,7 +370,7 @@ peca: IDO;
                 <p>Revelou-se um projeto bastante interessante e útil na medida em que através da sua realização foi possível melhorarmos (e até aprendermos!) muito os nossos conhecimentos em termos de aplicações <i>Web</i>.</p>
                 <p>É sempre positivo poder praticar o uso de novas tecnologias, como foi o caso do <i>PHP</i> que nunca haviamos utilizado ou mesmo o <i>javascript</i>. </p>
                 <p>Em termos de gramáticas foi também interessante perceber que podem ser bastante utilizáveis e úteis em casos reais.</p>
-                <p>O maior obstáculo que encontramos na realização deste trabalho foi o facto de o <i>PHP</i> não suportar o <i>XSL 2.0</i>, o que fez com que tivessemos que encontrar alternativas para o <i>xsl:result-document</i> de forma a poder gerar documentos atravésdo <i>XSL</i></p>
+                <p>O maior obstáculo que encontramos na realização deste trabalho foi o facto de o <i>PHP</i> não suportar o <i>XSL 2.0</i>, o que fez com que tivessemos que encontrar alternativas para o <i>xsl:result-document</i> de forma a poder gerar documentos através do <i>XSL</i>.</p>
             </subsection>
             <subsection>
                 <title>Trabalho Futuro</title>

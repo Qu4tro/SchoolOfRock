@@ -10,13 +10,14 @@
 
 	$audicao = $logs->xpath("//audicao[@id='".$id."']");
 
+	$filename = "audicao".$id.".html";
 	$audicaoHTML = fopen('audicao.html','w');
 	fwrite($audicaoHTML,$xslt->transformToXML($audicao[0]));
 
 	header('Content-Type: application/download');
-    header('Content-Disposition: attachment; filename="audicao.html"');
-    header("Content-Length: " . filesize("audicao.html"));
-    $fp = fopen("audicao.html", "r");
+    header('Content-Disposition: attachment; filename="'.$filename.'"');
+    header("Content-Length: " . filesize($filename));
+    $fp = fopen($filename, "r");
     fpassthru($fp);
     fclose($fp);
 

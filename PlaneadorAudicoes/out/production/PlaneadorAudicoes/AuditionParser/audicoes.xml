@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<audicoes>
+	<audicao id="A1">
+		<nome>Récita </nome>
+		<data>2015-12-01</data>
+		<local>Theatro Circo</local>
+		<inicio>22:30</inicio>
+		<duracao>150 min</duracao>
+		<atuacoes>
+			<atuacao>
+				<nome>Ritmo Fluente</nome>
+				<duracao>40 min</duracao>
+				<alunos>
+					<aluno>A1510</aluno>
+					<aluno>A32597</aluno>
+				</alunos>
+				<professores>
+					<professor>P1</professor>
+					<professor>P2</professor>
+				</professores>
+				<obras>
+					<obra>O134</obra>
+				</obras>
+			</atuacao>
+			<atuacao>
+				<nome>Vários Ritmos</nome>
+				<duracao>50 min</duracao>
+				<alunos>
+					<aluno>A32597</aluno>
+					<aluno>A38165</aluno>
+				</alunos>
+				<professores>
+					<professor>P1</professor>
+					<professor>P2</professor>
+				</professores>
+				<obras>
+					<obra>O1</obra>
+				</obras>
+			</atuacao>
+			<atuacao>
+				<nome>Rapsódia</nome>
+				<duracao>50 min</duracao>
+				<alunos>
+					<aluno>A32597</aluno>
+					<aluno>A38165</aluno>
+				</alunos>
+				<professores>
+					<professor>P1</professor>
+					<professor>P2</professor>
+				</professores>
+				<obras>
+					<obra>O1</obra>
+				</obras>
+			</atuacao>
+		</atuacoes>
+	</audicao>
+		<audicao id="A2">
+		<nome>Orquestra Gulbenkian</nome>
+		<data>2016-01-29</data>
+		<local>Grande Auditório </local>
+		<inicio>19:00</inicio>
+		<duracao>150 min</duracao>
+		<atuacoes>
+			<atuacao>
+				<nome>Atuação Principal</nome>
+				<duracao>40 min</duracao>
+				<alunos>
+					<aluno>A35291</aluno>
+					<aluno>A38595</aluno>
+				</alunos>
+				<professores>
+					<professor>P4</professor>
+				</professores>
+				<obras>
+					<obra>O121</obra>
+				</obras>
+			</atuacao>
+		</atuacoes>
+	</audicao>
+</audicoes>

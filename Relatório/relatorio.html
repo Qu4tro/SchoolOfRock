@@ -1,13 +1,12 @@
 <html>
    <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"><script src="https://code.jquery.com/jquery-1.11.0.min.js"></script><style type="text/css">
                     .col-center{
                         float:none;
                         margin-left:auto;
                         margin-right:auto;
-                    }</style><title>Relat&oacute;rio</title>
+                    }</style><title>Relatório</title>
    </head>
    <body>
       <div class="container">
@@ -15,13 +14,13 @@
             <div class="row">
                <div class="col-md-12">
                   <h2 style="color:#c0392b">Processamento de Linguagens e Conhecimento</h2>
-                  <h3 style="color:#e74c3c">Um Gestor de Audi&ccedil;&otilde;es/Concertos Musicais</h3>
+                  <h3 style="color:#e74c3c">Um Gestor de Audições/Concertos Musicais</h3>
                </div>
             </div>
             <div class="row">
                <div class="col-md-6 col-center">
                   <div class="col-md-4">
-                     <div class="row"><strong>Patr&iacute;cia Barros</strong></div>
+                     <div class="row"><strong>Patrícia Barros</strong></div>
                      <div class="row">a67665</div>
                      <div class="row"><a href="mailto:a67665@alunos.uminho.pt">a67665@alunos.uminho.pt</a></div>
                      <div class="row"><img style="width: 100px" src="7.jpg"></div>
@@ -45,316 +44,334 @@
                </div>
             </div>
          </div>
-                     
-         <p>Este relat&oacute;rio descreve todo o processo de desenvolvimento e decis&otilde;es tomadas para a realiza&ccedil;&atilde;o do trabalho final do perfil
-            de Processamento de Linguagens e Compiladores.
+         
+         <p>Este relatório descreve todo o processo de desenvolvimento e decisões tomadas para
+            a realização do trabalho final do perfil de Processamento de Linguagens e Compiladores.
          </p>
-                     
-         <p>O problema a resolver consiste na cria&ccedil;&atilde;o de um sistema que permita a gest&atilde;o de audi&ccedil;&otilde;es musicais de uma escola de m&uacute;sica.</p>
-                 
+         
+         <p>O problema a resolver consiste na criação de um sistema que permita a gestão de audições
+            musicais de uma escola de música.
+         </p>
+         
          <div class="col-md-12">
             <div class="row">
-               <p class="bg-info">Ind&iacute;ce:</p>
+               <p class="bg-info">Indíce:</p>
                <ul>
-                  <li><a style="color:#2ecc71" href="#d0e67">Estrutura do Relat&oacute;rio</a></li>
+                  <li><a style="color:#2ecc71" href="#d1e67">Estrutura do Relatório</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#2ecc71" href="#d0e85">Introdu&ccedil;&atilde;o</a></li>
+                  <li><a style="color:#2ecc71" href="#d1e85">Introdução</a></li>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d0e90">Contextualiza&ccedil;&atilde;o</a></li>
+                     <li><a style="color:#1abc9c" href="#d1e90">Contextualização</a></li>
                   </ul>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d0e99">Objetivos</a></li>
+                     <li><a style="color:#1abc9c" href="#d1e99">Objetivos</a></li>
                   </ul>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d0e108">Motiva&ccedil;&atilde;o</a></li>
+                     <li><a style="color:#1abc9c" href="#d1e108">Motivação</a></li>
                   </ul>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d0e117">Ferramentas</a></li>
-                  </ul>
-               </ul>
-               <ul>
-                  <li><a style="color:#2ecc71" href="#d0e204">Desenvolvimento</a></li>
-                  <ul>
-                     <li><a style="color:#1abc9c" href="#d0e209">Arquitetura do Sistema</a></li>
-                  </ul>
-                  <ul>
-                     <li><a style="color:#1abc9c" href="#d0e236">Base de Dados</a></li>
-                     <ul>
-                        <li><a style="color:#3498db" href="#d0e256">Modelos</a></li>
-                     </ul>
-                  </ul>
-                  <ul>
-                     <li><a style="color:#1abc9c" href="#d0e359">Funcionalidades</a></li>
-                     <ul>
-                        <li><a style="color:#3498db" href="#d0e367">Listar Alunos/Professores</a></li>
-                     </ul>
-                     <ul>
-                        <li><a style="color:#3498db" href="#d0e403">Adicionar um Aluno/Professor</a></li>
-                     </ul>
-                     <ul>
-                        <li><a style="color:#3498db" href="#d0e448">Alterar um Aluno/Professor</a></li>
-                     </ul>
-                     <ul>
-                        <li><a style="color:#3498db" href="#d0e502">Remover um Aluno/Professor/Audi&ccedil;&atilde;o</a></li>
-                     </ul>
-                     <ul>
-                        <li><a style="color:#3498db" href="#d0e529">Listar Audi&ccedil;&otilde;es</a></li>
-                     </ul>
-                     <ul>
-                        <li><a style="color:#3498db" href="#d0e565">Adicionar uma Audi&ccedil;&atilde;o</a></li>
-                     </ul>
-                     <ul>
-                        <li><a style="color:#3498db" href="#d0e604">Alterar uma Audi&ccedil;&atilde;o</a></li>
-                     </ul>
-                     <ul>
-                        <li><a style="color:#3498db" href="#d0e613">Gerar PDF para uma Audi&ccedil;&atilde;o</a></li>
-                     </ul>
-                     <ul>
-                        <li><a style="color:#3498db" href="#d0e643">Gerar p&aacute;gina HTML para uma Audi&ccedil;&atilde;o</a></li>
-                     </ul>
+                     <li><a style="color:#1abc9c" href="#d1e117">Ferramentas</a></li>
                   </ul>
                </ul>
                <ul>
-                  <li><a style="color:#2ecc71" href="#d0e688">Conclus&otilde;es</a></li>
+                  <li><a style="color:#2ecc71" href="#d1e206">Desenvolvimento</a></li>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d0e693">Reflex&atilde;o Crit&iacute;ca</a></li>
+                     <li><a style="color:#1abc9c" href="#d1e211">Arquitetura do Sistema</a></li>
                   </ul>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d0e740">Trabalho Futuro</a></li>
+                     <li><a style="color:#1abc9c" href="#d1e245">Base de Dados</a></li>
+                     <ul>
+                        <li><a style="color:#3498db" href="#d1e265">Modelos</a></li>
+                     </ul>
+                  </ul>
+                  <ul>
+                     <li><a style="color:#1abc9c" href="#d1e371">Funcionalidades</a></li>
+                     <ul>
+                        <li><a style="color:#3498db" href="#d1e379">Listar Alunos/Professores</a></li>
+                     </ul>
+                     <ul>
+                        <li><a style="color:#3498db" href="#d1e416">Adicionar um Aluno/Professor</a></li>
+                     </ul>
+                     <ul>
+                        <li><a style="color:#3498db" href="#d1e462">Alterar um Aluno/Professor</a></li>
+                     </ul>
+                     <ul>
+                        <li><a style="color:#3498db" href="#d1e518">Remover um Aluno/Professor/Audição</a></li>
+                     </ul>
+                     <ul>
+                        <li><a style="color:#3498db" href="#d1e545">Listar Audições</a></li>
+                     </ul>
+                     <ul>
+                        <li><a style="color:#3498db" href="#d1e582">Adicionar uma Audição</a></li>
+                     </ul>
+                     <ul>
+                        <li><a style="color:#3498db" href="#d1e622">Alterar uma Audição</a></li>
+                     </ul>
+                     <ul>
+                        <li><a style="color:#3498db" href="#d1e634">Gerar PDF para uma Audição</a></li>
+                     </ul>
+                     <ul>
+                        <li><a style="color:#3498db" href="#d1e664">Gerar página HTML para uma Audição</a></li>
+                     </ul>
+                  </ul>
+               </ul>
+               <ul>
+                  <li><a style="color:#2ecc71" href="#d1e710">Conclusões</a></li>
+                  <ul>
+                     <li><a style="color:#1abc9c" href="#d1e715">Reflexão Critíca</a></li>
+                  </ul>
+                  <ul>
+                     <li><a style="color:#1abc9c" href="#d1e764">Trabalho Futuro</a></li>
                   </ul>
                </ul>
             </div>
          </div>
          <div class="col-md-12">
             <div class="row">
-               <p class="bg-success">Ind&iacute;ce de Figuras:</p>
+               <p class="bg-success">Indíce de Figuras:</p>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e217">Desenho da arquitetura do Sistema</a></li>
+                  <li><a style="color:#3498db" href="#d1e219">Desenho da arquitetura do Sistema</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e286">Schema representativo da estrutura do ficheiro XML que suporta a informa&ccedil;&atilde;o dos alunos.</a></li>
+                  <li><a style="color:#3498db" href="#d1e296">Schema representativo da estrutura do ficheiro XML que suporta a informação dos alunos.</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e316">Schema representativo da estrutura do ficheiro XML que suporta a informa&ccedil;&atilde;o dos professores.</a></li>
+                  <li><a style="color:#3498db" href="#d1e327">Schema representativo da estrutura do ficheiro XML que suporta a informação dos professores.</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e349">Schema representativo da estrutura do ficheiro XML que suporta a informa&ccedil;&atilde;o das audi&ccedil;&otilde;es.</a></li>
+                  <li><a style="color:#3498db" href="#d1e361">Schema representativo da estrutura do ficheiro XML que suporta a informação das audições.</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e390">Exemplo da listagem de professores.</a></li>
+                  <li><a style="color:#3498db" href="#d1e402">Exemplo da listagem de professores.</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e441">Exemplo de preenchimento do formul&aacute;rio de cria&ccedil;&atilde;o de um aluno.</a></li>
+                  <li><a style="color:#3498db" href="#d1e455">Exemplo de preenchimento do formulário de criação de um aluno.</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e444">Exemplo de preenchimento do formul&aacute;rio de cria&ccedil;&atilde;o de um professor.</a></li>
+                  <li><a style="color:#3498db" href="#d1e458">Exemplo de preenchimento do formulário de criação de um professor.</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e498">Exemplo da altera&ccedil;&atilde;o de um aluno.</a></li>
+                  <li><a style="color:#3498db" href="#d1e513">Exemplo da alteração de um aluno.</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e555">Listagem de todas as audi&ccedil;&otilde;es</a></li>
+                  <li><a style="color:#3498db" href="#d1e571">Listagem de todas as audições</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e558">Listagem das audi&ccedil;&otilde;es que j&aacute; decorreram</a></li>
+                  <li><a style="color:#3498db" href="#d1e575">Listagem das audições que já decorreram</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e561">Listagem das audi&ccedil;&otilde;es que ainda v&atilde;o decorrer</a></li>
+                  <li><a style="color:#3498db" href="#d1e578">Listagem das audições que ainda vão decorrer</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e681">HTML gerado para a audi&ccedil;&atilde;o</a></li>
+                  <li><a style="color:#3498db" href="#d1e703">HTML gerado para a audição</a></li>
                </ul>
             </div>
          </div>
          <hr>
-         <div class="col-md-12"><a name="d0e67"></a>
-                        
-            <h2 style="color:#c0392b">Estrutura do Relat&oacute;rio</h2>
-                       
-            <p>Este relat&oacute;rio est&aacute; organizado em cap&iacute;tulos e sec&ccedil;&otilde;es. No cap&iacute;tulo 1 podemos encontrar um apanhado de informa&ccedil;&otilde;es sobre o
-               projeto, nomeadamente sobre o contexto, motiva&ccedil;&atilde;o, objetivos e resultados do mesmo.
+         <div class="col-md-12"><a name="d1e67"></a>
+            
+            <h2 style="color:#c0392b">Estrutura do Relatório</h2>
+            
+            <p>Este relatório está organizado em capítulos e secções. No capítulo 1 podemos encontrar
+               um apanhado de informações sobre o projeto, nomeadamente sobre o contexto, motivação,
+               objetivos e resultados do mesmo.
             </p>
-                       
-            <p>O cap&iacute;tulo 2  exp&otilde;e o enunciado do trabalho.</p>
-                       
-            <p>De seguida, o cap&iacute;tulo 3 engloba todas as sec&ccedil;&otilde;es relativas ao desenvolvimento do projeto: todas as decis&otilde;es tomadas e uma
-               descri&ccedil;&atilde;o de tudo o que foi feito. CONTINUAR
+            
+            <p>O capítulo 2  expõe o enunciado do trabalho.</p>
+            
+            <p>De seguida, o capítulo 3 engloba todas as secções relativas ao desenvolvimento do
+               projeto: todas as decisões tomadas e uma descrição de tudo o que foi feito.
             </p>
-                       
-            <p>Por &uacute;ltimo, o cap&iacute;tulo 4 cont&eacute;m algumas conclus&otilde;es sobre o trabalho realizado, nomeadamente o estado do mesmo, o trabalho
-               futuro e um coment&aacute;rio de opini&atilde;o pessoal.
+            
+            <p>Por último, o capítulo 4 contém algumas conclusões sobre o trabalho realizado, nomeadamente
+               o estado do mesmo, o trabalho futuro e um comentário de opinião pessoal.
             </p>
-                    <a name="d0e85"></a>
-                        
-            <h2 style="color:#c0392b">Introdu&ccedil;&atilde;o</h2>
-                        <a name="d0e90"></a>
-                            
-            <h3 style="color:#e74c3c">Contextualiza&ccedil;&atilde;o</h3>
-                           
-            <p>Este trabalho foi realizado no &acirc;mbito das Unidades Curriculares de Gram&aacute;ticas na Compreens&atilde;o de Software e Processamento e
-               Representa&ccedil;&atilde;o de Informa&ccedil;&atilde;o, dizendo respeito &agrave;s mat&eacute;rias leccionadas em ambas: gram&aacute;ticas independentes de contexto, gram&aacute;ticas
-               de atributos, DTD's, XPath, XSLT, XML Schema e formul&aacute;rios HTML.
+            <a name="d1e85"></a>
+            
+            <h2 style="color:#c0392b">Introdução</h2>
+            <a name="d1e90"></a>
+            
+            <h3 style="color:#e74c3c">Contextualização</h3>
+            
+            <p>Este trabalho foi realizado no âmbito das Unidades Curriculares de Gramáticas na Compreensão
+               de Software e Processamento e Representação de Informação, dizendo respeito às matérias
+               leccionadas em ambas: gramáticas independentes de contexto, gramáticas de atributos,
+               DTD's, XPath, XSLT, XML Schema e formulários HTML.
             </p>
-                        
-                        <a name="d0e99"></a>
-                            
+            
+            <a name="d1e99"></a>
+            
             <h3 style="color:#e74c3c">Objetivos</h3>
-                           
-            <p>Este trabalho tem como objetivos consolidar todo o conhecimento adquirido ao longo do semestre nas duas Unidades Curriculares
-               a que diz respeito mas tamb&eacute;m dar resposta a uma necessidade que existe atualmente no Mundo real, tornando ainda o projeto
-               mais aliciante.
+            
+            <p>Este trabalho tem como objetivos consolidar todo o conhecimento adquirido ao longo
+               do semestre nas duas Unidades Curriculares a que diz respeito mas também dar resposta
+               a uma necessidade que existe atualmente no Mundo real, tornando ainda o projeto mais
+               aliciante.
             </p>
-                        
-                        <a name="d0e108"></a>
-                            
-            <h3 style="color:#e74c3c">Motiva&ccedil;&atilde;o</h3>
-                           
-            <p>Atualmente praticamente nenhuma das aplica&ccedil;&otilde;es existentes para gerir escolas tem a funcionalidade de gerir audi&ccedil;&otilde;es ou concertos
-               pois esta &eacute; uma necessidade espec&iacute;fica de uma escola de m&uacute;sica que ao longo de um ano letivo poder&aacute; ter que organizar dezenas
-               ou centenas de audi&ccedil;&otilde;es e concertos. Posto isto &eacute; importante come&ccedil;ar a dar resposta &agrave;s escolas de m&uacute;sica nesse sentido.
+            
+            <a name="d1e108"></a>
+            
+            <h3 style="color:#e74c3c">Motivação</h3>
+            
+            <p>Atualmente praticamente nenhuma das aplicações existentes para gerir escolas tem a
+               funcionalidade de gerir audições ou concertos pois esta é uma necessidade específica
+               de uma escola de música que ao longo de um ano letivo poderá ter que organizar dezenas
+               ou centenas de audições e concertos. Posto isto é importante começar a dar resposta
+               às escolas de música nesse sentido.
             </p>
-                        
-                        <a name="d0e117"></a>
-                            
+            
+            <a name="d1e117"></a>
+            
             <h3 style="color:#e74c3c">Ferramentas</h3>
-                           
-            <p>Para o desenvolvimento deste projeto foram necess&aacute;rias v&aacute;rias ferramentas de desenvolvimento que passamos a nomear.</p>
-                           
-            <p>Para gerir o desenvolvimento de c&oacute;digo em paralelo pelos dois membros da equipa utilizamos uma ferramenta de controlo de vers&otilde;es,
-               o <em><strong>Github</strong></em>.
+            
+            <p>Para o desenvolvimento deste projeto foram necessárias várias ferramentas de desenvolvimento
+               que passamos a nomear.
             </p>
-                           
-            <p>Para o desenvolvimento propriamente dito do projeto utilizamos <em><strong>HTML</strong></em>, <em><strong>PHP</strong></em> e <em><strong>Javascript</strong></em>. Recorremos ainda ao <em><strong>CSS</strong></em> para melhorar o aspeto est&eacute;tico do sistema. Utiliz&aacute;mos ainda algomas funcionalidades do <em><strong>Bootsrap</strong></em>, nomeadamente para a formata&ccedil;&atilde;o das tabelas de listagem e dos bot&otilde;es.
+            
+            <p>Para gerir o desenvolvimento de código em paralelo pelos dois membros da equipa utilizamos
+               uma ferramenta de controlo de versões, o <em><strong>Github</strong></em>.
             </p>
-                           
-            <p>Para lidar com os ficheiros de texto que guardam os dados do nosso sistema recorremos ao <em><strong>XML</strong></em> e utilizamos <em><strong>XSL</strong></em> para os transformar em ficheiros <em>javascript</em> e <em>html</em>. Utilizamos ainda <em><strong>XSL-FO</strong></em> para gerar um documento <em>PDF</em> a partir de um <em>XML</em></p>
-                           
+            
+            <p>Para o desenvolvimento propriamente dito do projeto utilizamos <em><strong>HTML</strong></em>, <em><strong>PHP</strong></em> e <em><strong>Javascript</strong></em>. Recorremos ainda ao <em><strong>CSS</strong></em> para melhorar o aspeto estético do sistema. Utilizámos ainda algomas funcionalidades
+               do <em><strong>Bootsrap</strong></em>, nomeadamente para a formatação das tabelas de listagem e dos botões.
+            </p>
+            
+            <p>Para lidar com os ficheiros de texto que guardam os dados do nosso sistema recorremos
+               ao <em><strong>XML</strong></em> e utilizamos <em><strong>XSL</strong></em> para os transformar em ficheiros <em>javascript</em> e <em>html</em>. Utilizamos ainda <em><strong>XSL-FO</strong></em> para gerar um documento <em>PDF</em> a partir de um <em>XML</em></p>
+            
             <p>Utilizamos ainda <em><strong>ANTLR</strong></em> para criar uma linguagem de suporte a uma parte do nosso sistema.
             </p>
-                           
+            
             <p>Para facilitar o nosso trabalho recorremos a alguns <em>IDE's</em> como o <em><strong>Oxygen</strong></em> e o <em><strong>Intelij</strong></em>.
             </p>
-                        
-                    <a name="d0e204"></a>
-                        
+            
+            <a name="d1e206"></a>
+            
             <h2 style="color:#c0392b">Desenvolvimento</h2>
-                        <a name="d0e209"></a>
-                            
+            <a name="d1e211"></a>
+            
             <h3 style="color:#e74c3c">Arquitetura do Sistema</h3>
-                            
-            <p>Para come&ccedil;ar a descri&ccedil;&atilde;o do trabalho que realizamos segue-se um desenho da arquitetura do sistema para que seja facilmente
-               percept&iacute;vel qual a abordagem que utilizamos.
+            
+            <p>Para começar a descrição do trabalho que realizamos segue-se um desenho da arquitetura
+               do sistema para que seja facilmente perceptível qual a abordagem que utilizamos.
             </p>
-                            
-            <div class="col-center text-center"><a name="d0e217"></a><img src="PLC.png"><br><p style="font-size:11px">Desenho da arquitetura do Sistema</p>
+            
+            <div class="col-center text-center"><a name="d1e219"></a><img src="PLC.png"><br><p style="font-size:11px">Desenho da arquitetura do Sistema</p>
             </div>
-                            
-            <p>Apesar de o sistema ser um gestor de audi&ccedil;&otilde;es decidimos tamb&eacute;m manipular informa&ccedil;&atilde;o sobre os alunos e professores da escola
-               de m&uacute;sica.
+            
+            <p>Apesar de o sistema ser um gestor de audições decidimos também manipular informação
+               sobre os alunos e professores da escola de música.
             </p>
-                            
-            <p>O utilizador pode consultar toda a informa&ccedil;&atilde;o sobre essas tr&ecirc;s entidades, sendo que os dados s&atilde;o extra&iacute;dos dos ficheiros <em>XML</em> pr&eacute;-definidos (alunos.xml, professores.xml e audicoes.xml) atrav&eacute;s de um <em>XSL</em>.
+            
+            <p>O utilizador pode consultar toda a informação sobre essas três entidades, sendo que
+               os dados são extraídos dos ficheiros <em>XML</em> pré-definidos (alunos.xml, professores.xml e audicoes.xml) através de um <em>XSL</em> que gera um <em>HTML</em>.
             </p>
-                            
-            <p>ACABAR DESCRI&Ccedil;&Atilde;O</p>
-                        
-                        <a name="d0e236"></a>
-                            
+            
+            <p>Ao alterar/adicionar dados, estes são validados e posteriormente adicionados aos ficheiros
+               <em>XML</em> correspondentes.
+            </p>
+            
+            <a name="d1e245"></a>
+            
             <h3 style="color:#e74c3c">Base de Dados</h3>
-                            
-            <p>Decidimos utilizar ficheiros <em>XML</em> para guardar todos os dados relevantes da escola de m&uacute;sica: alunos, professores, cursos, instrumentos, audi&ccedil;&otilde;es, obras e
-               compositores. Para cada uma destas entidades existe um ficheiro <em>XML</em> que lhe oferece suporte.
+            
+            <p>Decidimos utilizar ficheiros <em>XML</em> para guardar todos os dados relevantes da escola de música: alunos, professores,
+               cursos, instrumentos, audições, obras e compositores. Para cada uma destas entidades
+               existe um ficheiro <em>XML</em> que lhe oferece suporte.
             </p>
-                            
-            <p>Passamos ent&atilde;o a descrever a estrutura dos documentos <em>XML</em> utilizados para suportar toda a indorma&ccedil;&atilde;o do sistema.
+            
+            <p>Passamos então a descrever a estrutura dos documentos <em>XML</em> utilizados para suportar toda a indormação do sistema.
             </p>
-                            <a name="d0e256"></a>
-                                
+            <a name="d1e265"></a>
+            
             <h4 style="color:#2ecc71">Modelos</h4>
-                                
+            
             <p><strong>Aluno:</strong></p>
-                                
-                                    
-            <ul>c&oacute;digo/identificador &uacute;nico;</ul>
-                                    
+            
+            
+            <ul>código/identificador único;</ul>
+            
             <ul>nome;</ul>
-                                    
+            
             <ul>data de nascimento;</ul>
-                                    
-            <ul>curso em que est&aacute; matriculado;</ul>
-                                    
+            
+            <ul>curso em que está matriculado;</ul>
+            
             <ul>ano do curso que frequenta;</ul>
-                                    
+            
             <ul>instrumento que toca;</ul>
-                                
-                                
-            <div class="col-center text-center"><a name="d0e286"></a><img src="dtdAlunos.png"><br><p style="font-size:11px">Schema representativo da estrutura do ficheiro XML que suporta a informa&ccedil;&atilde;o dos alunos.</p>
+            
+            
+            <div class="col-center text-center"><a name="d1e296"></a><img src="dtdAlunos.png"><br><p style="font-size:11px">Schema representativo da estrutura do ficheiro XML que suporta a informação dos alunos.</p>
             </div>
-                                
+            
             <p><strong>Professor:</strong></p>
-                                
-                                    
-            <ul>c&oacute;digo/identificador &uacute;nico;</ul>
-                                    
+            
+            
+            <ul>código/identificador único;</ul>
+            
             <ul>nome;</ul>
-                                    
+            
             <ul>data de nascimento;</ul>
-                                    
-            <ul>abilita&ccedil;&atilde;o acad&eacute;mica (que n&iacute;vel de forma&ccedil;&atilde;o tem e em qu&ecirc;);</ul>
-                                    
+            
+            <ul>abilitação académica (que nível de formação tem e em quê);</ul>
+            
             <ul>curso que lecciona;</ul>
-                                
-                                
-            <div class="col-center text-center"><a name="d0e316"></a><img src="dtdProfessores.png"><br><p style="font-size:11px">Schema representativo da estrutura do ficheiro XML que suporta a informa&ccedil;&atilde;o dos professores.</p>
+            
+            
+            <div class="col-center text-center"><a name="d1e327"></a><img src="dtdProfessores.png"><br><p style="font-size:11px">Schema representativo da estrutura do ficheiro XML que suporta a informação dos professores.</p>
             </div>
-                                
-            <p><strong>Audi&ccedil;&atilde;o:</strong></p>
-                                
-                                    
-            <ul>nome/t&iacute;tulo;</ul>
-                                    
+            
+            <p><strong>Audição:</strong></p>
+            
+            
+            <ul>nome/título;</ul>
+            
             <ul>local;</ul>
-                                    
+            
             <ul>data;</ul>
-                                    
-            <ul>dura&ccedil;&atilde;o esperada;</ul>
-                                    
+            
+            <ul>duração esperada;</ul>
+            
             <ul>hora de inicio;</ul>
-                                    
-            <ul>atua&ccedil;oes: cada atua&ccedil;ao tem um nome, dura&ccedil;&atilde;o e uma lista de alunos e professores;</ul>
-                                
-                                
-            <div class="col-center text-center"><a name="d0e349"></a><img src="dtdAudicoes.png"><br><p style="font-size:11px">Schema representativo da estrutura do ficheiro XML que suporta a informa&ccedil;&atilde;o das audi&ccedil;&otilde;es.</p>
+            
+            <ul>atuaçoes: cada atuaçao tem um nome, duração e uma lista de alunos e professores;</ul>
+            
+            
+            <div class="col-center text-center"><a name="d1e361"></a><img src="dtdAudicoes.png"><br><p style="font-size:11px">Schema representativo da estrutura do ficheiro XML que suporta a informação das audições.</p>
             </div>
-                            
-                        
-                        <a name="d0e359"></a>
-                            
+            
+            
+            <a name="d1e371"></a>
+            
             <h3 style="color:#e74c3c">Funcionalidades</h3>
-                            
-            <p>Passamos agora a descrever detalhadamente como foi implementada cada uma das funcionalidades que o nosso sistema tem para
-               oferecer e todas as decis&otilde;es tomadas em rela&ccedil;&atilde;o a elas.
+            
+            <p>Passamos agora a descrever detalhadamente como foi implementada cada uma das funcionalidades
+               que o nosso sistema tem para oferecer e todas as decisões tomadas em relação a elas.
             </p>
-                            <a name="d0e367"></a>
-                                
+            <a name="d1e379"></a>
+            
             <h4 style="color:#2ecc71">Listar Alunos/Professores</h4>
-                                
-            <p>Os alunos e professores s&atilde;o listados da mesma forma: a partir do ficheiro <em>XML</em> pr&eacute;-definido (alunos.xml) &eacute; gerado um ficheiro .js atrav&eacute;s de um processador <em>XSLT</em> que cont&eacute;m algumas informa&ccedil;&otilde;es sobre os elementos (id, nome e instrumento/curso) guardadas em arrays. Na p&aacute;gina em que &eacute;
-               apresentada a listagem &eacute; carregado um outro .js que povoa a tabela de acordo com os arrays de informa&ccedil;&otilde;es dispon&iacute;veis. S&atilde;o
-               ainda adicionados para cada elemento tr&ecirc;s bot&otilde;es que d&atilde;o acesso &agrave;s funcionalidades de consultar, alterar e remover.
+            
+            <p>Os alunos e professores são listados da mesma forma: a partir do ficheiro <em>XML</em> pré-definido (alunos.xml) é gerado um ficheiro .js através de um processador <em>XSLT</em> que contém algumas informações sobre os elementos (id, nome e instrumento/curso)
+               guardadas em arrays. Na página em que é apresentada a listagem é carregado um outro
+               .js que povoa a tabela de acordo com os arrays de informações disponíveis. São ainda
+               adicionados para cada elemento três botões que dão acesso às funcionalidades de consultar,
+               alterar e remover.
             </p>
-                                
-            <p>A tabela em que s&atilde;o apresentados os resultados &eacute; paginada, ou seja, s&atilde;o apresentados no m&aacute;ximo 20 resultados por p&aacute;gina e
-               &eacute; poss&iacute;vel navegar para outras p&aacute;ginas. Isto foi conseguido atrav&eacute;s de uma biblioteca <em>javascript</em> j&aacute; existente chamada <em>pagination.js</em>.
+            
+            <p>A tabela em que são apresentados os resultados é paginada, ou seja, são apresentados
+               no máximo 20 resultados por página e é possível navegar para outras páginas. Isto
+               foi conseguido através de uma biblioteca <em>javascript</em> já existente chamada <em>pagination.js</em>.
             </p>
-                                
-            <div class="col-center text-center"><a name="d0e390"></a><img src="listarAlunos.png"><br><p style="font-size:11px">Exemplo da listagem de professores.</p>
+            
+            <div class="col-center text-center"><a name="d1e402"></a><img src="listarAlunos.png"><br><p style="font-size:11px">Exemplo da listagem de professores.</p>
             </div>
-                                
-            <p>Segue-se o ficheiro .js utilizado para povoar a tabela de alunos, sendo que a <em>script</em> para povoar a tabela dos professores &eacute; id&ecirc;ntica.
+            
+            <p>Segue-se o ficheiro .js utilizado para povoar a tabela de alunos, sendo que a <em>script</em> para povoar a tabela dos professores é idêntica.
             </p>
-                                <pre style="background-color:#F5FFFA">
+            <pre style="background-color:#F5FFFA">
         var index=0;
         $(document).ready(function(){
         for(index=0;index &lt; nomes.length;index++){
@@ -368,17 +385,18 @@
                         }
                         });
                     </pre>
-                            
-                            <a name="d0e403"></a>
-                                
+            
+            <a name="d1e416"></a>
+            
             <h4 style="color:#2ecc71">Adicionar um Aluno/Professor</h4>
-                                
-            <p>O ato de adicionar um aluno ou professor ao sistema &eacute; feito atrav&eacute;s de um formul&aacute;rio <em>HTML</em> com uma <em>script</em> de atendimento em <em>PHP</em> que utilizando <em>DOM</em> adiciona um novo elemento ao ficheiro <em>XML</em> com as informa&ccedil;&otilde;es recebidas do formul&aacute;rio.
+            
+            <p>O ato de adicionar um aluno ou professor ao sistema é feito através de um formulário
+               <em>HTML</em> com uma <em>script</em> de atendimento em <em>PHP</em> que utilizando <em>DOM</em> adiciona um novo elemento ao ficheiro <em>XML</em> com as informações recebidas do formulário.
             </p>
-                                
+            
             <p>De seguida mostra-se a <em>script PHP</em> utilizada para adicionar os elementos ao <em>XML</em>:
             </p>
-                                <pre style="background-color:#F5FFFA">
+            <pre style="background-color:#F5FFFA">
 &lt;?php
 $logs = new DOMDocument(); 
 $logs-&gt;load('alunos.xml');
@@ -405,28 +423,31 @@ $logs-&gt;save("alunos.xml");
 
 header("Location:alunos.html");
                     </pre>
-                                <p>Seguem-se exemplos ilustrativos dos formul&aacute;rios de cria&ccedil;&atilde;o de um aluno e de um professor.</p>
-                                
-            <div class="col-center text-center"><a name="d0e441"></a><img src="adicionarAluno.png"><br><p style="font-size:11px">Exemplo de preenchimento do formul&aacute;rio de cria&ccedil;&atilde;o de um aluno.</p>
+            <p>Seguem-se exemplos ilustrativos dos formulários de criação de um aluno e de um professor.</p>
+            
+            <div class="col-center text-center"><a name="d1e455"></a><img src="adicionarAluno.png"><br><p style="font-size:11px">Exemplo de preenchimento do formulário de criação de um aluno.</p>
             </div>
-                                
-            <div class="col-center text-center"><a name="d0e444"></a><img src="adicionarProfessor.png"><br><p style="font-size:11px">Exemplo de preenchimento do formul&aacute;rio de cria&ccedil;&atilde;o de um professor.</p>
+            
+            <div class="col-center text-center"><a name="d1e458"></a><img src="adicionarProfessor.png"><br><p style="font-size:11px">Exemplo de preenchimento do formulário de criação de um professor.</p>
             </div>
-                            
-                            <a name="d0e448"></a>
-                                
+            
+            <a name="d1e462"></a>
+            
             <h4 style="color:#2ecc71">Alterar um Aluno/Professor</h4>
-                                
-            <p>A funcionalidade de alterar um aluno ou professor &eacute; tamb&eacute;m ela processada a partir de um formul&aacute;rio <em>HTML</em>, semelhante ao respetivo para adicionar, mas j&aacute; inicialmente preenchido com as informa&ccedil;&otilde;es pr&eacute;-altera&ccedil;&atilde;o do aluno ou professor
-               escolhido. Assumimos que o id de um aluno n&atilde;o pode ser alterado pois isso n&atilde;o faria grande sentido.
+            
+            <p>A funcionalidade de alterar um aluno ou professor é também ela processada a partir
+               de um formulário <em>HTML</em>, semelhante ao respetivo para adicionar, mas já inicialmente preenchido com as informações
+               pré-alteração do aluno ou professor escolhido. Assumimos que o id de um aluno não
+               pode ser alterado pois isso não faria grande sentido.
             </p>
-                                
-            <p>Ap&oacute;s feitas as altera&ccedil;&otilde;es no formul&aacute;rio e submetido o mesmo &eacute; chamada a <em>script</em> de atendimento em <em>PHP</em> utilizando <em>SimpleXML</em> que altera o nodo respetivo do <em>XML</em> com as informa&ccedil;&otilde;es do formul&aacute;rio.
+            
+            <p>Após feitas as alterações no formulário e submetido o mesmo é chamada a <em>script</em> de atendimento em <em>PHP</em> utilizando <em>SimpleXML</em> que altera o nodo respetivo do <em>XML</em> com as informações do formulário.
             </p>
-                                
-            <p> Segue-se a <em>script</em> utilizada para preencher o formul&aacute;rio com os dados do aluno escolhido (funciona igual para o professor).
+            
+            <p> Segue-se a <em>script</em> utilizada para preencher o formulário com os dados do aluno escolhido (funciona igual
+               para o professor).
             </p>
-                                <pre style="background-color:#F5FFFA">
+            <pre style="background-color:#F5FFFA">
 &lt;?php
                             
 include('consultarAluno.html');
@@ -448,9 +469,9 @@ echo "Instrumento: &lt;select name='instrumentos' id='instrumentos'&gt;&lt;optio
 echo "&lt;center&gt;&lt;input type='submit' id='bigButton' value='Alterar'&gt; &lt;/center&gt;";
 ?&gt;
                     </pre>
-                                <p>Para al&eacute;m desta <em>script</em> juntamos ainda a que trata de alterar os valores no <em>XML</em>:
+            <p>Para além desta <em>script</em> juntamos ainda a que trata de alterar os valores no <em>XML</em>:
             </p>
-                                <pre style="background-color:#F5FFFA">
+            <pre style="background-color:#F5FFFA">
 &lt;?php
                             
 $oldId = $_REQUEST['id'];
@@ -471,21 +492,22 @@ header("Location:alunos.html");
 $logs-&gt;asXML('alunos.xml');
 ?&gt;
                     </pre>
-                                <p>Segue-se um exemplo ilustrativo do formul&aacute;rio de altera&ccedil;&atilde;o de um aluno.</p>
-                                
-            <div class="col-center text-center"><a name="d0e498"></a><img src="alterarProfessor.png"><br><p style="font-size:11px">Exemplo da altera&ccedil;&atilde;o de um aluno.</p>
+            <p>Segue-se um exemplo ilustrativo do formulário de alteração de um aluno.</p>
+            
+            <div class="col-center text-center"><a name="d1e513"></a><img src="alterarProfessor.png"><br><p style="font-size:11px">Exemplo da alteração de um aluno.</p>
             </div>
-                            
-                            <a name="d0e502"></a>
-                                
-            <h4 style="color:#2ecc71">Remover um Aluno/Professor/Audi&ccedil;&atilde;o</h4>
-                                
-            <p>Para remover um aluno,professor ou audi&ccedil;&atilde;o do sistema recorremos novamente ao <em>DOM</em> numa <em>script PHP</em> que recebe como argumento o id do aluno ou professor a remover e facilmente o remove do documento <em>XML</em> correspondente.
+            
+            <a name="d1e518"></a>
+            
+            <h4 style="color:#2ecc71">Remover um Aluno/Professor/Audição</h4>
+            
+            <p>Para remover um aluno,professor ou audição do sistema recorremos novamente ao <em>DOM</em> numa <em>script PHP</em> que recebe como argumento o id do aluno ou professor a remover e facilmente o remove
+               do documento <em>XML</em> correspondente.
             </p>
-                                
-            <p>Segue-se a <em>script</em> de remo&ccedil;&atilde;o de um aluno, sendo que a de um professor e de uma audi&ccedil;&atilde;o &eacute; semelhante.
+            
+            <p>Segue-se a <em>script</em> de remoção de um aluno, sendo que a de um professor e de uma audição é semelhante.
             </p>
-                                <pre style="background-color:#F5FFFA">
+            <pre style="background-color:#F5FFFA">
 &lt;?php 
                             
 $logs = new DOMDocument(); 
@@ -503,111 +525,154 @@ $logs-&gt;save("alunos.xml");
 header("Location:alunos.html");
 ?&gt;
                     </pre>
-                            
-                            <a name="d0e529"></a>
-                                
-            <h4 style="color:#2ecc71">Listar Audi&ccedil;&otilde;es</h4>
-                                
-            <p>A listagem de audi&ccedil;&otilde;es &eacute; feita de forma semelhante &agrave; listagem de alunos e professores mas com uma ligeira diferen&ccedil;a: existe
-               a op&ccedil;&atilde;o de filtrar as audi&ccedil;&otilde;es distinguindo as que ainda v&atilde;o decorrer das que j&aacute; decorreram.
+            
+            <a name="d1e545"></a>
+            
+            <h4 style="color:#2ecc71">Listar Audições</h4>
+            
+            <p>A listagem de audições é feita de forma semelhante à listagem de alunos e professores
+               mas com uma ligeira diferença: existe a opção de filtrar as audições distinguindo
+               as que ainda vão decorrer das que já decorreram.
             </p>
-                                
-            <p>Para al&eacute;m disso para cada audi&ccedil;&atilde;o existem dois bot&otilde;es adicionais relativos &agrave;s funcionalidades de gerar um <em>PDF</em> e uma p&aacute;gina <em>HTML</em> para publicitar audi&ccedil;&atilde;o. Isto foi conseguido com o aux&iacute;lio de uma biblioteca <em>Javascript</em>, <em>moment.js</em> que oferece funcionalidades para lidar com datas.
+            
+            <p>Para além disso para cada audição existem dois botões adicionais relativos às funcionalidades
+               de gerar um <em>PDF</em> e uma página <em>HTML</em> para publicitar audição. Isto foi conseguido com o auxílio de uma biblioteca <em>Javascript</em>, <em>moment.js</em> que oferece funcionalidades para lidar com datas.
             </p>
-                                
-            <p>Seguem-se imagens ilustrativas da listagem de audi&ccedil;&otilde;es aplicando os filtros.</p>
-                                
-            <div class="col-center text-center"><a name="d0e555"></a><img src="audicoes.png"><br><p style="font-size:11px">Listagem de todas as audi&ccedil;&otilde;es</p>
+            
+            <p>Seguem-se imagens ilustrativas da listagem de audições aplicando os filtros.</p>
+            
+            <div class="col-center text-center"><a name="d1e571"></a><img src="audicoes.png"><br><p style="font-size:11px">Listagem de todas as audições</p>
             </div>
-                                
-            <div class="col-center text-center"><a name="d0e558"></a><img src="audicoesPass.png"><br><p style="font-size:11px">Listagem das audi&ccedil;&otilde;es que j&aacute; decorreram</p>
+            
+            <div class="col-center text-center"><a name="d1e575"></a><img src="audicoesPass.png"><br><p style="font-size:11px">Listagem das audições que já decorreram</p>
             </div>
-                                
-            <div class="col-center text-center"><a name="d0e561"></a><img src="audicoesFut.png"><br><p style="font-size:11px">Listagem das audi&ccedil;&otilde;es que ainda v&atilde;o decorrer</p>
+            
+            <div class="col-center text-center"><a name="d1e578"></a><img src="audicoesFut.png"><br><p style="font-size:11px">Listagem das audições que ainda vão decorrer</p>
             </div>
-                            
-                            <a name="d0e565"></a>
-                                
-            <h4 style="color:#2ecc71">Adicionar uma Audi&ccedil;&atilde;o</h4>
-                                
-            <p>4 COMPLETAR ESTA SEC&Ccedil;&Atilde;O COM O QUE TU FIZESTE</p>
-                                
-            <p>Uma das funcionalidades que a plataforma deve oferecer &eacute; o planeamento/adi&ccedil;&atilde;o de uma audi&ccedil;&atilde;o &agrave; base de dados da escola.</p>
-                                
-            <p>Este planeamento ser&aacute; feito atrav&eacute;s de um simples ficheiro de texto em que o utilizador poder&aacute; introduzir os dados da audi&ccedil;&atilde;o
-               de acordo com algumas regras especificadas por uma gram&aacute;tica desenvolvida por n&oacute;s.
+            
+            <a name="d1e582"></a>
+            
+            <h4 style="color:#2ecc71">Adicionar uma Audição</h4>
+            
+            <p>4 COMPLETAR ESTA SECÇÃO COM O QUE TU FIZESTE</p>
+            
+            <p>Uma das funcionalidades que a plataforma deve oferecer é o planeamento/adição de uma
+               audição à base de dados da escola.
             </p>
-                                <pre style="background-color:#F5FFFA">
-grammar planeadorAudicoes;
+            
+            <p>Este planeamento será feito através de um simples ficheiro de texto em que o utilizador
+               poderá introduzir os dados da audição de acordo com algumas regras especificadas por
+               uma gramática desenvolvida por nós.
+            </p>
+            <pre style="background-color:#F5FFFA">
 
-planeadorAudicoes: audicao;
+grammar plano;
 
-audicao: 'Audicao' nome 'Local:' local 'Data:' data 'Inicio:' hora 'Duracao:' duracao plano;
+@members{
+    DataInterface dataInterface = new DataInterface();
+    Audicao audition  = new Audicao();
+}
 
-plano: atuacao (';' atuacao)*;
 
-atuacao: nome 'Alunos:' alunos 'Professores:' professores 'Pecas:' pecas 'Duracao:' duracao;
+audicao: 'Audição'  nome           {audition.setNome($nome.text);}
+         'Local:'   local          {audition.setLocal($local.text);}
+         'Data:'    data           {audition.setData($data.day, $data.month, $data.year);}
+         'Início:'  hora           {audition.setInicio($hora.hours, $hora.minutes);}
+         'Duração:' hora           {audition.setDuracao($hora.hours, $hora.minutes);}
+         plano
+                                   {dataInterface.addAudicao(audition);}
+       ;
 
-alunos : aluno (',' aluno)*;
+plano:       a1=atuacao            {audition.addAtuacao($a1.a);}
+        (';' a2=atuacao            {audition.addAtuacao($a2.a);})*
+     ;
 
-data: DATA;
+atuacao returns [Atuacao a]:
+    nome                           {$a = new Atuacao(dataInterface, $nome.text);}
+    'Alunos:' aluno[$a]*
+    'Professores:' professor[$a]*
+    'Peças:' peca[$a]*
+    'Duração:' hora                {$a.setDuracao($hora.hours, $hora.minutes);}
+    ;
 
-duracao: hora;
 
-hora: INT ':' INT;
 
-aluno: IDA; 
+aluno [Atuacao a]:
+    IDA                            { a.addAluno($IDA.text); }
+    ;
 
-professores: professor (',' professor)*;
 
-professor: IDP;
+professor [Atuacao a]:
+    IDP                            { a.addProfessor($IDP.text); }
+    ;
 
-pecas: peca (',' peca)*;
+peca [Atuacao a]:
+    IDO                            { a.addPeca($IDO.text); }
+    ;
 
-peca: IDO;
+nome:   STRING;
+local:  STRING;
+
+
+data returns [int day, int month, int year]:
+    d=INT '-' m=INT '-' y=INT      { $day = $d.int;
+                                     $month = $m.int;
+                                     $year = $y.int;}
+    ;
+
+
+hora returns [int hours, int minutes]:
+    h=INT ':' m=INT              { $hours = $h.int;
+                                   $minutes = $m.int;}
+    ;
                     </pre>
-                                <p>Essa gram&aacute;tica foi totalmente desenvolvida utilizando <em>ANTLR</em> e mais tarde completada com atributos e recorrendo a funcionalidades do <em>Java</em> para as a&ccedil;&otilde;es sem&acirc;nticas.
+            <p>Essa gramática foi totalmente desenvolvida utilizando <em>ANTLR</em> e mais tarde completada com atributos e recorrendo a funcionalidades do <em>Java</em> para as ações semânticas.
             </p>
-                                
-            <p>Para al&eacute;m de validar o formato do ficheiro de planeamento de uma audi&ccedil;&atilde;o fornecido pelo utilizador esta gram&aacute;tica ter&aacute; a fun&ccedil;&atilde;o
-               de verificar se a informa&ccedil;&atilde;o inserida est&aacute; de acordo com a base de dados (alunos existem, professor exite, obras existem...)
-               e, caso tudo esteja correto, adicionar a informa&ccedil;&atilde;o sobre a audi&ccedil;&atilde;o &agrave; base de dados da escola.
+            
+            <p>Para além de validar o formato do ficheiro de planeamento de uma audição fornecido
+               pelo utilizador esta gramática terá a função de verificar se a informação inserida
+               está de acordo com a base de dados (alunos existem, professor exite, obras existem...)
+               e, caso tudo esteja correto, adicionar a informação sobre a audição à base de dados
+               da escola.
             </p>
-                                
-            <p>Sendo a nossa base de dados um conjunto de ficheiros <em>XML</em> tivemos de recorrer a algumas bibliotecas do <em>Java</em> com fun&ccedil;&otilde;es especif&iacute;cas para podermos consultar e manipular os seus dados.
+            
+            <p>Sendo a nossa base de dados um conjunto de ficheiros <em>XML</em> tivemos de recorrer a algumas bibliotecas do <em>Java</em> com funções especifícas para podermos consultar e manipular os seus dados.
             </p>
-                            
-                            <a name="d0e604"></a>
-                                
-            <h4 style="color:#2ecc71">Alterar uma Audi&ccedil;&atilde;o</h4>
-                                
-            <p>Tamb&eacute;m a funcionalidade de alterar uma audi&ccedil;&atilde;o &eacute; conseguida atrav&eacute;s de um formul&aacute;rio html, CONTINUAR</p>
-                            
-                            <a name="d0e613"></a>
-                                
-            <h4 style="color:#2ecc71">Gerar PDF para uma Audi&ccedil;&atilde;o</h4>
-                                
-            <p>Outra das funcionalidades que o nosso sistema oferece &eacute; a possibilidade de gerar um documento <em>PDF</em> para uma audi&ccedil;&atilde;o.
+            
+            <a name="d1e622"></a>
+            
+            <h4 style="color:#2ecc71">Alterar uma Audição</h4>
+            
+            <p>Também a funcionalidade de alterar uma audição é conseguida através de um formulário
+               <em>HTML</em>, mas este um pouco mais complexo.
             </p>
-                                
-            <p>Para isto foi necess&aacute;rio criar um <em>XSL</em> que gerasse um ficheiro <em>FO (Formatting objects)</em> que por sua vez gera um documento <em>PDF</em> para um determinado documento <em>XML</em>.
+            
+            <a name="d1e634"></a>
+            
+            <h4 style="color:#2ecc71">Gerar PDF para uma Audição</h4>
+            
+            <p>Outra das funcionalidades que o nosso sistema oferece é a possibilidade de gerar um
+               documento <em>PDF</em> para uma audição.
             </p>
-                            
-                            <a name="d0e643"></a>
-                                
-            <h4 style="color:#2ecc71">Gerar p&aacute;gina HTML para uma Audi&ccedil;&atilde;o</h4>
-                                
-            <p>Para al&eacute;m do <em>PDF</em> &eacute; ainda poss&iacute;vel gerar uma p&aacute;gina <em>HTML</em> para publicitar uma audi&ccedil;&atilde;o.
+            
+            <p>Para isto foi necessário criar um <em>XSL</em> que gerasse um ficheiro <em>FO (Formatting objects)</em> que por sua vez gera um documento <em>PDF</em> para um determinado documento <em>XML</em>.
             </p>
-                                
-            <p>Isto &eacute; feito atrav&eacute;s de um <em>XSL</em> simples que transforma um <em>XML</em> num <em>HTML</em>.
+            
+            <a name="d1e664"></a>
+            
+            <h4 style="color:#2ecc71">Gerar página HTML para uma Audição</h4>
+            
+            <p>Para além do <em>PDF</em> é ainda possível gerar uma página <em>HTML</em> para publicitar uma audição.
             </p>
-                                
-            <p>De seguida apresentamos o <em>XML</em> de uma audi&ccedil;&atilde;o e o resultado.
+            
+            <p>Isto é feito através de um <em>XSL</em> simples que transforma um <em>XML</em> num <em>HTML</em>.
             </p>
-                                <pre style="background-color:#F5FFFA">
+            
+            <p>De seguida apresentamos o <em>XML</em> de uma audição e o resultado.
+            </p>
+            <pre style="background-color:#F5FFFA">
 &lt;audicao id="A1"&gt;
-   &lt;nome&gt;R&eacute;cita 1&ordm; Dezembro&lt;/nome&gt;
+   &lt;nome&gt;Récita 1º Dezembro&lt;/nome&gt;
    &lt;data&gt;2040-12-01&lt;/data&gt;
    &lt;local&gt;Theatro Circo&lt;/local&gt;
    &lt;inicio&gt;22:30&lt;/inicio&gt;
@@ -629,7 +694,7 @@ peca: IDO;
            &lt;/obras&gt;
        &lt;/atuacao&gt;
        &lt;atuacao&gt;
-           &lt;nome&gt;V&aacute;rios Ritmos&lt;/nome&gt;
+           &lt;nome&gt;Vários Ritmos&lt;/nome&gt;
            &lt;duracao&gt;50 min&lt;/duracao&gt;
            &lt;alunos&gt;
                &lt;aluno&gt;A32597&lt;/aluno&gt;
@@ -644,7 +709,7 @@ peca: IDO;
            &lt;/obras&gt;
        &lt;/atuacao&gt;
        &lt;atuacao&gt;
-           &lt;nome&gt;Raps&oacute;dia&lt;/nome&gt;
+           &lt;nome&gt;Rapsódia&lt;/nome&gt;
            &lt;duracao&gt;50 min&lt;/duracao&gt;
            &lt;alunos&gt;
                &lt;aluno&gt;A32597&lt;/aluno&gt;
@@ -661,44 +726,52 @@ peca: IDO;
    &lt;/atuacoes&gt;
 &lt;/audicao&gt;
                     </pre>
-                                <div class="col-center text-center"><a name="d0e681"></a><img src="audicaoHTML.png"><br><p style="font-size:11px">HTML gerado para a audi&ccedil;&atilde;o</p>
+            <div class="col-center text-center"><a name="d1e703"></a><img src="audicaoHTML.png"><br><p style="font-size:11px">HTML gerado para a audição</p>
             </div>
-                            
-                        
-                    <a name="d0e688"></a>
-                        
-            <h2 style="color:#c0392b">Conclus&otilde;es</h2>
-                        <a name="d0e693"></a>
-                            
-            <h3 style="color:#e74c3c">Reflex&atilde;o Crit&iacute;ca</h3>
-                            
-            <p>Este trabalho permitiu-nos consolidar e dar uma aplica&ccedil;&atilde;o mais pr&aacute;tica aos conceitos leccionados durante todo o semestre nas
-               Unidades Curriculares de <strong>GCS</strong> e <strong>PRI</strong>.
+            
+            
+            <a name="d1e710"></a>
+            
+            <h2 style="color:#c0392b">Conclusões</h2>
+            <a name="d1e715"></a>
+            
+            <h3 style="color:#e74c3c">Reflexão Critíca</h3>
+            
+            <p>Este trabalho permitiu-nos consolidar e dar uma aplicação mais prática aos conceitos
+               leccionados durante todo o semestre nas Unidades Curriculares de <strong>GCS</strong> e <strong>PRI</strong>.
             </p>
-                            
-            <p>Revelou-se um projeto bastante interessante e &uacute;til na medida em que atrav&eacute;s da sua realiza&ccedil;&atilde;o foi poss&iacute;vel melhorarmos (e
-               at&eacute; aprendermos!) muito os nossos conhecimentos em termos de aplica&ccedil;&otilde;es <em>Web</em>.
+            
+            <p>Revelou-se um projeto bastante interessante e útil na medida em que através da sua
+               realização foi possível melhorarmos (e até aprendermos!) muito os nossos conhecimentos
+               em termos de aplicações <em>Web</em>.
             </p>
-                            
-            <p>&Eacute; sempre positivo poder praticar o uso de novas tecnologias, como foi o caso do <em>PHP</em> que nunca haviamos utilizado ou mesmo o <em>javascript</em>. 
+            
+            <p>É sempre positivo poder praticar o uso de novas tecnologias, como foi o caso do <em>PHP</em> que nunca haviamos utilizado ou mesmo o <em>javascript</em>. 
             </p>
-                            
-            <p>Em termos de gram&aacute;ticas foi tamb&eacute;m interessante perceber que podem ser bastante utiliz&aacute;veis e &uacute;teis em casos reais.</p>
-                            
-            <p>O maior obst&aacute;culo que encontramos na realiza&ccedil;&atilde;o deste trabalho foi o facto de o <em>PHP</em> n&atilde;o suportar o <em>XSL 2.0</em>, o que fez com que tivessemos que encontrar alternativas para o <em>xsl:result-document</em> de forma a poder gerar documentos atrav&eacute;sdo <em>XSL</em></p>
-                        
-                        <a name="d0e740"></a>
-                            
+            
+            <p>Em termos de gramáticas foi também interessante perceber que podem ser bastante utilizáveis
+               e úteis em casos reais.
+            </p>
+            
+            <p>O maior obstáculo que encontramos na realização deste trabalho foi o facto de o <em>PHP</em> não suportar o <em>XSL 2.0</em>, o que fez com que tivessemos que encontrar alternativas para o <em>xsl:result-document</em> de forma a poder gerar documentos através do <em>XSL</em>.
+            </p>
+            
+            <a name="d1e764"></a>
+            
             <h3 style="color:#e74c3c">Trabalho Futuro</h3>
-                            
-            <p>Como trabalho futuro fica , antes de mais, tornar a plataforma mais apelativa e atual visualmente. </p>
-                            
-            <p>Gostariamos ainda de alarg&aacute;-la de forma a lidar com mais informa&ccedil;&atilde;o (cursos, obras, compositores, grupos de alunos) e criar
-               funcionalidades de registo de v&aacute;rios tipos de utilizador (alunos, professores, gerentes das escolas) de forma a que se tornasse
-               uma plataforma completa para uma escola de m&uacute;sica em que se pudessem,por exemplo, marcar aulas e gerir hor&aacute;rios
+            
+            <p>Como trabalho futuro fica , antes de mais, tornar a plataforma mais apelativa e atual
+               visualmente. 
             </p>
-                        
-                    
+            
+            <p>Gostariamos ainda de alargá-la de forma a lidar com mais informação (cursos, obras,
+               compositores, grupos de alunos) e criar funcionalidades de registo de vários tipos
+               de utilizador (alunos, professores, gerentes das escolas) de forma a que se tornasse
+               uma plataforma completa para uma escola de música em que se pudessem,por exemplo,
+               marcar aulas e gerir horários
+            </p>
+            
+            
          </div>
          <hr>
          <hr>

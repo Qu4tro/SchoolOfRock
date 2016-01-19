@@ -1,4 +1,4 @@
-// Generated from /home/quatro/IdeaProjects/PlaneadorAudicoes/src/AuditionParser/plano.g4 by ANTLR 4.5.1
+// Generated from C:/Users/patri/Documents/GitHub/SchoolOfRock/PlaneadorAudicoes/src/AuditionParser\plano.g4 by ANTLR 4.5.1
 package AuditionParser;
 
 import org.antlr.v4.runtime.ParserRuleContext;

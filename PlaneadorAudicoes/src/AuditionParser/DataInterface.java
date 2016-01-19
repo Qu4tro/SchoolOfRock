@@ -21,8 +21,6 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.FileInputStream;
 import java.io.File;
-import java.net.URI;
-import java.util.concurrent.Exchanger;
 
 
 public class DataInterface {
@@ -64,13 +62,6 @@ public class DataInterface {
         } catch (IOException ex) {
         }
 
-        try {
-            audicoesFile = new FileInputStream(new File("/home/quatro/BaseDeDados/audicoes.xml"));
-            alunosFile = new FileInputStream(new File("/home/quatro/BaseDeDados/alunos.xml"));
-            professoresFile = new FileInputStream(new File("/home/quatro/BaseDeDados/professores.xml"));
-        } catch (Exception e){
-        }
-
     }
 
 
@@ -78,6 +69,7 @@ public class DataInterface {
 
         DocumentBuilderFactory factoryA;
         DocumentBuilder builderA;
+        this.alunosFile = new FileInputStream(new File("C:\\Users\\patri\\Documents\\GitHub\\SchoolOfRock\\PlaneadorAudicoes\\src\\AuditionParser\\alunos.xml"));
 
         factoryA = DocumentBuilderFactory.newInstance();
         factoryA.setValidating(false);
@@ -85,7 +77,7 @@ public class DataInterface {
 
         builderA = factoryA.newDocumentBuilder();
 
-        this.docAlunos = builderA.parse(alunosFile);
+        this.docAlunos = builderA.parse(this.alunosFile);
 
     }
 
@@ -100,7 +92,9 @@ public class DataInterface {
         factoryAud.setNamespaceAware(false);
         builderAud = factoryAud.newDocumentBuilder();
 
-        this.docAudicoes = builderAud.parse(audicoesFile);
+        this.audicoesFile = new FileInputStream(new File("C:\\Users\\patri\\Documents\\GitHub\\SchoolOfRock\\PlaneadorAudicoes\\src\\AuditionParser\\audicoes.xml"));
+
+        this.docAudicoes = builderAud.parse(this.audicoesFile);
     }
 
     public void addAudicao(Audicao audicao){
@@ -135,7 +129,9 @@ public class DataInterface {
         factoryP.setNamespaceAware(false);
         builderP = factoryP.newDocumentBuilder();
 
-        this.docProfessores = (Document) builderP.parse(professoresFile);
+        this.professoresFile = new FileInputStream(new File("C:\\Users\\patri\\Documents\\GitHub\\SchoolOfRock\\PlaneadorAudicoes\\src\\AuditionParser\\alunos.xml"));
+
+        this.docProfessores = (Document) builderP.parse(this.professoresFile);
     }
 
     public void createDocObras() throws ParserConfigurationException, SAXException, IOException {
@@ -178,7 +174,8 @@ public class DataInterface {
 
 
     private Element createAudicaoXML(Document doc, Audicao a){
-        Element aud = doc.createElement("audicao"); //falta atributo id
+        Element aud = doc.createElement("audicao");
+        aud.setAttribute("id",a.getId());
 
         Element nome = doc.createElement("nome");
         nome.setTextContent(a.getNome());

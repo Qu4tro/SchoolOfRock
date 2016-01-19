@@ -6,11 +6,12 @@ grammar plano;
 }
 
 
-audicao: 'Audição'  nome           {audition.setNome($nome.text);}
+audicao: 'Audicao'  IDA             {audition.setId($IDA.text); }
+         'Nome:'    nome           {audition.setLocal($nome.text);}
          'Local:'   local          {audition.setLocal($local.text);}
          'Data:'    data           {audition.setData($data.day, $data.month, $data.year);}
-         'Início:'  hora           {audition.setInicio($hora.hours, $hora.minutes);}
-         'Duração:' hora           {audition.setDuracao($hora.hours, $hora.minutes);}
+         'Inicio:'  hora           {audition.setInicio($hora.hours, $hora.minutes);}
+         'Duracao:' hora           {audition.setDuracao($hora.hours, $hora.minutes);}
          plano
                                    {dataInterface.addAudicao(audition);}
        ;
@@ -23,8 +24,8 @@ atuacao returns [Atuacao a]:
     nome                           {$a = new Atuacao(dataInterface, $nome.text);}
     'Alunos:' aluno[$a]*
     'Professores:' professor[$a]*
-    'Peças:' peca[$a]*
-    'Duração:' hora                {$a.setDuracao($hora.hours, $hora.minutes);}
+    'Pecas:' peca[$a]*
+    'Duracao:' hora                {$a.setDuracao($hora.hours, $hora.minutes);}
     ;
 
 
@@ -62,11 +63,11 @@ hora returns [int hours, int minutes]:
 
 /*--------------- Lexer ---------------------------------------*/
 
-IDA: 'a' ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'-')*;
+IDA: 'A' ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'-')*;
 
-IDP: 'p' ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'-')*;
+IDP: 'P' ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'-')*;
 
-IDO: 'o' ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'-')*;
+IDO: 'O' ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'-')*;
 
 ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'-')*
     ;

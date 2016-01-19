@@ -1,25 +1,26 @@
-Audição "A"
+Audicao A5
+    Nome: "Récita X"
 	Local: "Braga"
 	Data: 25-12-2015
-	Início: 22:15
-	Duração: 00:40
+	Inicio: 22:15
+	Duracao: 00:40
 		"AtuacaoA"
 			Alunos:
-				a67665
-				a67709
+				A1510
+				A32597
 			Professores:
-				p21
-			Peças:
-				o1
-				o2
-			Duração: 00:20;
+				P1
+			Pecas:
+				O2
+				O134
+			Duracao: 00:20;
 		"AtuacaoB"
 			Alunos:
-				a67665
-				a64545
-				a34223
+				A36539
+				A1510
+                A32597
 			Professores:
-				p45
-			Peças:
-				o3
-			Duração: 00:20
+				P2
+			Pecas:
+				O108
+			Duracao: 00:20

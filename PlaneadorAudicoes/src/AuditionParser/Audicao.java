@@ -3,7 +3,7 @@ package AuditionParser;
 import java.util.ArrayList;
 
 public class Audicao {
-
+    private String id;
     private String nome;
     private String local;
     private String data;
@@ -14,6 +14,8 @@ public class Audicao {
     public Audicao() {
         atuacoes = new ArrayList<>();
     }
+
+    public void setId(String id) {this.id = id;}
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -69,6 +71,9 @@ public class Audicao {
 
         return (total_duracao == duracao);
     }
+    public String getId() {
+        return id;
+    }
 
     public String getNome() {
         return nome;
@@ -97,7 +102,8 @@ public class Audicao {
     @Override
     public String toString() {
         return "Audicao{" +
-                "nome='" + nome + '\'' +
+                "id='" + id + '\'' +
+                ", nome='" + nome + '\'' +
                 ", local='" + local + '\'' +
                 ", data='" + data + '\'' +
                 ", inicio='" + inicio + '\'' +

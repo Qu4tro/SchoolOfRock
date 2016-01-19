@@ -27,6 +27,9 @@ public class Atuacao {
             if (data.existeAluno(id)){
                 alunos.add(id);
             }
+            else{
+                System.out.println("ERRO: O aluno" + id + "não existe na base de dados e não foi inserido na audição!");
+            }
         } catch (XPathExpressionException exception){
             //todo: Invalid XML alunos
 
@@ -40,6 +43,9 @@ public class Atuacao {
             if (data.existeProfessor(id)){
                 professores.add(id);
             }
+            else{
+                System.out.println("ERRO: O professor" + id + "não existe na base de dados e não foi inserido na audição!");
+            }
         } catch (XPathExpressionException exception){
             //todo: Invalid XML professores
 
@@ -50,6 +56,9 @@ public class Atuacao {
         try {
             if (data.existeObra(id)){
                 pecas.add(id);
+            }
+            else{
+                System.out.println("ERRO: A obra" + id + "não existe na base de dados e não foi inserida na audição!");
             }
         } catch (XPathExpressionException exception){
             //todo: Invalid XML obras
@@ -64,7 +73,7 @@ public class Atuacao {
             this.duracao = hours * 60 + minutes;
 
         } else {
-            //todo: Invalid time
+            System.out.println("ERRO: Duração inválida, por favor introduza no formato HH:MM");
         }
     }
 

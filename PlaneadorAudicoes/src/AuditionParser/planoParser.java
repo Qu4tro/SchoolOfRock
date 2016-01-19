@@ -148,7 +148,7 @@ public class planoParser extends Parser {
 			match(T__1);
 			setState(24);
 			((AudicaoContext)_localctx).nome = nome();
-			audition.setLocal((((AudicaoContext)_localctx).nome!=null?_input.getText(((AudicaoContext)_localctx).nome.start,((AudicaoContext)_localctx).nome.stop):null));
+			audition.setNome((((AudicaoContext)_localctx).nome!=null?_input.getText(((AudicaoContext)_localctx).nome.start,((AudicaoContext)_localctx).nome.stop):null));
 			setState(26);
 			match(T__2);
 			setState(27);

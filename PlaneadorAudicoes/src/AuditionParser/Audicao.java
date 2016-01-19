@@ -33,7 +33,7 @@ public class Audicao {
             this.data = day + "-" + month + "-" + year;
 
          } else {
-            //todo: Invalid date
+            System.out.println("ERRO: Data inválida, por favor introduza no formato DD-MM-YYY");
         }
     }
 
@@ -44,7 +44,7 @@ public class Audicao {
             this.inicio = hours + ":" + minutes;
 
         } else {
-            //todo: Invalid time
+            System.out.println("ERRO: Hora de início inválida, por favor introduza no formato HH:MM");
         }
     }
 
@@ -55,7 +55,7 @@ public class Audicao {
             this.duracao = hours * 60 + minutes;
 
         } else {
-            //todo: Invalid time
+            System.out.println("ERRO: Duração inválida, por favor introduza no formato HH:MM");
         }
     }
 

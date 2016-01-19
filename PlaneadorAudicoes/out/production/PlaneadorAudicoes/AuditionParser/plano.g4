@@ -7,7 +7,7 @@ grammar plano;
 
 
 audicao: 'Audicao'  IDA             {audition.setId($IDA.text); }
-         'Nome:'    nome           {audition.setLocal($nome.text);}
+         'Nome:'    nome           {audition.setNome($nome.text);}
          'Local:'   local          {audition.setLocal($local.text);}
          'Data:'    data           {audition.setData($data.day, $data.month, $data.year);}
          'Inicio:'  hora           {audition.setInicio($hora.hours, $hora.minutes);}
@@ -40,7 +40,7 @@ professor [Atuacao a]:
     ;
 
 peca [Atuacao a]:
-    IDO                            { a.addPeca($IDO.text); }
+    IDO                            { a.addPeca($IDO.text);}
     ;
 
 nome:   STRING;

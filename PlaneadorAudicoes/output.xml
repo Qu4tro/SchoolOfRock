@@ -76,4 +76,43 @@
 			</atuacao>
 		</atuacoes>
 	</audicao>
-<audicao id="A5"><nome/><data>25-12-2015</data><local>"Braga"</local><inicio>22:15</inicio><duracao>40 min</duracao><atuacoes><atuacao/><atuacao/></atuacoes></audicao></audicoes>
+	<audicao id="A3">
+		<nome>"Récita X"</nome>
+		<data>25-12-2015</data>
+		<local>"Braga"</local>
+		<inicio>22:15</inicio>
+		<duracao>40 min</duracao>
+		<atuacoes>
+			<atuacao>
+				<nome>"AtuacaoA"</nome>
+				<duracao>20 min</duracao>
+				<alunos>
+					<aluno>A1510</aluno>
+					<aluno>A32597</aluno>
+				</alunos>
+				<professores>
+					<professor>P1</professor>
+				</professores>
+				<obras>
+					<obra>O2</obra>
+					<obra>O134</obra>
+				</obras>
+			</atuacao>
+			<atuacao>
+				<nome>"AtuacaoB"</nome>
+				<duracao>20 min</duracao>
+				<alunos>
+					<aluno>A36539</aluno>
+					<aluno>A1510</aluno>
+					<aluno>A32597</aluno>
+				</alunos>
+				<professores>
+					<professor>P2</professor>
+				</professores>
+				<obras>
+					<obra>O108</obra>
+				</obras>
+			</atuacao>
+		</atuacoes>
+	</audicao>
+	</audicoes>

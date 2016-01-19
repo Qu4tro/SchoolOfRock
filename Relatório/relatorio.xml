@@ -252,7 +252,6 @@ header("Location:alunos.html");
                 </subsubsection>
                 <subsubsection>
                     <title>Adicionar uma Audição</title>
-                    <p>4 COMPLETAR ESTA SECÇÃO COM O QUE TU FIZESTE</p>
                     <p>Uma das funcionalidades que a plataforma deve oferecer é o planeamento/adição de uma audição à base de dados da escola.</p>
                     <p>Este planeamento será feito através de um simples ficheiro de texto em que o utilizador poderá introduzir os dados da audição de acordo com algumas regras especificadas por uma gramática desenvolvida por nós.</p>
                     <code>
@@ -320,10 +319,9 @@ hora returns [int hours, int minutes]:
                     <p>Essa gramática foi totalmente desenvolvida utilizando <i>ANTLR</i> e mais tarde completada com atributos e recorrendo a funcionalidades do <i>Java</i> para as ações semânticas.</p>
                     <p>Para além de validar o formato do ficheiro de planeamento de uma audição fornecido pelo utilizador esta gramática terá a função de verificar se a informação inserida está de acordo com a base de dados (alunos existem, professor exite, obras existem...) e, caso tudo esteja correto, adicionar a informação sobre a audição à base de dados da escola.</p>
                     <p>Sendo a nossa base de dados um conjunto de ficheiros <i>XML</i> tivemos de recorrer a algumas bibliotecas do <i>Java</i> com funções especifícas para podermos consultar e manipular os seus dados.</p>
-                </subsubsection>
-                <subsubsection>
-                    <title>Alterar uma Audição</title>
-                    <p>Também a funcionalidade de alterar uma audição é conseguida através de um formulário <i>HTML</i>, mas este um pouco mais complexo.</p>
+                    <p>Executando esta gramática, se não ocorrerem erros,  é gerado código <i>XML</i> relativo à audição presente no ficheiro de <i>input</i>. Este código é adicionado no final do ficheiro de audições já existente na base de dados. </p>
+                    <p>Os erros que são verificados são a existência dos alunos, professores e obras na nossa base de dados do sistema, ou seja, verifica a sua existência sempre nos ficheiros pré-definidos da base de dados.</p>
+                    <p>Quando ocorrem erros...</p>
                 </subsubsection>
                 <subsubsection>
                     <title>Gerar <i>PDF</i> para uma Audição</title>

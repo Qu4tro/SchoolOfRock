@@ -144,7 +144,7 @@ public class DataInterface {
         factoryO.setNamespaceAware(false);
         builderO = factoryO.newDocumentBuilder();
 
-        this.docObras = (Document) builderO.parse("obras.xml");
+        this.docObras = (Document) builderO.parse("C:\\Users\\patri\\Documents\\GitHub\\SchoolOfRock\\PlaneadorAudicoes\\src\\AuditionParser\\obras.xml");
     }
 
     public boolean existeAluno(String id) throws XPathExpressionException{
@@ -221,9 +221,11 @@ public class DataInterface {
 
             nome = doc.createElement("nome");
             nome.setTextContent(a.getNome());
+            at.appendChild(nome);
 
             duracao = doc.createElement("duracao");
             duracao.setTextContent(a.getDuracao() + " min");
+            at.appendChild(duracao);
 
             alunos = doc.createElement("alunos");
             for (String id: a.getAlunos()){
@@ -232,6 +234,7 @@ public class DataInterface {
 
                 alunos.appendChild(aluno);
             }
+            at.appendChild(alunos);
 
             professores = doc.createElement("professores");
             for (String id: a.getProfessores()){
@@ -240,6 +243,7 @@ public class DataInterface {
 
                 professores.appendChild(professor);
             }
+            at.appendChild(professores);
 
             obras = doc.createElement("obras");
             for (String id: a.getPecas()){
@@ -248,6 +252,7 @@ public class DataInterface {
 
                 obras.appendChild(obra);
             }
+            at.appendChild(obras);
 
             ats.appendChild(at);
         }

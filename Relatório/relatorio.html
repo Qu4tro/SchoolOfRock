@@ -105,20 +105,20 @@
                         <li><a style="color:#3498db" href="#d0e571">Adicionar uma Audi&ccedil;&atilde;o</a></li>
                      </ul>
                      <ul>
-                        <li><a style="color:#3498db" href="#d0e625">Gerar PDF para uma Audi&ccedil;&atilde;o</a></li>
+                        <li><a style="color:#3498db" href="#d0e628">Gerar PDF para uma Audi&ccedil;&atilde;o</a></li>
                      </ul>
                      <ul>
-                        <li><a style="color:#3498db" href="#d0e655">Gerar p&aacute;gina HTML para uma Audi&ccedil;&atilde;o</a></li>
+                        <li><a style="color:#3498db" href="#d0e658">Gerar p&aacute;gina HTML para uma Audi&ccedil;&atilde;o</a></li>
                      </ul>
                   </ul>
                </ul>
                <ul>
-                  <li><a style="color:#2ecc71" href="#d0e700">Conclus&otilde;es</a></li>
+                  <li><a style="color:#2ecc71" href="#d0e703">Conclus&otilde;es</a></li>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d0e705">Reflex&atilde;o Crit&iacute;ca</a></li>
+                     <li><a style="color:#1abc9c" href="#d0e708">Reflex&atilde;o Crit&iacute;ca</a></li>
                   </ul>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d0e753">Trabalho Futuro</a></li>
+                     <li><a style="color:#1abc9c" href="#d0e756">Trabalho Futuro</a></li>
                   </ul>
                </ul>
             </div>
@@ -160,7 +160,7 @@
                   <li><a style="color:#3498db" href="#d0e567">Listagem das audi&ccedil;&otilde;es que ainda v&atilde;o decorrer</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e693">HTML gerado para a audi&ccedil;&atilde;o</a></li>
+                  <li><a style="color:#3498db" href="#d0e696">HTML gerado para a audi&ccedil;&atilde;o</a></li>
                </ul>
             </div>
          </div>
@@ -528,8 +528,6 @@ header("Location:alunos.html");
                                 
             <h4 style="color:#2ecc71">Adicionar uma Audi&ccedil;&atilde;o</h4>
                                 
-            <p>4 COMPLETAR ESTA SEC&Ccedil;&Atilde;O COM O QUE TU FIZESTE</p>
-                                
             <p>Uma das funcionalidades que a plataforma deve oferecer &eacute; o planeamento/adi&ccedil;&atilde;o de uma audi&ccedil;&atilde;o &agrave; base de dados da escola.</p>
                                 
             <p>Este planeamento ser&aacute; feito atrav&eacute;s de um simples ficheiro de texto em que o utilizador poder&aacute; introduzir os dados da audi&ccedil;&atilde;o
@@ -615,9 +613,10 @@ hora returns [int hours, int minutes]:
                verifica a sua exist&ecirc;ncia sempre nos ficheiros pr&eacute;-definidos da base de dados.
             </p>
                                 
-            <p>Quando ocorrem erros...</p>
+            <p>Quando ocorre um erro este causa uma excep&ccedil;&atilde;o que &eacute; imprimida tanto para o <em>standard input</em> como para um ficheiro de <em>logs</em> e a audi&ccedil;&atilde;o n&atilde;o &eacute; adicionada.
+            </p>
                             
-                            <a name="d0e625"></a>
+                            <a name="d0e628"></a>
                                 
             <h4 style="color:#2ecc71">Gerar PDF para uma Audi&ccedil;&atilde;o</h4>
                                 
@@ -627,7 +626,7 @@ hora returns [int hours, int minutes]:
             <p>Para isto foi necess&aacute;rio criar um <em>XSL</em> que gerasse um ficheiro <em>FO (Formatting objects)</em> que por sua vez gera um documento <em>PDF</em> para um determinado documento <em>XML</em>.
             </p>
                             
-                            <a name="d0e655"></a>
+                            <a name="d0e658"></a>
                                 
             <h4 style="color:#2ecc71">Gerar p&aacute;gina HTML para uma Audi&ccedil;&atilde;o</h4>
                                 
@@ -695,14 +694,14 @@ hora returns [int hours, int minutes]:
    &lt;/atuacoes&gt;
 &lt;/audicao&gt;
                     </pre>
-                                <div class="col-center text-center"><a name="d0e693"></a><img src="audicaoHTML.png"><br><p style="font-size:11px">HTML gerado para a audi&ccedil;&atilde;o</p>
+                                <div class="col-center text-center"><a name="d0e696"></a><img src="audicaoHTML.png"><br><p style="font-size:11px">HTML gerado para a audi&ccedil;&atilde;o</p>
             </div>
                             
                         
-                    <a name="d0e700"></a>
+                    <a name="d0e703"></a>
                         
             <h2 style="color:#c0392b">Conclus&otilde;es</h2>
-                        <a name="d0e705"></a>
+                        <a name="d0e708"></a>
                             
             <h3 style="color:#e74c3c">Reflex&atilde;o Crit&iacute;ca</h3>
                             
@@ -722,7 +721,7 @@ hora returns [int hours, int minutes]:
             <p>O maior obst&aacute;culo que encontramos na realiza&ccedil;&atilde;o deste trabalho foi o facto de o <em>PHP</em> n&atilde;o suportar o <em>XSL 2.0</em>, o que fez com que tivessemos que encontrar alternativas para o <em>xsl:result-document</em> de forma a poder gerar documentos atrav&eacute;s do <em>XSL</em>.
             </p>
                         
-                        <a name="d0e753"></a>
+                        <a name="d0e756"></a>
                             
             <h3 style="color:#e74c3c">Trabalho Futuro</h3>
                             

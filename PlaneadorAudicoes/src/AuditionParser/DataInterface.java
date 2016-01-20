@@ -12,6 +12,7 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 import org.w3c.dom.Element;
 import org.w3c.dom.Document;
@@ -149,26 +150,26 @@ public class DataInterface {
 
     public boolean existeAluno(String id) throws XPathExpressionException{
         XPath xpath = XPathFactory.newInstance().newXPath();
-        XPathExpression expr = xpath.compile("/Alunos/Aluno[@id="+id+"]");
-        NodeList nodes = (NodeList) expr.evaluate(docAlunos, XPathConstants.NODESET);
+        XPathExpression expr = xpath.compile("/alunos/aluno[@id='"+id+"']");
+        Node node = (Node) expr.evaluate(docAlunos, XPathConstants.NODE);
 
-        return (nodes != null);
+        return(node!=null);
     }
 
     public boolean existeProfessor(String id) throws XPathExpressionException{
         XPath xpath = XPathFactory.newInstance().newXPath();
-        XPathExpression expr = xpath.compile("/Professores/Professor[@id="+id+"]");
-        NodeList nodes = (NodeList) expr.evaluate(docProfessores, XPathConstants.NODESET);
+        XPathExpression expr = xpath.compile("/professores/professor[@id='"+id+"']");
+        Node node = (Node) expr.evaluate(docProfessores, XPathConstants.NODE);
 
-        return (nodes != null);
+        return(node!=null);
     }
 
     public boolean existeObra(String id) throws XPathExpressionException{
         XPath xpath = XPathFactory.newInstance().newXPath();
-        XPathExpression expr = xpath.compile("/Obras/Obra[@id="+id+"]");
-        NodeList nodes = (NodeList) expr.evaluate(docObras, XPathConstants.NODESET);
+        XPathExpression expr = xpath.compile("/obras/obra[@id='"+id+"']");
+        Node node = (Node) expr.evaluate(docObras, XPathConstants.NODE);
 
-        return (nodes != null);
+        return (node!=null);
     }
 
 

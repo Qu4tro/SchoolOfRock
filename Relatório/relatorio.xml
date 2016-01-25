@@ -317,11 +317,16 @@ hora returns [int hours, int minutes]:
     ;
                     </code>
                     <p>Essa gramática foi totalmente desenvolvida utilizando <i>ANTLR</i> e mais tarde completada com atributos e recorrendo a funcionalidades do <i>Java</i> para as ações semânticas.</p>
-                    <p>Para além de validar o formato do ficheiro de planeamento de uma audição fornecido pelo utilizador esta gramática terá a função de verificar se a informação inserida está de acordo com a base de dados (alunos existem, professor exite, obras existem...) e, caso tudo esteja correto, adicionar a informação sobre a audição à base de dados da escola.</p>
+                    <p>Para além de validar o formato do ficheiro de planeamento de uma audição fornecido pelo utilizador esta gramática terá a função de verificar se a informação inserida está de acordo com a base de dados (alunos existem, professor existe e obras existem) e, caso tudo esteja correto, adicionar a informação sobre a audição à base de dados da escola.</p>
                     <p>Sendo a nossa base de dados um conjunto de ficheiros <i>XML</i> tivemos de recorrer a algumas bibliotecas do <i>Java</i> com funções especifícas para podermos consultar e manipular os seus dados.</p>
                     <p>Executando esta gramática, se não ocorrerem erros,  é gerado código <i>XML</i> relativo à audição presente no ficheiro de <i>input</i>. Este código é adicionado no final do ficheiro de audições já existente na base de dados. </p>
                     <p>Os erros que são verificados são a existência dos alunos, professores e obras na nossa base de dados do sistema, ou seja, verifica a sua existência sempre nos ficheiros pré-definidos da base de dados.</p>
-                    <p>Quando ocorrem erros...</p>
+                    <p>Quando ocorre um erro este causa uma excepção que é imprimida tanto para o <i>standard input</i> como para um ficheiro de <i>logs</i> e a audição não é adicionada.</p>
+                    <p>Na aplicação <i>Web</i> quando é pressionado o botão para adicionar uma nova audição é apresentada uma caixa de texto em que podemos digitar o ficheiro de entrada para a criação da audição. Após ter escrito o texto de entrada e clicado no botão "Adicionar" o ficheiro de texto gerado é processado pelo <i>ANTLR</i> <b>!!!!!!!!!!!!!!!!!!!!!!!COMO?????????????????</b></p>
+                    <p>Para além disso é também dada a opção de importar um ficheiro de texto já existente e executar o <i>ANTLR</i> para o ficheiro escolhido.</p>
+                    <image path="adicionaraudicao.PNG">Exemplo de um ficheiro de entrada para a criação de uma audição inserido na interface da aplicação <i>Web</i>.</image>
+                    <p>Se não ocorrerem erros no processamento do ficheiro pelo <i>ANTLR</i> é mostrada uma caixa de diálogo informando que a audição foi inserida com sucesso e somos reencaminhados de novo para a listagem de audições, agora com umalinha adicional na tabela.</p>
+                    <p>Se ocorrerem erros ... <b>!!!!!!!!!!!!!!!!CONTINUAR E ACRESCENTAR PRINTS DOS ERROS PARA O EXEMPLO!!!!!!!!!!!!!!!!!!!!!!!</b></p>
                 </subsubsection>
                 <subsubsection>
                     <title>Gerar <i>PDF</i> para uma Audição</title>

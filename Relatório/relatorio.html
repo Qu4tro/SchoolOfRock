@@ -105,20 +105,20 @@
                         <li><a style="color:#3498db" href="#d0e571">Adicionar uma Audi&ccedil;&atilde;o</a></li>
                      </ul>
                      <ul>
-                        <li><a style="color:#3498db" href="#d0e628">Gerar PDF para uma Audi&ccedil;&atilde;o</a></li>
+                        <li><a style="color:#3498db" href="#d0e662">Gerar PDF para uma Audi&ccedil;&atilde;o</a></li>
                      </ul>
                      <ul>
-                        <li><a style="color:#3498db" href="#d0e658">Gerar p&aacute;gina HTML para uma Audi&ccedil;&atilde;o</a></li>
+                        <li><a style="color:#3498db" href="#d0e692">Gerar p&aacute;gina HTML para uma Audi&ccedil;&atilde;o</a></li>
                      </ul>
                   </ul>
                </ul>
                <ul>
-                  <li><a style="color:#2ecc71" href="#d0e703">Conclus&otilde;es</a></li>
+                  <li><a style="color:#2ecc71" href="#d0e737">Conclus&otilde;es</a></li>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d0e708">Reflex&atilde;o Crit&iacute;ca</a></li>
+                     <li><a style="color:#1abc9c" href="#d0e742">Reflex&atilde;o Crit&iacute;ca</a></li>
                   </ul>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d0e756">Trabalho Futuro</a></li>
+                     <li><a style="color:#1abc9c" href="#d0e790">Trabalho Futuro</a></li>
                   </ul>
                </ul>
             </div>
@@ -160,7 +160,10 @@
                   <li><a style="color:#3498db" href="#d0e567">Listagem das audi&ccedil;&otilde;es que ainda v&atilde;o decorrer</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d0e696">HTML gerado para a audi&ccedil;&atilde;o</a></li>
+                  <li><a style="color:#3498db" href="#d0e644">Exemplo de um ficheiro de entrada para a cria&ccedil;&atilde;o de uma audi&ccedil;&atilde;o inserido na interface da aplica&ccedil;&atilde;o Web.</a></li>
+               </ul>
+               <ul>
+                  <li><a style="color:#3498db" href="#d0e730">HTML gerado para a audi&ccedil;&atilde;o</a></li>
                </ul>
             </div>
          </div>
@@ -599,7 +602,7 @@ hora returns [int hours, int minutes]:
             </p>
                                 
             <p>Para al&eacute;m de validar o formato do ficheiro de planeamento de uma audi&ccedil;&atilde;o fornecido pelo utilizador esta gram&aacute;tica ter&aacute; a fun&ccedil;&atilde;o
-               de verificar se a informa&ccedil;&atilde;o inserida est&aacute; de acordo com a base de dados (alunos existem, professor exite, obras existem...)
+               de verificar se a informa&ccedil;&atilde;o inserida est&aacute; de acordo com a base de dados (alunos existem, professor existe e obras existem)
                e, caso tudo esteja correto, adicionar a informa&ccedil;&atilde;o sobre a audi&ccedil;&atilde;o &agrave; base de dados da escola.
             </p>
                                 
@@ -615,8 +618,24 @@ hora returns [int hours, int minutes]:
                                 
             <p>Quando ocorre um erro este causa uma excep&ccedil;&atilde;o que &eacute; imprimida tanto para o <em>standard input</em> como para um ficheiro de <em>logs</em> e a audi&ccedil;&atilde;o n&atilde;o &eacute; adicionada.
             </p>
+                                
+            <p>Na aplica&ccedil;&atilde;o <em>Web</em> quando &eacute; pressionado o bot&atilde;o para adicionar uma nova audi&ccedil;&atilde;o &eacute; apresentada uma caixa de texto em que podemos digitar o ficheiro
+               de entrada para a cria&ccedil;&atilde;o da audi&ccedil;&atilde;o. Ap&oacute;s ter escrito o texto de entrada e clicado no bot&atilde;o "Adicionar" o ficheiro de texto
+               gerado &eacute; processado pelo <em>ANTLR</em> <strong>!!!!!!!!!!!!!!!!!!!!!!!COMO?????????????????</strong></p>
+                                
+            <p>Para al&eacute;m disso &eacute; tamb&eacute;m dada a op&ccedil;&atilde;o de importar um ficheiro de texto j&aacute; existente e executar o <em>ANTLR</em> para o ficheiro escolhido.
+            </p>
+                                
+            <div class="col-center text-center"><a name="d0e644"></a><img src="adicionaraudicao.PNG"><br><p style="font-size:11px">Exemplo de um ficheiro de entrada para a cria&ccedil;&atilde;o de uma audi&ccedil;&atilde;o inserido na interface da aplica&ccedil;&atilde;o Web.</p>
+            </div>
+                                
+            <p>Se n&atilde;o ocorrerem erros no processamento do ficheiro pelo <em>ANTLR</em> &eacute; mostrada uma caixa de di&aacute;logo informando que a audi&ccedil;&atilde;o foi inserida com sucesso e somos reencaminhados de novo para a listagem
+               de audi&ccedil;&otilde;es, agora com umalinha adicional na tabela.
+            </p>
+                                
+            <p>Se ocorrerem erros ... <strong>!!!!!!!!!!!!!!!!CONTINUAR E ACRESCENTAR PRINTS DOS ERROS PARA O EXEMPLO!!!!!!!!!!!!!!!!!!!!!!!</strong></p>
                             
-                            <a name="d0e628"></a>
+                            <a name="d0e662"></a>
                                 
             <h4 style="color:#2ecc71">Gerar PDF para uma Audi&ccedil;&atilde;o</h4>
                                 
@@ -626,7 +645,7 @@ hora returns [int hours, int minutes]:
             <p>Para isto foi necess&aacute;rio criar um <em>XSL</em> que gerasse um ficheiro <em>FO (Formatting objects)</em> que por sua vez gera um documento <em>PDF</em> para um determinado documento <em>XML</em>.
             </p>
                             
-                            <a name="d0e658"></a>
+                            <a name="d0e692"></a>
                                 
             <h4 style="color:#2ecc71">Gerar p&aacute;gina HTML para uma Audi&ccedil;&atilde;o</h4>
                                 
@@ -694,14 +713,14 @@ hora returns [int hours, int minutes]:
    &lt;/atuacoes&gt;
 &lt;/audicao&gt;
                     </pre>
-                                <div class="col-center text-center"><a name="d0e696"></a><img src="audicaoHTML.png"><br><p style="font-size:11px">HTML gerado para a audi&ccedil;&atilde;o</p>
+                                <div class="col-center text-center"><a name="d0e730"></a><img src="audicaoHTML.png"><br><p style="font-size:11px">HTML gerado para a audi&ccedil;&atilde;o</p>
             </div>
                             
                         
-                    <a name="d0e703"></a>
+                    <a name="d0e737"></a>
                         
             <h2 style="color:#c0392b">Conclus&otilde;es</h2>
-                        <a name="d0e708"></a>
+                        <a name="d0e742"></a>
                             
             <h3 style="color:#e74c3c">Reflex&atilde;o Crit&iacute;ca</h3>
                             
@@ -721,7 +740,7 @@ hora returns [int hours, int minutes]:
             <p>O maior obst&aacute;culo que encontramos na realiza&ccedil;&atilde;o deste trabalho foi o facto de o <em>PHP</em> n&atilde;o suportar o <em>XSL 2.0</em>, o que fez com que tivessemos que encontrar alternativas para o <em>xsl:result-document</em> de forma a poder gerar documentos atrav&eacute;s do <em>XSL</em>.
             </p>
                         
-                        <a name="d0e756"></a>
+                        <a name="d0e790"></a>
                             
             <h3 style="color:#e74c3c">Trabalho Futuro</h3>
                             

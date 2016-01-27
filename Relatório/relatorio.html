@@ -106,20 +106,20 @@
                         <li><a style="color:#3498db" href="#d1e582">Adicionar uma Audição</a></li>
                      </ul>
                      <ul>
-                        <li><a style="color:#3498db" href="#d1e685">Gerar PDF para uma Audição</a></li>
+                        <li><a style="color:#3498db" href="#d1e696">Gerar PDF para uma Audição</a></li>
                      </ul>
                      <ul>
-                        <li><a style="color:#3498db" href="#d1e715">Gerar página HTML para uma Audição</a></li>
+                        <li><a style="color:#3498db" href="#d1e726">Gerar página HTML para uma Audição</a></li>
                      </ul>
                   </ul>
                </ul>
                <ul>
-                  <li><a style="color:#2ecc71" href="#d1e761">Conclusões</a></li>
+                  <li><a style="color:#2ecc71" href="#d1e772">Conclusões</a></li>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d1e766">Reflexão Critíca</a></li>
+                     <li><a style="color:#1abc9c" href="#d1e777">Reflexão Critíca</a></li>
                   </ul>
                   <ul>
-                     <li><a style="color:#1abc9c" href="#d1e815">Trabalho Futuro</a></li>
+                     <li><a style="color:#1abc9c" href="#d1e826">Trabalho Futuro</a></li>
                   </ul>
                </ul>
             </div>
@@ -161,11 +161,20 @@
                   <li><a style="color:#3498db" href="#d1e578">Listagem das audições que ainda vão decorrer</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d1e667">Exemplo de um ficheiro de entrada para a criação de uma audição inserido na interface
+                  <li><a style="color:#3498db" href="#d1e664">Exemplo de um ficheiro de entrada para a criação de uma audição inserido na interface
                         da aplicação Web.</a></li>
                </ul>
                <ul>
-                  <li><a style="color:#3498db" href="#d1e754">HTML gerado para a audição</a></li>
+                  <li><a style="color:#3498db" href="#d1e676">Exemplo de um audição inserida com sucesso na interface da aplicação Web.</a></li>
+               </ul>
+               <ul>
+                  <li><a style="color:#3498db" href="#d1e685">Exemplo de um audição não valida na interface da aplicação Web.</a></li>
+               </ul>
+               <ul>
+                  <li><a style="color:#3498db" href="#d1e692">Diálogo de erros de uma audição não valida.</a></li>
+               </ul>
+               <ul>
+                  <li><a style="color:#3498db" href="#d1e765">HTML gerado para a audição</a></li>
                </ul>
             </div>
          </div>
@@ -653,25 +662,43 @@ hora returns [int hours, int minutes]:
             <p>Na aplicação <em>Web</em> quando é pressionado o botão para adicionar uma nova audição é apresentada uma caixa
                de texto em que podemos digitar o ficheiro de entrada para a criação da audição. Após
                ter escrito o texto de entrada e clicado no botão "Adicionar" o ficheiro de texto
-               é enviado por <em>POST Request</em> para o servidor, onde é processado por uma script <em>PHP</em> que por sua vez chama, com o commando <em>exec</em>, o <em>ANTLR</em> que, por fim, analisa o input que lhe foi passado. <strong>TODO: !!!!!!!!!!!!!!!!!!!!!!!COMO?????????????????</strong></p>
+               é enviado por <em>POST Request</em> para o servidor, onde é processado por uma script <em>PHP</em> que por sua vez chama, com o commando <em>exec</em>, o <em>ANTLR</em> que, por fim, analisa o input que lhe foi passado.
+            </p>
             
             <p>Para além disso é também dada a opção de importar um ficheiro de texto já existente
                e executar o <em>ANTLR</em> para o ficheiro escolhido.
             </p>
             
-            <div class="col-center text-center"><a name="d1e667"></a><img src="adicionaraudicao.PNG"><br><p style="font-size:11px">Exemplo de um ficheiro de entrada para a criação de uma audição inserido na interface
+            <div class="col-center text-center"><a name="d1e664"></a><img src="adicionaraudicao.PNG"><br><p style="font-size:11px">Exemplo de um ficheiro de entrada para a criação de uma audição inserido na interface
                   da aplicação Web.
                </p>
             </div>
             
-            <p>Se não ocorrerem erros no processamento do ficheiro pelo <em>ANTLR</em> é mostrada uma caixa de diálogo informando que a audição foi inserida com sucesso
-               e somos reencaminhados de novo para a listagem de audições, agora com umalinha adicional
-               na tabela.
+            
+            <p>Se não ocorrerem erros no processamento do ficheiro pelo <em>ANTLR</em> somos reencaminhados de novo para a listagem de audições, agora com uma linha adicional
+               na tabela, como podemos ver:
             </p>
             
-            <p>Se ocorrerem erros ... <strong>TODO: !!!!!!!!!!!!!!!!CONTINUAR E ACRESCENTAR PRINTS DOS ERROS PARA O EXEMPLO!!!!!!!!!!!!!!!!!!!!!!!</strong></p>
             
-            <a name="d1e685"></a>
+            <div class="col-center text-center"><a name="d1e676"></a><img src="newAudi.jpg"><br><p style="font-size:11px">Exemplo de um audição inserida com sucesso na interface da aplicação Web.</p>
+            </div>
+            
+            
+            <p>Se ocorrerem erros é mostrada uma caixa de diálogo que informa ao utilizador os erros
+               que a validação semântica descobriu, como podemos ver nas seguintes imagens: 
+            </p>
+            
+            
+            <div class="col-center text-center"><a name="d1e685"></a><img src="wrongAuditionInput.png"><br><p style="font-size:11px">Exemplo de um audição não valida na interface da aplicação Web.</p>
+            </div>
+            
+            
+            <div class="col-center text-center"><a name="d1e692"></a><img src="wrongAuditionOutput.png"><br><p style="font-size:11px">Diálogo de erros de uma audição não valida.</p>
+            </div>
+            
+            
+            
+            <a name="d1e696"></a>
             
             <h4 style="color:#2ecc71">Gerar PDF para uma Audição</h4>
             
@@ -682,7 +709,7 @@ hora returns [int hours, int minutes]:
             <p>Para isto foi necessário criar um <em>XSL</em> que gerasse um ficheiro <em>FO (Formatting objects)</em> que por sua vez gera um documento <em>PDF</em> para um determinado documento <em>XML</em>.
             </p>
             
-            <a name="d1e715"></a>
+            <a name="d1e726"></a>
             
             <h4 style="color:#2ecc71">Gerar página HTML para uma Audição</h4>
             
@@ -750,14 +777,14 @@ hora returns [int hours, int minutes]:
    &lt;/atuacoes&gt;
 &lt;/audicao&gt;
                     </pre>
-            <div class="col-center text-center"><a name="d1e754"></a><img src="audicaoHTML.png"><br><p style="font-size:11px">HTML gerado para a audição</p>
+            <div class="col-center text-center"><a name="d1e765"></a><img src="audicaoHTML.png"><br><p style="font-size:11px">HTML gerado para a audição</p>
             </div>
             
             
-            <a name="d1e761"></a>
+            <a name="d1e772"></a>
             
             <h2 style="color:#c0392b">Conclusões</h2>
-            <a name="d1e766"></a>
+            <a name="d1e777"></a>
             
             <h3 style="color:#e74c3c">Reflexão Critíca</h3>
             
@@ -780,7 +807,7 @@ hora returns [int hours, int minutes]:
             <p>O maior obstáculo que encontramos na realização deste trabalho foi o facto de o <em>PHP</em> não suportar o <em>XSL 2.0</em>, o que fez com que tivessemos que encontrar alternativas para o <em>xsl:result-document</em> de forma a poder gerar documentos através do <em>XSL</em>.
             </p>
             
-            <a name="d1e815"></a>
+            <a name="d1e826"></a>
             
             <h3 style="color:#e74c3c">Trabalho Futuro</h3>
             

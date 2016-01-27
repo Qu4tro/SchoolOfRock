@@ -322,11 +322,21 @@ hora returns [int hours, int minutes]:
                     <p>Executando esta gramática, se não ocorrerem erros,  é gerado código <i>XML</i> relativo à audição presente no ficheiro de <i>input</i>. Este código é adicionado no final do ficheiro de audições já existente no repositório de dados. </p>
                     <p>Os erros que são verificados são a existência dos alunos, professores e obras no nosso repositório de dados do sistema, ou seja, verifica a sua existência sempre nos ficheiros pré-definidos do repositório de dados.</p>
                     <p>Quando ocorre um erro este causa uma excepção que é imprimida tanto para o <i>standard input</i> como para um ficheiro de <i>logs</i> e a audição não é adicionada.</p>
-                    <p>Na aplicação <i>Web</i> quando é pressionado o botão para adicionar uma nova audição é apresentada uma caixa de texto em que podemos digitar o ficheiro de entrada para a criação da audição. Após ter escrito o texto de entrada e clicado no botão "Adicionar" o ficheiro de texto é enviado por <i>POST Request</i> para o servidor, onde é processado por uma script <i>PHP</i> que por sua vez chama, com o commando <i>exec</i>, o <i>ANTLR</i> que, por fim, analisa o input que lhe foi passado. <b>TODO: !!!!!!!!!!!!!!!!!!!!!!!COMO?????????????????</b></p>
+                    <p>Na aplicação <i>Web</i> quando é pressionado o botão para adicionar uma nova audição é apresentada uma caixa de texto em que podemos digitar o ficheiro de entrada para a criação da audição. Após ter escrito o texto de entrada e clicado no botão "Adicionar" o ficheiro de texto é enviado por <i>POST Request</i> para o servidor, onde é processado por uma script <i>PHP</i> que por sua vez chama, com o commando <i>exec</i>, o <i>ANTLR</i> que, por fim, analisa o input que lhe foi passado.</p>
                     <p>Para além disso é também dada a opção de importar um ficheiro de texto já existente e executar o <i>ANTLR</i> para o ficheiro escolhido.</p>
                     <image path="adicionaraudicao.PNG">Exemplo de um ficheiro de entrada para a criação de uma audição inserido na interface da aplicação <i>Web</i>.</image>
-                    <p>Se não ocorrerem erros no processamento do ficheiro pelo <i>ANTLR</i> é mostrada uma caixa de diálogo informando que a audição foi inserida com sucesso e somos reencaminhados de novo para a listagem de audições, agora com umalinha adicional na tabela.</p>
-                    <p>Se ocorrerem erros ... <b>TODO: !!!!!!!!!!!!!!!!CONTINUAR E ACRESCENTAR PRINTS DOS ERROS PARA O EXEMPLO!!!!!!!!!!!!!!!!!!!!!!!</b></p>
+
+                    <p>Se não ocorrerem erros no processamento do ficheiro pelo <i>ANTLR</i> somos reencaminhados de novo para a listagem de audições, agora com uma linha adicional na tabela, como podemos ver:</p>
+
+                    <image path="newAudi.jpg">Exemplo de um audição inserida com sucesso na interface da aplicação <i>Web</i>.</image>
+
+                    <p>Se ocorrerem erros é mostrada uma caixa de diálogo que informa ao utilizador os erros que a validação semântica descobriu, como podemos ver nas seguintes imagens: </p>
+
+                    <image path="wrongAuditionInput.png">Exemplo de um audição não valida na interface da aplicação <i>Web</i>.</image>
+
+                    <image path="wrongAuditionOutput.png">Diálogo de erros de uma audição não valida.</image>
+
+
                 </subsubsection>
                 <subsubsection>
                     <title>Gerar <i>PDF</i> para uma Audição</title>

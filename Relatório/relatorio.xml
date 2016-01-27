@@ -54,7 +54,7 @@
                 <title>Ferramentas</title>
                <p>Para o desenvolvimento deste projeto foram necessárias várias ferramentas de desenvolvimento que passamos a nomear.</p>
                <p>Para gerir o desenvolvimento de código em paralelo pelos dois membros da equipa utilizamos uma ferramenta de controlo de versões, o <i><b>Github</b></i>.</p>
-               <p>Para o desenvolvimento propriamente dito do projeto utilizamos <i><b>HTML</b></i>, <i><b>PHP</b></i> e <i><b>Javascript</b></i>. Recorremos ainda ao <i><b>CSS</b></i> para melhorar o aspeto estético do sistema. Utilizámos ainda algomas funcionalidades do <i><b>Bootsrap</b></i>, nomeadamente para a formatação das tabelas de listagem e dos botões.</p>
+               <p>Para o desenvolvimento propriamente dito do projeto utilizamos <i><b>HTML</b></i>, <i><b>PHP</b></i> e <i><b>Javascript</b></i>. Recorremos ainda ao <i><b>CSS</b></i> para melhorar o aspeto estético do sistema. Utilizámos ainda algomas funcionalidades do <i><b>Bootstrap</b></i>, nomeadamente para a formatação das tabelas de listagem e dos botões.</p>
                <p>Para lidar com os ficheiros de texto que guardam os dados do nosso sistema recorremos ao <i><b>XML</b></i> e utilizamos <i><b>XSL</b></i> para os transformar em ficheiros <i>javascript</i> e <i>html</i>. Utilizamos ainda <i><b>XSL-FO</b></i> para gerar um documento <i>PDF</i> a partir de um <i>XML</i></p>
                <p>Utilizamos ainda <i><b>ANTLR</b></i> para criar uma linguagem de suporte a uma parte do nosso sistema.</p>
                <p>Para facilitar o nosso trabalho recorremos a alguns <i>IDE's</i> como o <i><b>Oxygen</b></i> e o <i><b>Intelij</b></i>.</p>
